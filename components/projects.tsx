@@ -18,7 +18,7 @@ const PROJECTS = [
     tags: ["Platform", "Community", "Education"],
     status: "Active",
     url: "https://example.com/libreincu",
-    repoUrl: "https://github.com/altermundi/libreincu",
+    repoUrl: "https://github.com/AlterMundi-MonitoreoyControl/Proyecto-Incubadora",
   },
   {
     name: "SAI (Sistema de Alerta de Incendios)",
@@ -26,8 +26,8 @@ const PROJECTS = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fire alert system for communities.",
     tags: ["IoT", "Safety", "Monitoring"],
     status: "Active",
-    url: "https://example.com/sai",
-    repoUrl: "https://github.com/altermundi/sai",
+    url: "https://sai.altermundi.net",
+    repoUrl: "https://github.com/AlterMundi/sai-cam",
   },
 ]
 
