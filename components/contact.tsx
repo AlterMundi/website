@@ -24,7 +24,7 @@ export function Contact() {
           {/* Left: CTA */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <span className="text-xs font-mono uppercase tracking-wider text-muted">Get in Touch</span>
+              <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; CONTACT</span>
               <h2 className="font-mono text-3xl lg:text-4xl font-bold leading-tight">Work with Us</h2>
               <p className="text-lg text-foreground/80 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interested in collaborating or learning more
@@ -33,19 +33,19 @@ export function Contact() {
             </div>
 
             <div className="space-y-4 pt-4">
-              <div className="flex items-center gap-3 text-sm">
+              <div className="flex items-center gap-3 text-sm font-mono">
                 <Mail className="w-5 h-5 text-primary" />
-                <a href="mailto:info@altermundi.net" className="hover:text-primary transition-colors">
+                <a href="mailto:info@altermundi.net" className="hover:text-primary transition-colors hover:crt-glow">
                   info@altermundi.net
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-sm">
+              <div className="flex items-center gap-3 text-sm font-mono">
                 <Github className="w-5 h-5 text-primary" />
                 <a
                   href="https://github.com/altermundi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors hover:crt-glow"
                 >
                   github.com/altermundi
                 </a>
@@ -54,10 +54,21 @@ export function Contact() {
           </div>
 
           {/* Right: Contact Form */}
-          <div className="bg-card border border-border rounded-lg p-6">
+          <div className="relative bg-card border-2 border-border p-6">
+            {/* Corner brackets */}
+            <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-primary" />
+            <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-primary" />
+            <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-primary" />
+            <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-primary" />
+            
+            {/* Form header */}
+            <div className="border-b border-border pb-3 mb-4">
+              <span className="font-mono text-xs uppercase tracking-wider text-primary">// MESSAGE_INPUT</span>
+            </div>
+            
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-mono font-medium">
+                <label htmlFor="name" className="text-sm font-mono font-medium uppercase tracking-wider">
                   Name
                 </label>
                 <input
@@ -65,13 +76,13 @@ export function Contact() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-3 py-2 bg-background border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                  className="w-full px-3 py-2 bg-background border-2 border-border text-sm font-mono focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(13,81,100,0.3)] transition-all"
                   placeholder="Your name"
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-mono font-medium">
+                <label htmlFor="email" className="text-sm font-mono font-medium uppercase tracking-wider">
                   Email
                 </label>
                 <input
@@ -79,13 +90,13 @@ export function Contact() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-3 py-2 bg-background border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                  className="w-full px-3 py-2 bg-background border-2 border-border text-sm font-mono focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(13,81,100,0.3)] transition-all"
                   placeholder="your@email.com"
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-mono font-medium">
+                <label htmlFor="message" className="text-sm font-mono font-medium uppercase tracking-wider">
                   Message
                 </label>
                 <textarea
@@ -93,12 +104,12 @@ export function Contact() {
                   name="message"
                   required
                   rows={5}
-                  className="w-full px-3 py-2 bg-background border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
+                  className="w-full px-3 py-2 bg-background border-2 border-border text-sm font-mono focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(13,81,100,0.3)] transition-all resize-none"
                   placeholder="Tell us about your project or inquiry..."
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button type="submit" className="w-full">
                 Send Message
               </Button>
             </form>

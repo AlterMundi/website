@@ -4,42 +4,42 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* AlterMundi Light Theme */
-  --background: #f2f3f6;
-  --surface: #e0e0e0;
-  --foreground: #333333;
+  /* AlterMundi Dark Terminal Theme */
+  --background: #1a1a1a;
+  --surface: #242424;
+  --foreground: #f2f3f6;
   --muted: #c0c2ca;
   --primary: #0d5164;
-  --primary-foreground: #ffffff;
+  --primary-foreground: #f2f3f6;
   --secondary: #467e33;
-  --secondary-foreground: #ffffff;
-  --border: #c0c2ca;
-  --radius: 0.25rem;
+  --secondary-foreground: #f2f3f6;
+  --border: #333333;
+  --radius: 0.125rem;
 
   /* Keep existing tokens for compatibility */
-  --card: #ffffff;
-  --card-foreground: #333333;
-  --popover: #ffffff;
-  --popover-foreground: #333333;
+  --card: #1e1e1e;
+  --card-foreground: #f2f3f6;
+  --popover: #1e1e1e;
+  --popover-foreground: #f2f3f6;
   --accent: #0d5164;
-  --accent-foreground: #ffffff;
+  --accent-foreground: #f2f3f6;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --input: #c0c2ca;
+  --destructive-foreground: #f2f3f6;
+  --input: #333333;
   --ring: #0d5164;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: #1e1e1e;
+  --sidebar-foreground: #f2f3f6;
+  --sidebar-primary: #0d5164;
+  --sidebar-primary-foreground: #f2f3f6;
+  --sidebar-accent: #242424;
+  --sidebar-accent-foreground: #f2f3f6;
+  --sidebar-border: #333333;
+  --sidebar-ring: #0d5164;
 }
 
 .dark {
@@ -130,8 +130,8 @@
 
 @layer utilities {
   .grid-background {
-    background-image: linear-gradient(to right, rgba(192, 194, 202, 0.15) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(192, 194, 202, 0.15) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgba(13, 81, 100, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(13, 81, 100, 0.08) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
@@ -146,5 +146,56 @@
     opacity: 0.03;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     pointer-events: none;
+  }
+
+  .scanlines {
+    position: relative;
+  }
+
+  .scanlines::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+  }
+
+  .crt-glow {
+    text-shadow: 0 0 8px rgba(13, 81, 100, 0.5),
+                 0 0 16px rgba(13, 81, 100, 0.3);
+  }
+
+  .terminal-border {
+    border: 2px solid var(--border);
+    position: relative;
+  }
+
+  .terminal-border::before,
+  .terminal-border::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--primary);
+  }
+
+  .terminal-border::before {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .terminal-border::after {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
   }
 }
