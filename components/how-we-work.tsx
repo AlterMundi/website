@@ -1,3 +1,5 @@
+import { CornerBrackets } from "@/components/ui/corner-brackets"
+
 export function HowWeWork() {
   const steps = [
     {
@@ -74,7 +76,7 @@ export function HowWeWork() {
         {/* Capabilities */}
         <div className="space-y-6 pt-8">
           <h3 className="font-mono text-xl font-bold uppercase tracking-wider">
-            <span className="text-primary">//</span> Capabilities
+            <span className="text-primary">{"//"}</span> Capabilities
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {capabilities.map((capability) => (
@@ -82,11 +84,7 @@ export function HowWeWork() {
                 key={capability.title}
                 className="relative bg-card border-2 border-border p-4 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(13,81,100,0.15)]"
               >
-                {/* Corner brackets */}
-                <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-primary" />
-                <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-primary" />
-                <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-primary" />
-                <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-primary" />
+                <CornerBrackets size="sm" />
                 
                 <h4 className="font-mono text-sm font-bold uppercase tracking-wider mb-2">{capability.title}</h4>
                 <p className="text-xs text-foreground/70 leading-relaxed">{capability.description}</p>

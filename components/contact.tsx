@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { Button } from "@/components/ui/button"
+import { CornerBrackets } from "@/components/ui/corner-brackets"
 import { Mail, Github } from "lucide-react"
 
 export function Contact() {
@@ -55,15 +56,11 @@ export function Contact() {
 
           {/* Right: Contact Form */}
           <div className="relative bg-card border-2 border-border p-6">
-            {/* Corner brackets */}
-            <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-primary" />
-            <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-primary" />
-            <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-primary" />
-            <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-primary" />
+            <CornerBrackets />
             
             {/* Form header */}
             <div className="border-b border-border pb-3 mb-4">
-              <span className="font-mono text-xs uppercase tracking-wider text-primary">// MESSAGE_INPUT</span>
+              <span className="font-mono text-xs uppercase tracking-wider text-primary">{"// MESSAGE_INPUT"}</span>
             </div>
             
             <form onSubmit={handleSubmit} className="space-y-4">

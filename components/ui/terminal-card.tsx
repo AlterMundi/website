@@ -1,5 +1,6 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
+import { CornerBrackets } from "@/components/ui/corner-brackets"
 
 interface TerminalCardProps extends React.HTMLAttributes<HTMLDivElement> {
   header?: string
@@ -20,11 +21,7 @@ const TerminalCard = React.forwardRef<HTMLDivElement, TerminalCardProps>(
         )}
         {...props}
       >
-        {/* Corner brackets */}
-        <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-primary" />
-        <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-primary" />
-        <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-primary" />
-        <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-primary" />
+        <CornerBrackets />
 
         {/* Header bar */}
         {header && (

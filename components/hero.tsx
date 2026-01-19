@@ -1,17 +1,9 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { NetworkMesh } from "@/components/network-mesh"
 import { TerminalCard } from "@/components/ui/terminal-card"
+import { ScrollLink } from "@/components/ui/scroll-link"
 
 export function Hero() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <section id="hero" className="container mx-auto px-4 lg:px-8 pt-8 pb-16 lg:pt-10 lg:pb-20 scroll-mt-16">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -35,14 +27,11 @@ export function Hero() {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Button
-              onClick={() => scrollToSection("projects")}
-              size="lg"
-            >
-              Explore projects
+            <Button asChild size="lg">
+              <ScrollLink targetId="projects">Explore projects</ScrollLink>
             </Button>
-            <Button onClick={() => scrollToSection("contact")} variant="outline" size="lg">
-              Work with us
+            <Button asChild variant="outline" size="lg">
+              <ScrollLink targetId="contact">Work with us</ScrollLink>
             </Button>
           </div>
 

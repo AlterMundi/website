@@ -1,15 +1,9 @@
-"use client"
-
 import { AlterMundiLogo } from "@/components/altermundi-logo"
+import { ScrollLink } from "@/components/ui/scroll-link"
+
+const currentYear = new Date().getFullYear()
 
 export function Footer() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <footer className="border-t-2 border-border bg-card">
       <div className="container mx-auto px-4 lg:px-8 py-12">
@@ -28,34 +22,34 @@ export function Footer() {
           {/* Navigation */}
           <div className="space-y-4">
             <h3 className="font-mono text-sm font-bold uppercase tracking-wider text-primary">
-              // Navigation
+              {"// Navigation"}
             </h3>
             <nav className="flex flex-col gap-2">
-              <button
-                onClick={() => scrollToSection("about")}
+              <ScrollLink
+                targetId="about"
                 className="text-sm font-mono text-foreground/70 hover:text-primary transition-colors text-left"
               >
                 &gt; About_Us
-              </button>
-              <button
-                onClick={() => scrollToSection("projects")}
+              </ScrollLink>
+              <ScrollLink
+                targetId="projects"
                 className="text-sm font-mono text-foreground/70 hover:text-primary transition-colors text-left"
               >
                 &gt; Projects
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
+              </ScrollLink>
+              <ScrollLink
+                targetId="contact"
                 className="text-sm font-mono text-foreground/70 hover:text-primary transition-colors text-left"
               >
                 &gt; Contact
-              </button>
+              </ScrollLink>
             </nav>
           </div>
 
           {/* Connect */}
           <div className="space-y-4">
             <h3 className="font-mono text-sm font-bold uppercase tracking-wider text-primary">
-              // Connect
+              {"// Connect"}
             </h3>
             <div className="flex flex-col gap-2">
               <a
@@ -78,7 +72,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 border-t-2 border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-foreground/60 font-mono">© {new Date().getFullYear()} AlterMundi. All rights reserved.</p>
+          <p className="text-xs text-foreground/60 font-mono">© {currentYear} AlterMundi. All rights reserved.</p>
           <p className="text-xs text-primary font-mono crt-glow">[ Built with open tools &amp; open hearts ]</p>
         </div>
       </div>

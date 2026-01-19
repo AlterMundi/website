@@ -1,3 +1,5 @@
+import { CornerBrackets } from "@/components/ui/corner-brackets"
+
 export function About() {
   const principles = [
     {
@@ -55,11 +57,7 @@ export function About() {
               key={principle.label}
               className="relative bg-card border-2 border-border p-6 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(13,81,100,0.15)]"
             >
-              {/* Corner brackets */}
-              <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-primary" />
-              <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-primary" />
-              <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-primary" />
-              <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-primary" />
+              <CornerBrackets />
               
               <div className="flex items-start gap-4">
                 <span className="font-mono text-sm text-primary crt-glow mt-0.5">[{principle.label}]</span>
