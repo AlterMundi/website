@@ -26,11 +26,10 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <ScrollLink
             targetId="hero"
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity group"
+            className="flex items-center hover:opacity-80 transition-opacity group"
             aria-label="AlterMundi Home"
           >
-            <AlterMundiLogo className="h-8 w-8" />
-            <span className="font-mono font-bold text-lg tracking-tight group-hover:text-primary transition-colors">ALTERMUNDI</span>
+            <AlterMundiLogo className="h-12 w-auto" />
           </ScrollLink>
 
           <div className="hidden md:flex items-center gap-6">

@@ -10,9 +10,8 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <AlterMundiLogo className="h-8 w-8" />
-              <span className="font-mono font-bold text-lg">ALTERMUNDI</span>
+            <div className="flex items-center">
+              <AlterMundiLogo className="h-12 w-auto" />
             </div>
             <p className="text-sm text-foreground/70 leading-relaxed">
               Building community networks and open technology solutions for digital inclusion.
