@@ -4,12 +4,11 @@ export function AlterMundiLogo({ className }: { className?: string }) {
   return (
     <div className="relative">
       <Image
-        src="/Logo-alter-nuevo-blanco.png"
+        src="/Logo-alter-nuevo-negro.png"
         alt="AlterMundi Logo"
         width={200}
         height={50}
         className={className}
-        style={{ mixBlendMode: 'screen' }}
         priority
       />
     </div>

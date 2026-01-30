@@ -1,16 +1,17 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Space_Mono, Inter } from "next/font/google"
+import { Source_Code_Pro, Montserrat } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const spaceMono = Space_Mono({
-  weight: ["400", "700"],
+const sourceCodePro = Source_Code_Pro({
+  weight: ["300", "400"],
   subsets: ["latin"],
   variable: "--font-mono",
 })
 
-const inter = Inter({
+const montserrat = Montserrat({
+  weight: ["400", "800"],
   subsets: ["latin"],
   variable: "--font-sans",
 })
@@ -45,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${spaceMono.variable} font-sans antialiased`}>
+      <body className={`${montserrat.variable} ${sourceCodePro.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

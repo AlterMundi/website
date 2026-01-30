@@ -51,7 +51,7 @@ export function Projects() {
           {PROJECTS.map((project) => (
             <div
               key={project.name}
-              className="relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(13,81,100,0.15)] group flex flex-col"
+              className="relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(7,68,52,0.15)] group flex flex-col"
             >
               <CornerBrackets />
 

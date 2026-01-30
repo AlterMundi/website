@@ -9,7 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 hover:shadow-[0_0_16px_rgba(13,81,100,0.4)]",
+        default: "bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 hover:shadow-[0_0_16px_rgba(7,68,52,0.4)]",
         destructive:
           "bg-destructive text-white border-2 border-destructive hover:bg-destructive/90 focus-visible:ring-destructive/20",
         outline:
@@ -20,7 +20,7 @@ const buttonVariants = cva(
           "hover:bg-card hover:text-primary",
         link: "text-primary underline-offset-4 hover:underline",
         terminal:
-          "bg-transparent border-2 border-primary text-primary hover:bg-primary/10 hover:shadow-[0_0_16px_rgba(13,81,100,0.3)] relative before:content-['['] after:content-[']'] before:absolute after:absolute before:left-2 after:right-2 px-6",
+          "bg-transparent border-2 border-primary text-primary hover:bg-primary/10 hover:shadow-[0_0_16px_rgba(7,68,52,0.3)] relative before:content-['['] after:content-[']'] before:absolute after:absolute before:left-2 after:right-2 px-6",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

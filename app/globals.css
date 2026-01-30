@@ -4,42 +4,42 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* AlterMundi Dark Terminal Theme */
-  --background: #1a1a1a;
-  --surface: #242424;
-  --foreground: #f2f3f6;
-  --muted: #c0c2ca;
-  --primary: #0d5164;
-  --primary-foreground: #f2f3f6;
-  --secondary: #467e33;
-  --secondary-foreground: #f2f3f6;
-  --border: #333333;
+  /* AlterMundi Light Theme (Brandbook) */
+  --background: #fff6e7;
+  --surface: #f7f9ce;
+  --foreground: #074434;
+  --muted: #abc685;
+  --primary: #074434;
+  --primary-foreground: #fff6e7;
+  --secondary: #abc685;
+  --secondary-foreground: #074434;
+  --border: #abc685;
   --radius: 0.125rem;
 
   /* Keep existing tokens for compatibility */
-  --card: #1e1e1e;
-  --card-foreground: #f2f3f6;
-  --popover: #1e1e1e;
-  --popover-foreground: #f2f3f6;
-  --accent: #0d5164;
-  --accent-foreground: #f2f3f6;
+  --card: #f7f9ce;
+  --card-foreground: #074434;
+  --popover: #fff6e7;
+  --popover-foreground: #074434;
+  --accent: #e8ff99;
+  --accent-foreground: #074434;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: #f2f3f6;
-  --input: #333333;
-  --ring: #0d5164;
+  --destructive-foreground: #fff6e7;
+  --input: #abc685;
+  --ring: #074434;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: #1e1e1e;
-  --sidebar-foreground: #f2f3f6;
-  --sidebar-primary: #0d5164;
-  --sidebar-primary-foreground: #f2f3f6;
-  --sidebar-accent: #242424;
-  --sidebar-accent-foreground: #f2f3f6;
-  --sidebar-border: #333333;
-  --sidebar-ring: #0d5164;
+  --sidebar: #fff6e7;
+  --sidebar-foreground: #074434;
+  --sidebar-primary: #074434;
+  --sidebar-primary-foreground: #fff6e7;
+  --sidebar-accent: #f7f9ce;
+  --sidebar-accent-foreground: #074434;
+  --sidebar-border: #abc685;
+  --sidebar-ring: #074434;
 }
 
 .dark {
@@ -78,9 +78,8 @@
 }
 
 @theme inline {
-  --font-sans: "Inter", "Geist", "Geist Fallback", sans-serif;
-  --font-mono: "Space Mono", "Geist Mono", "Geist Mono Fallback", monospace;
-  --font-serif: "Times New Roman", Times, serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-mono: "Source Code Pro", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -130,8 +129,8 @@
 
 @layer utilities {
   .grid-background {
-    background-image: linear-gradient(to right, rgba(13, 81, 100, 0.08) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(13, 81, 100, 0.08) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgba(7, 68, 52, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(7, 68, 52, 0.08) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
@@ -158,8 +157,8 @@
     inset: 0;
     background: repeating-linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.15) 1px,
+      rgba(7, 68, 52, 0.03),
+      rgba(7, 68, 52, 0.03) 1px,
       transparent 1px,
       transparent 2px
     );
@@ -167,8 +166,8 @@
   }
 
   .crt-glow {
-    text-shadow: 0 0 8px rgba(13, 81, 100, 0.5),
-                 0 0 16px rgba(13, 81, 100, 0.3);
+    text-shadow: 0 0 8px rgba(7, 68, 52, 0.3),
+                 0 0 16px rgba(7, 68, 52, 0.15);
   }
 
   .terminal-border {

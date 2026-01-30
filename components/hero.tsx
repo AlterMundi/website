@@ -17,7 +17,7 @@ export function Hero() {
             </div>
 
             <h1 className="font-mono text-4xl lg:text-6xl font-bold leading-tight tracking-tight text-balance">
-              Engineering Open Tools for the <span className="font-serif italic text-5xl lg:text-7xl">Real World</span>
+              Engineering Open Tools for the <span className="font-sans font-extrabold text-5xl lg:text-7xl">Real World</span>
             </h1>
 
             <p className="text-lg text-foreground/80 leading-relaxed max-w-xl">

@@ -73,7 +73,7 @@ export function Contact() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-3 py-2 bg-background border-2 border-border text-sm font-mono focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(13,81,100,0.3)] transition-all"
+                  className="w-full px-3 py-2 bg-background border-2 border-border text-sm font-mono focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(7,68,52,0.3)] transition-all"
                   placeholder="Your name"
                 />
               </div>
@@ -87,7 +87,7 @@ export function Contact() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-3 py-2 bg-background border-2 border-border text-sm font-mono focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(13,81,100,0.3)] transition-all"
+                  className="w-full px-3 py-2 bg-background border-2 border-border text-sm font-mono focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(7,68,52,0.3)] transition-all"
                   placeholder="your@email.com"
                 />
               </div>
@@ -101,7 +101,7 @@ export function Contact() {
                   name="message"
                   required
                   rows={5}
-                  className="w-full px-3 py-2 bg-background border-2 border-border text-sm font-mono focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(13,81,100,0.3)] transition-all resize-none"
+                  className="w-full px-3 py-2 bg-background border-2 border-border text-sm font-mono focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(7,68,52,0.3)] transition-all resize-none"
                   placeholder="Tell us about your project or inquiry..."
                 />
               </div>

@@ -55,7 +55,7 @@ export function About() {
           {principles.map((principle) => (
             <div
               key={principle.label}
-              className="relative bg-card border-2 border-border p-6 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(13,81,100,0.15)]"
+              className="relative bg-card border-2 border-border p-6 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(7,68,52,0.15)]"
             >
               <CornerBrackets />
               
