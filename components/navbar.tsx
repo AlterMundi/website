@@ -29,25 +29,25 @@ export function Navbar() {
             className="flex items-center hover:opacity-80 transition-opacity group"
             aria-label="AlterMundi Home"
           >
-            <AlterMundiLogo className="h-12 w-auto" />
+            <AlterMundiLogo className="h-14 w-auto" />
           </ScrollLink>
 
           <div className="hidden md:flex items-center gap-6">
             <ScrollLink
               targetId="about"
-              className="text-sm font-mono font-medium uppercase tracking-wider hover:text-primary hover:crt-glow transition-all px-2 py-1 border-2 border-transparent hover:border-primary/30"
+              className="text-base font-mono font-medium uppercase tracking-wider hover:text-primary hover:crt-glow transition-all px-2 py-1 border-2 border-transparent hover:border-primary/30"
             >
               About
             </ScrollLink>
             <ScrollLink
               targetId="projects"
-              className="text-sm font-mono font-medium uppercase tracking-wider hover:text-primary hover:crt-glow transition-all px-2 py-1 border-2 border-transparent hover:border-primary/30"
+              className="text-base font-mono font-medium uppercase tracking-wider hover:text-primary hover:crt-glow transition-all px-2 py-1 border-2 border-transparent hover:border-primary/30"
             >
               Projects
             </ScrollLink>
             <ScrollLink
               targetId="contact"
-              className="text-sm font-mono font-medium uppercase tracking-wider hover:text-primary hover:crt-glow transition-all px-2 py-1 border-2 border-transparent hover:border-primary/30"
+              className="text-base font-mono font-medium uppercase tracking-wider hover:text-primary hover:crt-glow transition-all px-2 py-1 border-2 border-transparent hover:border-primary/30"
             >
               Contact
             </ScrollLink>
