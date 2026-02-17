@@ -1,3 +1,5 @@
+import { CornerBrackets } from "@/components/ui/corner-brackets"
+
 export function HowWeWork() {
   const steps = [
     {
@@ -47,7 +49,7 @@ export function HowWeWork() {
         {/* Process Timeline */}
         <div className="space-y-8">
           <div className="space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-muted">How We Work</span>
+            <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; WORKFLOW</span>
             <h2 className="font-mono text-3xl lg:text-4xl font-bold leading-tight">Our Process</h2>
           </div>
 
@@ -56,12 +58,14 @@ export function HowWeWork() {
               <div key={step.number} className="relative">
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full border-2 border-primary flex items-center justify-center">
-                      <span className="font-mono text-xs font-bold">{step.number}</span>
+                    <div className="w-10 h-10 border-2 border-primary flex items-center justify-center bg-primary/10">
+                      <span className="font-mono text-sm font-bold text-primary crt-glow">{step.number}</span>
                     </div>
-                    {index < steps.length - 1 && <div className="hidden lg:block flex-1 h-px bg-border" />}
+                    {index < steps.length - 1 && (
+                      <div className="hidden lg:block flex-1 h-px bg-gradient-to-r from-primary/50 to-border" />
+                    )}
                   </div>
-                  <h3 className="font-mono text-lg font-bold">{step.title}</h3>
+                  <h3 className="font-mono text-lg font-bold uppercase tracking-wider">{step.title}</h3>
                   <p className="text-sm text-foreground/70 leading-relaxed">{step.description}</p>
                 </div>
               </div>
@@ -71,14 +75,18 @@ export function HowWeWork() {
 
         {/* Capabilities */}
         <div className="space-y-6 pt-8">
-          <h3 className="font-mono text-xl font-bold">Capabilities</h3>
+          <h3 className="font-mono text-xl font-bold uppercase tracking-wider">
+            <span className="text-primary">{"//"}</span> Capabilities
+          </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {capabilities.map((capability) => (
               <div
                 key={capability.title}
-                className="bg-card border border-border rounded p-4 hover:border-primary/50 transition-colors"
+                className="relative bg-card border-2 border-border p-4 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(13,81,100,0.15)]"
               >
-                <h4 className="font-mono text-sm font-bold mb-2">{capability.title}</h4>
+                <CornerBrackets size="sm" />
+                
+                <h4 className="font-mono text-sm font-bold uppercase tracking-wider mb-2">{capability.title}</h4>
                 <p className="text-xs text-foreground/70 leading-relaxed">{capability.description}</p>
               </div>
             ))}

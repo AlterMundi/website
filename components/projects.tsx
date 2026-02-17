@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { CornerBrackets } from "@/components/ui/corner-brackets"
 import { ExternalLink, Github } from "lucide-react"
 
 const PROJECTS = [
@@ -39,7 +40,7 @@ export function Projects() {
     >
       <div className="space-y-12">
         <div className="space-y-4">
-          <span className="text-xs font-mono uppercase tracking-wider text-muted">Featured Work</span>
+          <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; FEATURED_WORK</span>
           <h2 className="font-mono text-3xl lg:text-4xl font-bold leading-tight">Our Projects</h2>
           <p className="text-lg text-foreground/80 leading-relaxed max-w-2xl">
             Open-source hardware and software projects built for resilient infrastructure and real-world deployment.
@@ -50,9 +51,11 @@ export function Projects() {
           {PROJECTS.map((project) => (
             <div
               key={project.name}
-              className="bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all hover:shadow-lg group"
+              className="relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(7,68,52,0.15)] group flex flex-col"
             >
-              <div className="p-6 space-y-4">
+              <CornerBrackets />
+
+              <div className="p-6 flex flex-col flex-1">
                 {/* Header */}
                 <div className="space-y-3">
                   <div className="flex items-start justify-between gap-2">
@@ -60,10 +63,10 @@ export function Projects() {
                       {project.name}
                     </h3>
                     <span
-                      className={`inline-flex items-center px-2 py-1 rounded text-xs font-mono shrink-0 ${
+                      className={`inline-flex items-center px-2 py-1 text-xs font-mono uppercase tracking-wider shrink-0 ${
                         project.status === "Flagship"
-                          ? "bg-primary/10 text-primary border border-primary/30"
-                          : "bg-secondary/10 text-secondary border border-secondary/20"
+                          ? "bg-primary/10 text-primary border-2 border-primary/30"
+                          : "bg-secondary/10 text-secondary border-2 border-secondary/30"
                       }`}
                     >
                       {project.status}
@@ -73,26 +76,29 @@ export function Projects() {
                 </div>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-4">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="text-xs font-mono px-2 py-1 bg-muted/20 rounded border border-muted/40">
+                    <span key={tag} className="text-xs font-mono uppercase tracking-wider px-2 py-1 bg-surface border-2 border-border">
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                {/* Actions */}
-                <div className="flex gap-2 pt-2">
-                  <Button asChild size="sm" className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
+                {/* Spacer to push buttons to bottom */}
+                <div className="flex-1 min-h-4" />
+
+                {/* Actions - always at bottom */}
+                <div className="flex gap-2 pt-4 mt-auto">
+                  <Button asChild size="sm" className="flex-1">
                     <a href={project.url} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-4 h-4" />
-                      Visit Website
+                      Website
                     </a>
                   </Button>
                   <Button asChild variant="outline" size="sm">
                     <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4" />
-                      Repository
+                      Repo
                     </a>
                   </Button>
                 </div>

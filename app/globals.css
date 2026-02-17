@@ -4,42 +4,42 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* AlterMundi Light Theme */
-  --background: #f2f3f6;
-  --surface: #e0e0e0;
-  --foreground: #333333;
-  --muted: #c0c2ca;
-  --primary: #0d5164;
-  --primary-foreground: #ffffff;
-  --secondary: #467e33;
-  --secondary-foreground: #ffffff;
-  --border: #c0c2ca;
-  --radius: 0.25rem;
+  /* AlterMundi Light Theme (Brandbook) */
+  --background: #fff6e7;
+  --surface: #f7f9ce;
+  --foreground: #074434;
+  --muted: #abc685;
+  --primary: #074434;
+  --primary-foreground: #fff6e7;
+  --secondary: #abc685;
+  --secondary-foreground: #074434;
+  --border: #abc685;
+  --radius: 0.125rem;
 
   /* Keep existing tokens for compatibility */
-  --card: #ffffff;
-  --card-foreground: #333333;
-  --popover: #ffffff;
-  --popover-foreground: #333333;
-  --accent: #0d5164;
-  --accent-foreground: #ffffff;
+  --card: #f7f9ce;
+  --card-foreground: #074434;
+  --popover: #fff6e7;
+  --popover-foreground: #074434;
+  --accent: #e8ff99;
+  --accent-foreground: #074434;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --input: #c0c2ca;
-  --ring: #0d5164;
+  --destructive-foreground: #fff6e7;
+  --input: #abc685;
+  --ring: #074434;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: #fff6e7;
+  --sidebar-foreground: #074434;
+  --sidebar-primary: #074434;
+  --sidebar-primary-foreground: #fff6e7;
+  --sidebar-accent: #f7f9ce;
+  --sidebar-accent-foreground: #074434;
+  --sidebar-border: #abc685;
+  --sidebar-ring: #074434;
 }
 
 .dark {
@@ -78,9 +78,8 @@
 }
 
 @theme inline {
-  --font-sans: "Inter", "Geist", "Geist Fallback", sans-serif;
-  --font-mono: "Space Mono", "Geist Mono", "Geist Mono Fallback", monospace;
-  --font-serif: "Times New Roman", Times, serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-mono: "Source Code Pro", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -130,8 +129,8 @@
 
 @layer utilities {
   .grid-background {
-    background-image: linear-gradient(to right, rgba(192, 194, 202, 0.15) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(192, 194, 202, 0.15) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgba(7, 68, 52, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(7, 68, 52, 0.08) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
@@ -146,5 +145,56 @@
     opacity: 0.03;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     pointer-events: none;
+  }
+
+  .scanlines {
+    position: relative;
+  }
+
+  .scanlines::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(7, 68, 52, 0.03),
+      rgba(7, 68, 52, 0.03) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+  }
+
+  .crt-glow {
+    text-shadow: 0 0 8px rgba(7, 68, 52, 0.3),
+                 0 0 16px rgba(7, 68, 52, 0.15);
+  }
+
+  .terminal-border {
+    border: 2px solid var(--border);
+    position: relative;
+  }
+
+  .terminal-border::before,
+  .terminal-border::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--primary);
+  }
+
+  .terminal-border::before {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .terminal-border::after {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
   }
 }
