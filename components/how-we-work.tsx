@@ -1,96 +1,62 @@
 import { CornerBrackets } from "@/components/ui/corner-brackets"
 
 export function HowWeWork() {
-  const steps = [
+  const areas = [
     {
-      number: "01",
-      title: "Research & Listen",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+      title: "Connectivity",
+      description:
+        "We promote the co-creation of internet infrastructure - open hardware, mesh networking software, and public policy advocacy.",
     },
     {
-      number: "02",
-      title: "Co-design",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+      title: "Collaborative Economy",
+      description:
+        "We provide technical and methodological support for community-driven economic projects, improving local management, resources, and growth.",
     },
     {
-      number: "03",
-      title: "Build & Test",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+      title: "Renewable Energy",
+      description:
+        "We develop accessible and sustainable technologies for responsible energy use, designed for long-term viability in resource-limited contexts.",
     },
     {
-      number: "04",
-      title: "Deploy & Maintain",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
-    },
-  ]
-
-  const capabilities = [
-    {
-      title: "Hardware & Firmware",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "Artificial Intelligence",
+      description:
+        "We drive access to and decentralization of AI, building practical open tools that strengthen technological autonomy.",
     },
     {
-      title: "Software Development",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "Education",
+      description:
+        "We foster learning that unlocks creative and technological potential, cultivating individual and collective skills for a changing world.",
     },
     {
-      title: "Systems Integration",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      title: "Technical Support",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "IoT & Monitoring",
+      description:
+        "We build and simplify monitoring and control systems that strengthen local production and safety projects.",
     },
   ]
 
   return (
     <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20 border-t border-border scroll-mt-16">
-      <div className="space-y-12">
-        {/* Process Timeline */}
-        <div className="space-y-8">
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; WORKFLOW</span>
-            <h2 className="font-mono text-3xl lg:text-4xl font-bold leading-tight">Our Process</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {steps.map((step, index) => (
-              <div key={step.number} className="relative">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 border-2 border-primary flex items-center justify-center bg-primary/10">
-                      <span className="font-mono text-sm font-bold text-primary crt-glow">{step.number}</span>
-                    </div>
-                    {index < steps.length - 1 && (
-                      <div className="hidden lg:block flex-1 h-px bg-gradient-to-r from-primary/50 to-border" />
-                    )}
-                  </div>
-                  <h3 className="font-mono text-lg font-bold uppercase tracking-wider">{step.title}</h3>
-                  <p className="text-sm text-foreground/70 leading-relaxed">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      <div className="space-y-8">
+        <div className="space-y-4">
+          <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; AREAS_OF_WORK</span>
+          <h2 className="font-mono text-3xl lg:text-4xl font-bold leading-tight">What We Work On</h2>
+          <p className="text-lg text-foreground/80 leading-relaxed max-w-3xl">
+            We work across six interconnected areas - all driven by the same approach: listen to communities,
+            co-design solutions, build open tools, and support long-term autonomy.
+          </p>
         </div>
 
-        {/* Capabilities */}
-        <div className="space-y-6 pt-8">
-          <h3 className="font-mono text-xl font-bold uppercase tracking-wider">
-            <span className="text-primary">{"//"}</span> Capabilities
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {capabilities.map((capability) => (
-              <div
-                key={capability.title}
-                className="relative bg-card border-2 border-border p-4 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(13,81,100,0.15)]"
-              >
-                <CornerBrackets size="sm" />
-                
-                <h4 className="font-mono text-sm font-bold uppercase tracking-wider mb-2">{capability.title}</h4>
-                <p className="text-xs text-foreground/70 leading-relaxed">{capability.description}</p>
-              </div>
-            ))}
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {areas.map((area) => (
+            <div
+              key={area.title}
+              className="relative bg-card border-2 border-border p-5 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(13,81,100,0.15)]"
+            >
+              <CornerBrackets size="sm" />
+              <h3 className="font-mono text-sm font-bold uppercase tracking-wider mb-2">{area.title}</h3>
+              <p className="text-sm text-foreground/70 leading-relaxed">{area.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

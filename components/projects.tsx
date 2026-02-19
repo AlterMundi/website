@@ -6,7 +6,7 @@ const PROJECTS = [
   {
     name: "LibreRouter / LibreMesh",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Network infrastructure for community networks.",
+      "An open-hardware WiFi router and companion mesh networking firmware, purpose-built for community networks. Designed to be affordable, durable, and deployable with low technical barriers, already powering initiatives like QuintanaLibre in rural Cordoba.",
     tags: ["Networking", "Hardware", "Firmware"],
     status: "Flagship",
     url: "https://librerouter.org",
@@ -15,19 +15,19 @@ const PROJECTS = [
   {
     name: "LibreIncu",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Community incubator platform.",
-    tags: ["Platform", "Community", "Education"],
+      "An open-source poultry incubator system for family farming, developed with CTO. It integrates temperature and humidity monitoring and control, local WiFi access through a mobile app, and remote dashboard data for practical field use.",
+    tags: ["IoT", "Agriculture", "Hardware"],
     status: "Active",
-    url: "https://example.com/libreincu",
+    url: "https://github.com/AlterMundi-MonitoreoyControl/Proyecto-Incubadora",
     repoUrl: "https://github.com/AlterMundi-MonitoreoyControl/Proyecto-Incubadora",
   },
   {
     name: "SAI (Sistema de Alerta de Incendios)",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fire alert system for communities.",
-    tags: ["IoT", "Safety", "Monitoring"],
+      "A distributed early wildfire detection system that combines computer vision, edge devices, and automated alerts. Built as robust, scalable infrastructure for communities, municipalities, and private landowners protecting forests and agricultural land.",
+    tags: ["Computer Vision", "IoT", "Safety"],
     status: "Active",
-    url: "https://sai.altermundi.net",
+    url: "https://sainet.info/",
     repoUrl: "https://github.com/AlterMundi/sai-cam",
   },
 ]
@@ -43,7 +43,8 @@ export function Projects() {
           <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; FEATURED_WORK</span>
           <h2 className="font-mono text-3xl lg:text-4xl font-bold leading-tight">Our Projects</h2>
           <p className="text-lg text-foreground/80 leading-relaxed max-w-2xl">
-            Open-source hardware and software projects built for resilient infrastructure and real-world deployment.
+            Open-source tools built for real-world deployment - from community network infrastructure to fire detection
+            systems.
           </p>
         </div>
 

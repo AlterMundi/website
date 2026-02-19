@@ -11,10 +11,10 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <AlterMundiLogo className="h-12 w-auto" />
+              <AlterMundiLogo className="h-14 w-auto mt-1" />
             </div>
             <p className="text-sm text-foreground/70 leading-relaxed">
-              Building community networks and open technology solutions for digital inclusion.
+              Building open technology solutions for resilient infrastructure, digital inclusion, and real-world impact.
             </p>
           </div>
 

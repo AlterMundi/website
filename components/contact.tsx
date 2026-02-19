@@ -28,8 +28,8 @@ export function Contact() {
               <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; CONTACT</span>
               <h2 className="font-mono text-3xl lg:text-4xl font-bold leading-tight">Work with Us</h2>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interested in collaborating or learning more
-                about our work?
+                We value collaboration as the foundation of everything we do. Whether you want to fund a project,
+                contribute code, test our tools, or start a community network - every action counts.
               </p>
             </div>
 

@@ -23,13 +23,13 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <ScrollLink
             targetId="hero"
             className="flex items-center hover:opacity-80 transition-opacity group"
             aria-label="AlterMundi Home"
           >
-            <AlterMundiLogo className="h-14 w-auto" />
+            <AlterMundiLogo className="h-16 w-auto mt-1" />
           </ScrollLink>
 
           <div className="hidden md:flex items-center gap-6">

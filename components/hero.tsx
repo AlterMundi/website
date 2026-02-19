@@ -21,8 +21,8 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-foreground/80 leading-relaxed max-w-xl">
-              We design and build open-source hardware and software for resilient infrastructure — networks, safety
-              systems, and field-ready tools.
+              We design and build open-source hardware and software for resilient infrastructure — from community
+              networks and fire detection to agricultural tools and beyond.
             </p>
           </div>
 
