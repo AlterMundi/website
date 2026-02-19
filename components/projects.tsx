@@ -1,8 +1,19 @@
 import { Button } from "@/components/ui/button"
 import { CornerBrackets } from "@/components/ui/corner-brackets"
+import { ProjectAnimation } from "@/components/project-animation"
 import { ExternalLink, Github } from "lucide-react"
 
-const PROJECTS = [
+type Project = {
+  name: string
+  shortDescription: string
+  tags: string[]
+  status: string
+  url: string
+  repoUrl: string
+  modelUrl?: string
+}
+
+const PROJECTS: Project[] = [
   {
     name: "LibreRouter / LibreMesh",
     shortDescription:
@@ -29,6 +40,7 @@ const PROJECTS = [
     status: "Active",
     url: "https://sainet.info/",
     repoUrl: "https://github.com/AlterMundi/sai-cam",
+    modelUrl: "/models/sai-prueba-pagina.stl",
   },
 ]
 
@@ -48,15 +60,16 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 h-[80vh]">
           {PROJECTS.map((project) => (
             <div
               key={project.name}
               className="relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(7,68,52,0.15)] group flex flex-col"
             >
               <CornerBrackets />
+              {project.modelUrl && <ProjectAnimation modelUrl={project.modelUrl} />}
 
-              <div className="p-6 flex flex-col flex-1">
+              <div className="bg-card p-6 flex flex-col flex-1">
                 {/* Header */}
                 <div className="space-y-3">
                   <div className="flex items-start justify-between gap-2">
