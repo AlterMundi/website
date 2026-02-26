@@ -1,12 +1,14 @@
 import { AlterMundiLogo } from "@/components/altermundi-logo"
 import { ScrollLink } from "@/components/ui/scroll-link"
+import { FooterDecorations } from "@/components/section-decorations"
 
 const currentYear = new Date().getFullYear()
 
 export function Footer() {
   return (
-    <footer className="border-t-2 border-border bg-card">
-      <div className="container mx-auto px-4 lg:px-8 py-12">
+    <footer className="relative border-t-2 border-border bg-card">
+      <FooterDecorations />
+      <div className="relative z-10 container mx-auto px-4 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">

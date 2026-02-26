@@ -1,4 +1,5 @@
 import { CornerBrackets } from "@/components/ui/corner-brackets"
+import { HowWeWorkDecorations } from "@/components/section-decorations"
 
 export function HowWeWork() {
   const areas = [
@@ -35,8 +36,9 @@ export function HowWeWork() {
   ]
 
   return (
-    <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20 border-t border-border scroll-mt-16">
-      <div className="space-y-8">
+    <section className="relative container mx-auto px-4 lg:px-8 py-12 lg:py-20 border-t border-border scroll-mt-16">
+      <HowWeWorkDecorations />
+      <div className="relative z-10 space-y-8">
         <div className="space-y-4">
           <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; AREAS_OF_WORK</span>
           <h2 className="font-mono text-3xl lg:text-4xl font-bold leading-tight">What We Work On</h2>

@@ -14,7 +14,7 @@ const TerminalCard = React.forwardRef<HTMLDivElement, TerminalCardProps>(
       <div
         ref={ref}
         className={cn(
-          "relative bg-card border border-border overflow-hidden",
+          "relative bg-card border border-border overflow-hidden flex flex-col",
           variant === "bordered" && "terminal-border",
           variant === "glow" && "border-primary/50 shadow-[0_0_20px_rgba(13,81,100,0.2)]",
           className
@@ -40,7 +40,7 @@ const TerminalCard = React.forwardRef<HTMLDivElement, TerminalCardProps>(
         )}
 
         {/* Content */}
-        <div className="relative z-10">{children}</div>
+        <div className="relative z-10 flex flex-1 min-h-0 flex-col">{children}</div>
 
         {/* Footer bar */}
         {footer && (

@@ -1,5 +1,6 @@
 import { CornerBrackets } from "@/components/ui/corner-brackets"
 import { Button } from "@/components/ui/button"
+import { AboutDecorations } from "@/components/section-decorations"
 
 export function About() {
   const principles = [
@@ -30,8 +31,9 @@ export function About() {
   ]
 
   return (
-    <section id="about" className="container mx-auto px-4 lg:px-8 py-12 lg:py-20 scroll-mt-16">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+    <section id="about" className="relative container mx-auto px-4 lg:px-8 py-12 lg:py-20 scroll-mt-16">
+      <AboutDecorations />
+      <div className="relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-16">
         {/* Left: Introduction */}
         <div className="space-y-6">
           <div className="space-y-2">

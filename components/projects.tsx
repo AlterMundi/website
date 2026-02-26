@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { CornerBrackets } from "@/components/ui/corner-brackets"
-import { ProjectAnimation } from "@/components/project-animation"
+import { ProjectsDecorations } from "@/components/section-decorations"
 import { ExternalLink, Github } from "lucide-react"
 
 type Project = {
@@ -20,7 +20,7 @@ const PROJECTS: Project[] = [
       "An open-hardware WiFi router and companion mesh networking firmware, purpose-built for community networks. Designed to be affordable, durable, and deployable with low technical barriers, already powering initiatives like QuintanaLibre in rural Cordoba.",
     tags: ["Networking", "Hardware", "Firmware"],
     status: "Flagship",
-    url: "https://librerouter.org",
+    url: "https://libremesh.org/",
     repoUrl: "https://github.com/libremesh/librerouter",
   },
   {
@@ -42,15 +42,34 @@ const PROJECTS: Project[] = [
     repoUrl: "https://github.com/AlterMundi/sai-cam",
     modelUrl: "/models/sai-prueba-pagina.stl",
   },
+  {
+    name: "Phideus",
+    shortDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    tags: ["Open Source", "Infrastructure"],
+    status: "Active",
+    url: "https://github.com/altermundi",
+    repoUrl: "https://github.com/altermundi",
+  },
+  {
+    name: "Harmonic Beacon",
+    shortDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    tags: ["Connectivity", "Software"],
+    status: "Active",
+    url: "https://github.com/altermundi",
+    repoUrl: "https://github.com/altermundi",
+  },
 ]
 
 export function Projects() {
   return (
     <section
       id="projects"
-      className="container mx-auto px-4 lg:px-8 py-12 lg:py-20 border-t border-border scroll-mt-16"
+      className="relative min-h-screen flex flex-col container mx-auto px-4 lg:px-8 pt-8 pb-12 lg:pt-10 lg:pb-16 border-t border-border scroll-mt-16"
     >
-      <div className="space-y-12">
+      <ProjectsDecorations />
+      <div className="relative z-10 flex flex-col flex-1 space-y-12">
         <div className="space-y-4">
           <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; FEATURED_WORK</span>
           <h2 className="font-mono text-3xl lg:text-4xl font-bold leading-tight">Our Projects</h2>
@@ -60,16 +79,17 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 h-[80vh]">
-          {PROJECTS.map((project) => (
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-6 auto-rows-fr">
+          {PROJECTS.map((project, index) => (
             <div
               key={project.name}
-              className="relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(7,68,52,0.15)] group flex flex-col"
+              className={`relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(7,68,52,0.15)] group flex flex-col min-w-0 ${
+                index < 3 ? "md:col-span-2" : "md:col-span-2 md:col-start-2 md:[&:last-child]:col-start-4"
+              }`}
             >
               <CornerBrackets />
-              {project.modelUrl && <ProjectAnimation modelUrl={project.modelUrl} />}
 
-              <div className="bg-card p-6 flex flex-col flex-1">
+              <div className="bg-card p-6 flex flex-col flex-1 min-h-0">
                 {/* Header */}
                 <div className="space-y-3">
                   <div className="flex items-start justify-between gap-2">
@@ -98,10 +118,7 @@ export function Projects() {
                   ))}
                 </div>
 
-                {/* Spacer to push buttons to bottom */}
-                <div className="flex-1 min-h-4" />
-
-                {/* Actions - always at bottom */}
+                {/* Actions */}
                 <div className="flex gap-2 pt-4 mt-auto">
                   <Button asChild size="sm" className="flex-1">
                     <a href={project.url} target="_blank" rel="noopener noreferrer">
