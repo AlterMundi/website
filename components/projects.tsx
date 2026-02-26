@@ -21,7 +21,7 @@ const PROJECTS: Project[] = [
     tags: ["Networking", "Hardware", "Firmware"],
     status: "Flagship",
     url: "https://libremesh.org/",
-    repoUrl: "https://github.com/libremesh/librerouter",
+    repoUrl: "https://gitlab.com/librerouter/",
   },
   {
     name: "LibreIncu",
@@ -66,34 +66,34 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative min-h-screen flex flex-col container mx-auto px-4 lg:px-8 pt-8 pb-12 lg:pt-10 lg:pb-16 border-t border-border scroll-mt-16"
+      className="relative min-h-screen flex flex-col container mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 pb-10 sm:pb-12 lg:pb-16 border-t border-border scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20"
     >
       <ProjectsDecorations />
-      <div className="relative z-10 flex flex-col flex-1 space-y-12">
-        <div className="space-y-4">
+      <div className="relative z-10 flex flex-col flex-1 space-y-8 sm:space-y-12">
+        <div className="space-y-3 sm:space-y-4">
           <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; FEATURED_WORK</span>
-          <h2 className="font-mono text-3xl lg:text-4xl font-bold leading-tight">Our Projects</h2>
-          <p className="text-lg text-foreground/80 leading-relaxed max-w-2xl">
+          <h2 className="font-mono text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">Our Projects</h2>
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-2xl">
             Open-source tools built for real-world deployment - from community network infrastructure to fire detection
             systems.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-6 auto-rows-fr">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 auto-rows-fr">
           {PROJECTS.map((project, index) => (
             <div
               key={project.name}
               className={`relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(7,68,52,0.15)] group flex flex-col min-w-0 ${
-                index < 3 ? "md:col-span-2" : "md:col-span-2 md:col-start-2 md:[&:last-child]:col-start-4"
+                index < 3 ? "lg:col-span-2" : "lg:col-span-2 lg:col-start-2 lg:[&:last-child]:col-start-4"
               }`}
             >
               <CornerBrackets />
 
-              <div className="bg-card p-6 flex flex-col flex-1 min-h-0">
+              <div className="bg-card p-4 sm:p-6 flex flex-col flex-1 min-h-0">
                 {/* Header */}
-                <div className="space-y-3">
-                  <div className="flex items-start justify-between gap-2">
-                    <h3 className="font-mono text-lg font-bold leading-tight text-balance group-hover:text-primary transition-colors">
+                <div className="space-y-2 sm:space-y-3">
+                  <div className="flex items-start justify-between gap-2 min-w-0">
+                    <h3 className="font-mono text-base sm:text-lg font-bold leading-tight text-balance group-hover:text-primary transition-colors min-w-0">
                       {project.name}
                     </h3>
                     <span
@@ -106,20 +106,20 @@ export function Projects() {
                       {project.status}
                     </span>
                   </div>
-                  <p className="text-sm text-foreground/70 leading-relaxed text-pretty">{project.shortDescription}</p>
+                  <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed text-pretty">{project.shortDescription}</p>
                 </div>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mt-4">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="text-xs font-mono uppercase tracking-wider px-2 py-1 bg-surface border-2 border-border">
+                    <span key={tag} className="text-[10px] sm:text-xs font-mono uppercase tracking-wider px-1.5 sm:px-2 py-0.5 sm:py-1 bg-surface border-2 border-border">
                       {tag}
                     </span>
                   ))}
                 </div>
 
                 {/* Actions */}
-                <div className="flex gap-2 pt-4 mt-auto">
+                <div className="flex flex-col min-[400px]:flex-row gap-2 pt-3 sm:pt-4 mt-auto">
                   <Button asChild size="sm" className="flex-1">
                     <a href={project.url} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-4 h-4" />

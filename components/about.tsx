@@ -31,14 +31,14 @@ export function About() {
   ]
 
   return (
-    <section id="about" className="relative container mx-auto px-4 lg:px-8 py-12 lg:py-20 scroll-mt-16">
+    <section id="about" className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 pb-10 sm:pb-12 lg:pb-20 scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20">
       <AboutDecorations />
-      <div className="relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-16">
+      <div className="relative z-10 grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16">
         {/* Left: Introduction */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           <div className="space-y-2">
             <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; ABOUT_US</span>
-            <h2 className="font-mono text-3xl lg:text-4xl font-bold leading-tight">What Is AlterMundi</h2>
+            <h2 className="font-mono text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">What Is AlterMundi</h2>
           </div>
 
           <div className="space-y-4 text-foreground/80 leading-relaxed">
@@ -67,19 +67,19 @@ export function About() {
         </div>
 
         {/* Right: Principles Cards */}
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {principles.map((principle) => (
             <div
               key={principle.label}
-              className="relative bg-card border-2 border-border p-6 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(7,68,52,0.15)]"
+              className="relative bg-card border-2 border-border p-4 sm:p-6 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(7,68,52,0.15)]"
             >
               <CornerBrackets />
               
-              <div className="flex items-start gap-4">
-                <span className="font-mono text-sm text-primary crt-glow mt-0.5">[{principle.label}]</span>
-                <div className="flex-1 space-y-2">
-                  <h3 className="font-mono text-lg font-bold uppercase tracking-wider">{principle.title}</h3>
-                  <p className="text-sm text-foreground/70 leading-relaxed">{principle.description}</p>
+              <div className="flex items-start gap-3 sm:gap-4">
+                <span className="font-mono text-xs sm:text-sm text-primary crt-glow mt-0.5 shrink-0">[{principle.label}]</span>
+                <div className="flex-1 min-w-0 space-y-2">
+                  <h3 className="font-mono text-base sm:text-lg font-bold uppercase tracking-wider">{principle.title}</h3>
+                  <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">{principle.description}</p>
                 </div>
               </div>
             </div>

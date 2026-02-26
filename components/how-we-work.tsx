@@ -36,27 +36,27 @@ export function HowWeWork() {
   ]
 
   return (
-    <section className="relative container mx-auto px-4 lg:px-8 py-12 lg:py-20 border-t border-border scroll-mt-16">
+    <section className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-20 border-t border-border scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20">
       <HowWeWorkDecorations />
-      <div className="relative z-10 space-y-8">
-        <div className="space-y-4">
+      <div className="relative z-10 space-y-6 sm:space-y-8">
+        <div className="space-y-3 sm:space-y-4">
           <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; AREAS_OF_WORK</span>
-          <h2 className="font-mono text-3xl lg:text-4xl font-bold leading-tight">What We Work On</h2>
-          <p className="text-lg text-foreground/80 leading-relaxed max-w-3xl">
+          <h2 className="font-mono text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">What We Work On</h2>
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-3xl">
             We work across six interconnected areas - all driven by the same approach: listen to communities,
             co-design solutions, build open tools, and support long-term autonomy.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {areas.map((area) => (
             <div
               key={area.title}
-              className="relative bg-card border-2 border-border p-5 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(13,81,100,0.15)]"
+              className="relative bg-card border-2 border-border p-4 sm:p-5 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(13,81,100,0.15)]"
             >
               <CornerBrackets size="sm" />
-              <h3 className="font-mono text-sm font-bold uppercase tracking-wider mb-2">{area.title}</h3>
-              <p className="text-sm text-foreground/70 leading-relaxed">{area.description}</p>
+              <h3 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider mb-2">{area.title}</h3>
+              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">{area.description}</p>
             </div>
           ))}
         </div>

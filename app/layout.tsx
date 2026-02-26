@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Source_Code_Pro, Montserrat } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
@@ -26,14 +26,20 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${montserrat.variable} ${sourceCodePro.variable} font-sans antialiased`}>
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
+      <body className={`${montserrat.variable} ${sourceCodePro.variable} font-sans antialiased overflow-x-hidden`}>
         {children}
         <Analytics />
       </body>
