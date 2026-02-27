@@ -40,6 +40,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth overflow-x-hidden">
       <body className={`${montserrat.variable} ${sourceCodePro.variable} font-sans antialiased overflow-x-hidden`}>
+        {/* Ensure animated elements are visible when JS is disabled */}
+        <noscript>
+          <style>{`[class*="animate-[fade-in"],[class*="animate-[slide-in"]{animation:none!important;opacity:1!important}`}</style>
+        </noscript>
         {children}
         <Analytics />
       </body>

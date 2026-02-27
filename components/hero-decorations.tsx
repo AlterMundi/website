@@ -16,7 +16,7 @@ const navy = "#284a65"
 
 export function HeroDecorations() {
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden>
+    <div className="absolute inset-0 pointer-events-none overflow-hidden animate-[fade-in_800ms_ease-out_both] [animation-delay:200ms]" aria-hidden>
       {/* Top-left: network node cluster */}
       <svg
         className="absolute top-8 left-4 lg:top-12 lg:left-8 w-24 h-24 lg:w-32 lg:h-32"

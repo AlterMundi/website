@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { AlterMundiLogo } from "@/components/altermundi-logo"
 import { ScrollLink } from "@/components/ui/scroll-link"
 import { Menu, X } from "lucide-react"
+import { cn } from "@/lib/utils"
+import { useScrollSpy } from "@/hooks/use-scroll-spy"
 
 const navLinks: { id: string; label: string; scrollBlock?: "start" | "center" | "end" }[] = [
   { id: "about", label: "About" },
@@ -15,6 +17,7 @@ const navLinks: { id: string; label: string; scrollBlock?: "start" | "center" | 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { activeId, setActiveId } = useScrollSpy(["about", "projects", "contact"])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,9 +40,10 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-[slide-in-from-top_400ms_ease-out_both]",
         isScrolled ? "bg-background/95 backdrop-blur-sm border-b-2 border-border" : "bg-transparent"
-      }`}
+      )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
@@ -59,7 +63,13 @@ export function Navbar() {
                 key={id}
                 targetId={id}
                 {...(scrollBlock && { scrollBlock })}
-                className="text-sm lg:text-base font-mono font-medium uppercase tracking-wider hover:text-primary hover:crt-glow transition-all px-2 py-1.5 border-2 border-transparent hover:border-primary/30"
+                onClick={() => setActiveId(id)}
+                className={cn(
+                  "text-sm lg:text-base font-mono font-medium uppercase tracking-wider transition-all px-2 py-1.5 border-2 border-transparent",
+                  activeId === id
+                    ? "text-primary crt-glow border-b-primary/80"
+                    : "hover:text-primary hover:crt-glow hover:border-primary/30"
+                )}
               >
                 {label}
               </ScrollLink>
@@ -103,8 +113,13 @@ export function Navbar() {
                 key={id}
                 targetId={id}
                 {...(scrollBlock && { scrollBlock })}
-                onClick={closeMenu}
-                className="text-base font-mono font-medium uppercase tracking-wider hover:text-primary hover:crt-glow transition-all px-4 py-3 border-l-4 border-transparent hover:border-primary hover:bg-primary/5"
+                onClick={() => { setActiveId(id); closeMenu() }}
+                className={cn(
+                  "text-base font-mono font-medium uppercase tracking-wider transition-all px-4 py-3 border-l-4",
+                  activeId === id
+                    ? "border-primary bg-primary/5 text-primary"
+                    : "border-transparent hover:text-primary hover:crt-glow hover:border-primary hover:bg-primary/5"
+                )}
               >
                 {label}
               </ScrollLink>
