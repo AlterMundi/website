@@ -45,8 +45,8 @@ const PROJECTS: Project[] = [
   {
     name: "Phideus",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    tags: ["Open Source", "Infrastructure"],
+      "An open research platform for analyzing harmonic patterns across audio, physiological, and other time-based signals. It combines interpretable descriptors and machine learning to support cross-domain experiments, comparative analysis, and the development of proportion-aware AI.",
+    tags: ["opensource", "research", "ai"],
     status: "Active",
     url: "https://phideus.net",
     repoUrl: "https://github.com/AlterMundi/Phideus",
@@ -54,8 +54,8 @@ const PROJECTS: Project[] = [
   {
     name: "Harmonic Beacon",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-    tags: ["Connectivity", "Software"],
+      "An open acoustic platform for generating sustained harmonic fields in physical spaces. It is designed for research, live experimentation, and wellness-oriented practices around resonance, interference, and embodied sound.",
+    tags: ["acoustics", "wellness", "open hardware"],
     status: "Active",
     url: "https://harmonicbeacon.com",
     repoUrl: "https://github.com/altermundi",
