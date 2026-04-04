@@ -147,15 +147,28 @@
     from { opacity: 0; transform: translateY(-12px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+  }
+
+  @keyframes float-wide {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50%       { transform: translateY(-12px) rotate(2deg); }
+  }
+
+  /* SVG path-drawing animation.
+     Each animated <path> sets --path-len to its length in SVG units and
+     stroke-dasharray to the same value via inline style.
+     stroke-dashoffset goes from full-length → 0, "drawing" the path. */
+  @keyframes draw-path {
+    from { stroke-dashoffset: var(--path-len, 300); }
+    to   { stroke-dashoffset: 0; }
+  }
 }
 
 @layer utilities {
-  .grid-background {
-    background-image: linear-gradient(to right, rgba(7, 68, 52, 0.08) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(7, 68, 52, 0.08) 1px, transparent 1px);
-    background-size: 24px 24px;
-  }
-
   .noise-texture {
     position: relative;
   }
