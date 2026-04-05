@@ -6,27 +6,27 @@ export function About() {
   const principles = [
     {
       label: "01",
-      title: "Open by Default",
+      title: "Open Infrastructure",
       description:
-        "Everything we create - code, hardware designs, and documentation - is released under open licenses so anyone can study, adapt, and redistribute our tools.",
+        "Everything we create — code, hardware, documentation — is released under open licenses. Our tools are designed to be studied, adapted, and redistributed by the communities that use them.",
     },
     {
       label: "02",
-      title: "Community-Centered",
+      title: "Distributed by Design",
       description:
-        "We don't build for people, we build with them. Every project starts from real needs and integrates local knowledge from ideation to long-term maintenance.",
+        "We build systems with no single point of failure. From mesh networks to local AI inference, decentralization is not an add-on — it is the architecture.",
     },
     {
       label: "03",
-      title: "Built to Last",
+      title: "Perception over Accumulation",
       description:
-        "Our solutions are designed for real-world conditions: low-cost, high-performance, field-repairable, and scalable.",
+        "We do not seek to collect more data. We seek to recognize when a signal is valuable, when it changes, when it deserves attention. Infrastructure as a means of perception, not a pipe.",
     },
     {
       label: "04",
-      title: "Empowerment through Technology",
+      title: "Community Sovereignty",
       description:
-        "We strengthen the autonomy of those affected by the digital divide through tools and training that enable active participation instead of dependency.",
+        "Technology built with communities, not for them. Local knowledge shapes every project — from ideation through long-term maintenance — so autonomy outlasts our involvement.",
     },
   ]
 
@@ -43,19 +43,20 @@ export function About() {
 
           <div className="space-y-4 text-foreground/80 leading-relaxed">
             <p>
-              AlterMundi is a nonprofit organization of experienced community network builders and free software
-              advocates based in Argentina. We develop open-source tools - hardware, software, and documentation - that
-              solve real infrastructure problems: from internet connectivity in underserved areas to wildfire detection
-              and agricultural technology.
+              More than ten years ago we wrote a motto: <em>"AlterMundi — the technological leg of that other possible world."</em>{" "}
+              For a long time it was a guide. Today, we can attest to it.
             </p>
             <p>
-              We believe technology should be a vehicle for equity and autonomy, not a privilege. Every tool we create
-              is designed to be deployed, maintained, and adapted by the people and organizations who use it -
-              fostering technological sovereignty from the ground up.
+              Our trajectory began with connectivity — mesh networks, distributed routing, open hardware. AlterMesh, LibreMesh,
+              LibreRouter, 44mesh were not isolated projects: they were different expressions of the same search. We learned to
+              build community networks that operate robustly in any terrain, and in that process we understood infrastructure
+              as something modular, comprehensible, and deployable at any scale.
             </p>
             <p>
-              Since 2022 we have expanded beyond connectivity into renewable energy, collaborative economy, IoT, AI, and
-              education - always with the same principle: open, accessible, and built for the real world.
+              That foundation became the base for something larger. Today we think of our infrastructure as a{" "}
+              <strong>distributed nervous system</strong> — a conjunction of perceptors that capture signals from the environment,
+              integrators that organize and contextualize them locally, and intelligences — human or artificial — that detect
+              patterns and act when something of importance emerges.
             </p>
           </div>
 

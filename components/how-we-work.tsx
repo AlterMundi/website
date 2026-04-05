@@ -4,34 +4,34 @@ import { HowWeWorkDecorations } from "@/components/section-decorations"
 export function HowWeWork() {
   const areas = [
     {
-      title: "Connectivity",
+      title: "Network Infrastructure",
       description:
-        "We promote the co-creation of internet infrastructure - open hardware, mesh networking software, and public policy advocacy.",
+        "The material base for everything else. Open hardware, mesh networking software (LibreMesh, LibreRouter), distributed routing, and public policy advocacy for community-owned connectivity.",
     },
     {
-      title: "Collaborative Economy",
+      title: "Perceptors",
       description:
-        "We provide technical and methodological support for community-driven economic projects, improving local management, resources, and growth.",
+        "IoT sensors, environmental monitors, and signal-capture systems that read the world — fire, water, soil, air, motion. The nervous system starts with perception.",
+    },
+    {
+      title: "Integrators",
+      description:
+        "Local processing layers that organize, filter, and contextualize signals before they travel further. Intelligence at the edge — reducing noise, prioritizing what matters.",
+    },
+    {
+      title: "Intelligences",
+      description:
+        "Open AI tools and pattern-recognition systems that operate on locally processed data. Decentralized inference, anomaly detection, and decision support — without cloud dependency.",
     },
     {
       title: "Renewable Energy",
       description:
-        "We develop accessible and sustainable technologies for responsible energy use, designed for long-term viability in resource-limited contexts.",
-    },
-    {
-      title: "Artificial Intelligence",
-      description:
-        "We drive access to and decentralization of AI, building practical open tools that strengthen technological autonomy.",
+        "Accessible and sustainable power infrastructure for long-term operation in resource-limited contexts. Energy resilience is infrastructure resilience.",
     },
     {
       title: "Education",
       description:
-        "We foster learning that unlocks creative and technological potential, cultivating individual and collective skills for a changing world.",
-    },
-    {
-      title: "IoT & Monitoring",
-      description:
-        "We build and simplify monitoring and control systems that strengthen local production and safety projects.",
+        "Knowledge transfer that makes the whole system reproducible. We cultivate the capacity for communities to understand, maintain, and extend what we build together.",
     },
   ]
 
@@ -43,8 +43,9 @@ export function HowWeWork() {
           <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; AREAS_OF_WORK</span>
           <h2 className="font-mono text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">What We Work On</h2>
           <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-3xl">
-            We work across six interconnected areas - all driven by the same approach: listen to communities,
-            co-design solutions, build open tools, and support long-term autonomy.
+            A distributed nervous system needs every layer. We build the network infrastructure that carries signals,
+            the perceptors that capture them, the integrators that make sense of them locally, and the intelligences
+            that act when something matters.
           </p>
         </div>
 
