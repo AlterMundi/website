@@ -6,9 +6,9 @@
  * so they are never clipped at section boundaries.
  */
 
-const primary = "#074434"
-const forest  = "#3d745e"
-const lime    = "#8aba4b"
+const primary = "#5ec974"
+const forest  = "#5aaa7a"
+const lime    = "#9ed64e"
 const gold    = "#e9d942"
 const COLORS  = [primary, forest, lime, gold, primary, forest]
 
@@ -47,10 +47,10 @@ const MEDIUM = sunflower(89,  10)
 const SMALL  = sunflower(55,   8)
 
 const CLUSTERS = [
-  { key: "tr", wrapCls: "absolute -top-24 -right-24 w-[420px] opacity-[0.055]", svgView: "-200 -200 400 400", dots: LARGE,  fadeDelay: "1.5s", fadeDur: "2s"   },
-  { key: "ml", wrapCls: "absolute top-[38%] -left-24 w-[280px] opacity-[0.04]", svgView: "-140 -140 280 280", dots: MEDIUM, fadeDelay: "2s",   fadeDur: "2s"   },
-  { key: "bc", wrapCls: "absolute bottom-[8%] left-[30%] w-[200px] opacity-[0.045]", svgView: "-120 -120 240 240", dots: SMALL,  fadeDelay: "2.5s", fadeDur: "1.5s" },
-  { key: "br", wrapCls: "absolute -bottom-20 -right-16 w-[300px] opacity-[0.04]", svgView: "-150 -150 300 300", dots: MEDIUM, fadeDelay: "2s",   fadeDur: "2s"   },
+  { key: "tr", wrapCls: "absolute -top-24 -right-24 w-[420px] opacity-[0.10]",  svgView: "-200 -200 400 400", dots: LARGE,  fadeDelay: "1.5s", fadeDur: "2s"   },
+  { key: "ml", wrapCls: "absolute top-[38%] -left-24 w-[280px] opacity-[0.08]", svgView: "-140 -140 280 280", dots: MEDIUM, fadeDelay: "2s",   fadeDur: "2s"   },
+  { key: "bc", wrapCls: "absolute bottom-[8%] left-[30%] w-[200px] opacity-[0.09]", svgView: "-120 -120 240 240", dots: SMALL,  fadeDelay: "2.5s", fadeDur: "1.5s" },
+  { key: "br", wrapCls: "absolute -bottom-20 -right-16 w-[300px] opacity-[0.08]", svgView: "-150 -150 300 300", dots: MEDIUM, fadeDelay: "2s",   fadeDur: "2s"   },
 ]
 
 export function PageBackground() {
@@ -66,7 +66,7 @@ export function PageBackground() {
 
       {/* About — right */}
       <svg
-        className="absolute top-[26%] right-4 lg:right-8 w-[300px] lg:w-[440px] opacity-[0.055] animate-[float_28s_ease-in-out_1s_infinite]"
+        className="absolute top-[26%] right-4 lg:right-8 w-[300px] lg:w-[440px] opacity-[0.10] animate-[float_28s_ease-in-out_1s_infinite]"
         viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}
       >
         <g transform="scale(-1,1) translate(-95,0)">
@@ -76,7 +76,7 @@ export function PageBackground() {
 
       {/* HowWeWork — left */}
       <svg
-        className="absolute top-[38%] left-4 lg:left-8 w-[280px] lg:w-[400px] opacity-[0.05] animate-[float_32s_ease-in-out_5s_infinite]"
+        className="absolute top-[38%] left-4 lg:left-8 w-[280px] lg:w-[400px] opacity-[0.09] animate-[float_32s_ease-in-out_5s_infinite]"
         viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}
       >
         <path d={SPIRAL_PATH} stroke={forest} strokeWidth="0.6" strokeLinecap="round" style={draw(210, 3, 0.6)} />
@@ -84,7 +84,7 @@ export function PageBackground() {
 
       {/* Projects — right */}
       <svg
-        className="absolute top-[52%] right-4 lg:right-8 w-[300px] lg:w-[440px] opacity-[0.05] animate-[float_24s_ease-in-out_8s_infinite]"
+        className="absolute top-[52%] right-4 lg:right-8 w-[300px] lg:w-[440px] opacity-[0.09] animate-[float_24s_ease-in-out_8s_infinite]"
         viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}
       >
         <g transform="scale(-1,1) translate(-95,0)">
@@ -94,7 +94,7 @@ export function PageBackground() {
 
       {/* Projects — left (extra) */}
       <svg
-        className="absolute top-[57%] left-4 lg:left-8 w-[240px] lg:w-[360px] opacity-[0.045] animate-[float_20s_ease-in-out_3s_infinite]"
+        className="absolute top-[57%] left-4 lg:left-8 w-[240px] lg:w-[360px] opacity-[0.08] animate-[float_20s_ease-in-out_3s_infinite]"
         viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}
       >
         <path d={SPIRAL_PATH} stroke={forest} strokeWidth="0.6" strokeLinecap="round" style={draw(210, 3, 0.9)} />
@@ -102,7 +102,7 @@ export function PageBackground() {
 
       {/* Contact — left */}
       <svg
-        className="absolute top-[68%] left-4 lg:left-8 w-[280px] lg:w-[420px] opacity-[0.055] animate-[float_30s_ease-in-out_2s_infinite]"
+        className="absolute top-[68%] left-4 lg:left-8 w-[280px] lg:w-[420px] opacity-[0.10] animate-[float_30s_ease-in-out_2s_infinite]"
         viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}
       >
         <path d={SPIRAL_PATH} stroke={primary} strokeWidth="0.6" strokeLinecap="round" style={draw(210, 3, 1.0)} />
@@ -110,7 +110,7 @@ export function PageBackground() {
 
       {/* Contact — right (extra) */}
       <svg
-        className="absolute top-[73%] right-4 lg:right-8 w-[240px] lg:w-[360px] opacity-[0.045] animate-[float_26s_ease-in-out_7s_infinite]"
+        className="absolute top-[73%] right-4 lg:right-8 w-[240px] lg:w-[360px] opacity-[0.08] animate-[float_26s_ease-in-out_7s_infinite]"
         viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}
       >
         <g transform="scale(-1,1) translate(-95,0)">
@@ -120,7 +120,7 @@ export function PageBackground() {
 
       {/* Footer area — right */}
       <svg
-        className="absolute top-[82%] right-4 lg:right-8 w-[260px] lg:w-[380px] opacity-[0.04] animate-[float_36s_ease-in-out_6s_infinite]"
+        className="absolute top-[82%] right-4 lg:right-8 w-[260px] lg:w-[380px] opacity-[0.07] animate-[float_36s_ease-in-out_6s_infinite]"
         viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}
       >
         <g transform="scale(-1,1) translate(-95,0)">

@@ -16,7 +16,7 @@ const TerminalCard = React.forwardRef<HTMLDivElement, TerminalCardProps>(
         className={cn(
           "relative bg-card border border-border overflow-hidden flex flex-col",
           variant === "bordered" && "terminal-border",
-          variant === "glow" && "border-primary/50 shadow-[0_0_20px_rgba(13,81,100,0.2)]",
+          variant === "glow" && "border-primary/50 shadow-[0_0_20px_rgba(94,201,116,0.25)]",
           className
         )}
         {...props}

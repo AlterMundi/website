@@ -83,7 +83,7 @@ export function Projects() {
           {PROJECTS.map((project, index) => (
             <div
               key={project.name}
-              className={`relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(7,68,52,0.15)] group flex flex-col min-w-0 ${
+              className={`relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(94,201,116,0.2)] group flex flex-col min-w-0 ${
                 index < 3 ? "lg:col-span-2" : "lg:col-span-2 lg:col-start-2 lg:[&:last-child]:col-start-4"
               }`}
             >

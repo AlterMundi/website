@@ -1,8 +1,8 @@
 "use client"
 
-const primary = "#074434"
-const forest  = "#3d745e"
-const lime    = "#8aba4b"
+const primary = "#5ec974"
+const forest  = "#5aaa7a"
+const lime    = "#9ed64e"
 const gold    = "#e9d942"
 
 // Full Fibonacci spiral — CW, radii 55→34→21→13→8, viewBox "0 0 95 60"

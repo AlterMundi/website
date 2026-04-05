@@ -53,7 +53,7 @@ export function HowWeWork() {
           {areas.map((area) => (
             <div
               key={area.title}
-              className="relative bg-card border-2 border-border p-4 sm:p-5 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(13,81,100,0.15)]"
+              className="relative bg-card border-2 border-border p-4 sm:p-5 hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(94,201,116,0.2)]"
             >
               <CornerBrackets size="sm" />
               <h3 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider mb-2">{area.title}</h3>
