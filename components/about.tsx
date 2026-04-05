@@ -3,15 +3,15 @@ import { AboutDecorations } from "@/components/section-decorations"
 
 export function About() {
   return (
-    <section id="about" className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 pb-10 sm:pb-12 lg:pb-20 scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20">
+    <section id="about" className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-24 pb-14 sm:pb-18 lg:pb-28 scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20">
       <AboutDecorations />
-      <div className="relative z-10 max-w-3xl mx-auto space-y-4 sm:space-y-6">
-        <div className="space-y-2">
+      <div className="relative z-10 max-w-3xl mx-auto space-y-6 sm:space-y-8">
+        <div className="space-y-3">
           <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; ABOUT_US</span>
-          <h2 className="font-mono text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">What Is AlterMundi</h2>
+          <h2 className="font-mono text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">What Is AlterMundi</h2>
         </div>
 
-        <div className="space-y-4 text-foreground/80 leading-relaxed">
+        <div className="space-y-5 text-base sm:text-lg text-foreground/80 leading-relaxed">
           <p>
             More than ten years ago we wrote a motto: <em>"AlterMundi — the technological leg of that other possible world."</em>{" "}
             For a long time it was a guide. Today, we can attest to it.
