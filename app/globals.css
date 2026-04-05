@@ -5,39 +5,39 @@
 
 :root {
   /* AlterMundi TUI Dark Theme */
-  --background: #050d07;
-  --surface: #0b1a0e;
-  --foreground: #c4dcc8;
-  --muted: #486e52;
+  --background: #090a09;
+  --surface: #0f1110;
+  --foreground: #c8c4b8;
+  --muted: #526050;
   --primary: #5ec974;
-  --primary-foreground: #050d07;
+  --primary-foreground: #090a09;
   --secondary: #abc685;
-  --secondary-foreground: #050d07;
-  --border: #1e4428;
+  --secondary-foreground: #090a09;
+  --border: #1e2820;
   --radius: 0.125rem;
 
-  --card: #0b1a0e;
-  --card-foreground: #c4dcc8;
-  --popover: #050d07;
-  --popover-foreground: #c4dcc8;
+  --card: #0f1110;
+  --card-foreground: #c8c4b8;
+  --popover: #090a09;
+  --popover-foreground: #c8c4b8;
   --accent: #ccff66;
-  --accent-foreground: #050d07;
+  --accent-foreground: #090a09;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: #c4dcc8;
-  --input: #1e4428;
+  --destructive-foreground: #c8c4b8;
+  --input: #1e2820;
   --ring: #5ec974;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: #0b1a0e;
-  --sidebar-foreground: #c4dcc8;
+  --sidebar: #0f1110;
+  --sidebar-foreground: #c8c4b8;
   --sidebar-primary: #5ec974;
-  --sidebar-primary-foreground: #050d07;
-  --sidebar-accent: #0b1a0e;
-  --sidebar-accent-foreground: #c4dcc8;
-  --sidebar-border: #1e4428;
+  --sidebar-primary-foreground: #090a09;
+  --sidebar-accent: #0f1110;
+  --sidebar-accent-foreground: #c8c4b8;
+  --sidebar-border: #1e2820;
   --sidebar-ring: #5ec974;
 }
 
