@@ -11,13 +11,8 @@ export function Footer() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Brand */}
-          <div className="space-y-3 sm:space-y-4">
-            <div className="flex items-center">
-              <AlterMundiLogo className="h-12 sm:h-14 w-auto mt-1" />
-            </div>
-            <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
-              Building open technology solutions for resilient infrastructure, digital inclusion, and real-world impact.
-            </p>
+          <div className="flex items-center justify-center sm:justify-start h-full">
+            <AlterMundiLogo className="h-12 sm:h-14 w-auto" />
           </div>
 
           {/* Navigation */}

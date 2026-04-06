@@ -4,7 +4,7 @@ export function AlterMundiLogo({ className }: { className?: string }) {
   return (
     <div className="relative">
       <Image
-        src="/isotipo-alter-negro.svg"
+        src="/logo-blanco-aM.png"
         alt="AlterMundi Logo"
         width={200}
         height={50}

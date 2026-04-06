@@ -74,8 +74,8 @@ export function Projects() {
           <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; FEATURED_WORK</span>
           <h2 className="font-mono text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">Our Projects</h2>
           <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-2xl">
-            Open-source tools built for real-world deployment - from community network infrastructure to fire detection
-            systems.
+            Nodes in a distributed nervous system — perceptors, integrators, and intelligences that communities can own,
+            understand, and extend.
           </p>
         </div>
 

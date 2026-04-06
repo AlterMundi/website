@@ -160,6 +160,43 @@
     from { stroke-dashoffset: var(--path-len, 300); }
     to   { stroke-dashoffset: 0; }
   }
+
+  /* Larger float variants for hero spiral decorations */
+  @keyframes float-hero {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-22px); }
+  }
+
+  @keyframes float-hero-wide {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50%       { transform: translateY(-26px) rotate(3.5deg); }
+  }
+
+  /* Hero letters: each letter slides in from its own offset */
+  @keyframes hero-letter-in {
+    from {
+      opacity: 0;
+      transform: translateY(var(--ty, 32px)) translateX(var(--tx, 0px)) scale(0.92);
+      filter: blur(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) translateX(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  /* Arrow: fade in after title settles */
+  @keyframes hero-arrow-appear {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Arrow: continuous gentle bounce */
+  @keyframes arrow-bounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(10px); }
+  }
 }
 
 @layer utilities {

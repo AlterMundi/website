@@ -47,14 +47,14 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
-          <ScrollLink
-            targetId="hero"
+          <button
+            type="button"
             className="flex items-center hover:opacity-80 transition-opacity group shrink-0"
             aria-label="AlterMundi Home"
-            onClick={closeMenu}
+            onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu() }}
           >
             <AlterMundiLogo className="h-10 sm:h-12 md:h-16 w-auto mt-1" />
-          </ScrollLink>
+          </button>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-4 lg:gap-6">
