@@ -43,9 +43,10 @@ export function HowWeWork() {
           <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; AREAS_OF_WORK</span>
           <h2 className="font-mono text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">What We Work On</h2>
           <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-3xl">
-            A distributed nervous system needs every layer. We build the network infrastructure that carries signals,
-            the perceptors that capture them, the integrators that make sense of them locally, and the intelligences
-            that act when something matters.
+            A distributed nervous system with no single point of failure needs every layer working together. We build
+            the network infrastructure that carries signals, the perceptors that capture them, the integrators that
+            organize and contextualize them locally, and the intelligences — human or artificial — that recognize when
+            a signal is valuable, has changed significantly, or deserves more resolution.
           </p>
         </div>
 
