@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Projects } from "@/components/projects"
+import { Team } from "@/components/team"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { PageBackground } from "@/components/page-background"
@@ -15,6 +16,7 @@ export default function HomePage() {
         <Hero />
         <About />
         <Projects />
+        <Team />
         <Contact />
       </main>
       <Footer />

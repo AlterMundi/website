@@ -10,27 +10,20 @@ export function useScrollSpy(ids: string[]): {
   const idsRef = useRef(ids)
 
   useEffect(() => {
-    if (typeof window === "undefined") return
+    const update = () => {
+      const mid = window.innerHeight * 0.5
+      let current: string | null = null
+      for (const id of idsRef.current) {
+        const el = document.getElementById(id)
+        if (el && el.getBoundingClientRect().top < mid) current = id
+      }
+      setActiveId(current)
+    }
 
-    const observers = idsRef.current.map((id) => {
-      const el = document.getElementById(id)
-      if (!el) return null
-
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) setActiveId(id)
-        },
-        // Shrink the bottom of the viewport by 60% so only the section
-        // actively filling the top half triggers the active state.
-        { rootMargin: "0px 0px -60% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] }
-      )
-
-      observer.observe(el)
-      return observer
-    })
-
-    return () => observers.forEach((o) => o?.disconnect())
-  }, []) // stable: idsRef holds the array reference, no re-run needed
+    window.addEventListener("scroll", update, { passive: true })
+    update()
+    return () => window.removeEventListener("scroll", update)
+  }, [])
 
   return { activeId, setActiveId }
 }
