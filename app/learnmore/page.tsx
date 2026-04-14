@@ -6,7 +6,8 @@ import { HeroDecorations } from "@/components/hero-decorations"
 import { CornerBrackets } from "@/components/ui/corner-brackets"
 
 export const metadata = {
-  title: "AlterMundi Today",
+  title: "About AlterMundi",
+  description: "AlterMundi is a research and experimentation ecosystem exploring Harmonic Information Theory and developing technologies for harmonic pattern analysis.",
 }
 
 const paragraphs = [
@@ -26,7 +27,7 @@ const paragraphs = [
 ]
 
 const SPIRAL = "M 89 0 A 55 55 0 0 1 34 55 A 34 34 0 0 1 0 21 A 21 21 0 0 1 21 0 A 13 13 0 0 1 34 13 A 8 8 0 0 1 26 21"
-const SMALL  = "M 26 21 A 8 8 0 0 0 34 13 A 13 13 0 0 0 21 0 A 21 21 0 0 0 0 21"
+const SMALL = "M 26 21 A 8 8 0 0 0 34 13 A 13 13 0 0 0 21 0 A 21 21 0 0 0 0 21"
 const p = "#5ec974"
 const f = "#5aaa7a"
 const l = "#9ed64e"
@@ -47,17 +48,17 @@ export default function LearnMorePage() {
               viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}>
               <g transform="scale(-1,1) translate(-95,0)">
                 <path d={SPIRAL} stroke={p} strokeWidth="1.5" strokeLinecap="round" />
-                <circle cx="89" cy="0"  r="3"   fill={p} fillOpacity="0.6" />
+                <circle cx="89" cy="0" r="3" fill={p} fillOpacity="0.6" />
                 <circle cx="34" cy="55" r="2.5" fill={f} fillOpacity="0.6" />
-                <circle cx="0"  cy="21" r="2"   fill={l} fillOpacity="0.6" />
-                <circle cx="21" cy="0"  r="1.5" fill={p} fillOpacity="0.6" />
+                <circle cx="0" cy="21" r="2" fill={l} fillOpacity="0.6" />
+                <circle cx="21" cy="0" r="1.5" fill={p} fillOpacity="0.6" />
               </g>
             </svg>
             <svg className="absolute top-16 left-4 lg:left-12 w-16 lg:w-24 opacity-25 animate-[float_14s_ease-in-out_2s_infinite]"
               viewBox="0 0 40 25" fill="none" overflow="visible" style={{ height: "auto" }}>
               <path d={SMALL} stroke={f} strokeWidth="1.5" strokeLinecap="round" />
-              <circle cx="0"  cy="21" r="2"   fill={f} fillOpacity="0.5" />
-              <circle cx="21" cy="0"  r="1.5" fill={l} fillOpacity="0.5" />
+              <circle cx="0" cy="21" r="2" fill={f} fillOpacity="0.5" />
+              <circle cx="21" cy="0" r="1.5" fill={l} fillOpacity="0.5" />
             </svg>
           </div>
 
@@ -85,7 +86,7 @@ export default function LearnMorePage() {
             <svg className="absolute top-[10%] left-2 lg:left-6 w-20 lg:w-32 opacity-25 animate-[float_9s_ease-in-out_1s_infinite]"
               viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}>
               <path d={SPIRAL} stroke={f} strokeWidth="1.5" strokeLinecap="round" />
-              <circle cx="89" cy="0"  r="3"   fill={f} fillOpacity="0.5" />
+              <circle cx="89" cy="0" r="3" fill={f} fillOpacity="0.5" />
               <circle cx="34" cy="55" r="2.5" fill={p} fillOpacity="0.5" />
             </svg>
             <svg className="absolute top-[38%] left-4 lg:left-8 w-12 lg:w-20 opacity-30 animate-[float_13s_ease-in-out_3s_infinite]"
@@ -104,8 +105,8 @@ export default function LearnMorePage() {
               viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}>
               <g transform="scale(-1,1) translate(-95,0)">
                 <path d={SPIRAL} stroke={l} strokeWidth="1.5" strokeLinecap="round" />
-                <circle cx="89" cy="0"  r="3"   fill={l} fillOpacity="0.5" />
-                <circle cx="0"  cy="21" r="2"   fill={p} fillOpacity="0.5" />
+                <circle cx="89" cy="0" r="3" fill={l} fillOpacity="0.5" />
+                <circle cx="0" cy="21" r="2" fill={p} fillOpacity="0.5" />
               </g>
             </svg>
             <svg className="absolute top-[50%] right-4 lg:right-8 w-14 lg:w-20 opacity-30 animate-[float_8s_ease-in-out_4s_infinite]"
@@ -126,13 +127,13 @@ export default function LearnMorePage() {
             <svg className="absolute left-[8%] top-[20%] w-2 h-32 opacity-40 animate-[float-wide_14s_ease-in-out_infinite]"
               viewBox="0 0 8 130" fill="none">
               {[8, 21, 42, 76, 121].map((y, i) => (
-                <circle key={i} cx="4" cy={y} r="1.3" fill={[p,f,l,f,p][i]} />
+                <circle key={i} cx="4" cy={y} r="1.3" fill={[p, f, l, f, p][i]} />
               ))}
             </svg>
             <svg className="absolute right-[8%] top-[30%] w-2 h-32 opacity-40 animate-[float-wide_12s_ease-in-out_2s_infinite]"
               viewBox="0 0 8 130" fill="none">
               {[8, 21, 42, 76, 121].map((y, i) => (
-                <circle key={i} cx="4" cy={y} r="1.3" fill={[f,l,p,l,f][i]} />
+                <circle key={i} cx="4" cy={y} r="1.3" fill={[f, l, p, l, f][i]} />
               ))}
             </svg>
           </div>

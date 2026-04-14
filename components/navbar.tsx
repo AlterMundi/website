@@ -9,17 +9,16 @@ import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useScrollSpy } from "@/hooks/use-scroll-spy"
 
-const navLinks: { id: string; label: string; scrollBlock?: "start" | "center" | "end" }[] = [
-  { id: "about", label: "About" },
+const navLinks: { id: string; label: string; scrollBlock?: "start" | "center" | "end"; href?: string }[] = [
+  { id: "about", label: "About", href: "/about" },
   { id: "projects", label: "Projects", scrollBlock: "start" },
-  { id: "team", label: "Team" },
   { id: "contact", label: "Contact" },
 ]
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const { activeId, setActiveId } = useScrollSpy(["hero", "about", "projects", "team", "contact"])
+  const { activeId, setActiveId } = useScrollSpy(["hero", "projects", "contact"])
   const pathname = usePathname()
   const isHome = pathname === "/"
 
@@ -82,8 +81,27 @@ export function Navbar() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-4 lg:gap-6">
-            {navLinks.map(({ id, label, scrollBlock }) =>
-              isHome ? (
+            {navLinks.map(({ id, label, scrollBlock, href }) => {
+              // If it has an href (like /about), use it directly
+              if (href) {
+                const isActive = pathname === href
+                return (
+                  <a
+                    key={id}
+                    href={href}
+                    className={cn(
+                      "text-sm lg:text-base font-mono font-medium uppercase tracking-wider transition-all px-2 py-1.5 border-2 border-transparent",
+                      isActive
+                        ? "text-primary crt-glow border-b-primary/80"
+                        : "hover:text-primary hover:crt-glow hover:border-primary/30"
+                    )}
+                  >
+                    {label}
+                  </a>
+                )
+              }
+              // Otherwise use scroll behavior
+              return isHome ? (
                 <ScrollLink
                   key={id}
                   targetId={id}
@@ -98,7 +116,7 @@ export function Navbar() {
                   {label}
                 </a>
               )
-            )}
+            })}
           </div>
 
           <div className="flex items-center gap-2">
@@ -131,14 +149,31 @@ export function Navbar() {
         {/* Mobile menu */}
         <div
           id="mobile-nav"
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${
-            isMobileMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${isMobileMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+            }`}
           aria-hidden={!isMobileMenuOpen}
         >
           <div className="py-4 pb-6 border-t border-border flex flex-col gap-1">
-            {navLinks.map(({ id, label, scrollBlock }) =>
-              isHome ? (
+            {navLinks.map(({ id, label, scrollBlock, href }) => {
+              if (href) {
+                const isActive = pathname === href
+                return (
+                  <a
+                    key={id}
+                    href={href}
+                    className={cn(
+                      "text-base font-mono font-medium uppercase tracking-wider transition-all px-4 py-3 border-l-4",
+                      isActive
+                        ? "border-primary bg-primary/5 text-primary"
+                        : "border-transparent hover:text-primary hover:crt-glow hover:border-primary hover:bg-primary/5"
+                    )}
+                    onClick={closeMenu}
+                  >
+                    {label}
+                  </a>
+                )
+              }
+              return isHome ? (
                 <ScrollLink
                   key={id}
                   targetId={id}
@@ -153,7 +188,7 @@ export function Navbar() {
                   {label}
                 </a>
               )
-            )}
+            })}
             <div className="pt-2 mt-2 border-t border-border sm:hidden">
               <Button asChild size="default" className="w-full justify-center">
                 {isHome ? (

@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { AboutDecorations } from "@/components/section-decorations"
 
 export function About() {
@@ -45,11 +44,12 @@ export function About() {
           </p>
         </div>
 
-        <Button asChild variant="outline">
-          <a href="/learnmore">
-            Learn More
-          </a>
-        </Button>
+        <a
+          href="/learnmore"
+          className="inline-flex items-center gap-1 text-sm font-mono text-primary/70 hover:text-primary transition-colors underline underline-offset-4"
+        >
+          Read more →
+        </a>
       </div>
     </section>
   )

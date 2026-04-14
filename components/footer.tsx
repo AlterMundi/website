@@ -69,8 +69,8 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="pt-6 sm:pt-8 border-t-2 border-border flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center sm:text-left">
-          <p className="text-[10px] sm:text-xs text-foreground/60 font-mono">© {currentYear} AlterMundi. All rights reserved.</p>
-          <p className="text-[10px] sm:text-xs text-primary font-mono crt-glow">[ Built with open tools &amp; open hearts ]</p>
+          <p className="text-[10px] sm:text-xs text-foreground/60 font-mono">© {currentYear} AlterMundi · Asociación Civil Sin Fines de Lucro</p>
+          <p className="text-[10px] sm:text-xs text-primary/70 font-mono crt-glow">[ mesh · armónico · territorio · común ]</p>
         </div>
       </div>
     </footer>

@@ -15,7 +15,7 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    name: "LibreRouter / LibreMesh",
+    name: "Conectividad",
     shortDescription:
       "An open-hardware WiFi router and companion mesh networking firmware, purpose-built for community networks. Designed to be affordable, durable, and deployable with low technical barriers, already powering initiatives like QuintanaLibre in rural Cordoba.",
     tags: ["Networking", "Hardware", "Firmware"],
@@ -24,7 +24,7 @@ const PROJECTS: Project[] = [
     repoUrl: "https://gitlab.com/librerouter/",
   },
   {
-    name: "LibreIncu",
+    name: "LibreAgro",
     shortDescription:
       "An open-source poultry incubator system for family farming, developed with CTO. It integrates temperature and humidity monitoring and control, local WiFi access through a mobile app, and remote dashboard data for practical field use.",
     tags: ["IoT", "Agriculture", "Hardware"],
@@ -83,9 +83,8 @@ export function Projects() {
           {PROJECTS.map((project, index) => (
             <div
               key={project.name}
-              className={`relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(94,201,116,0.2)] group flex flex-col min-w-0 ${
-                index < 3 ? "lg:col-span-2" : "lg:col-span-2 lg:col-start-2 lg:[&:last-child]:col-start-4"
-              }`}
+              className={`relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(94,201,116,0.2)] group flex flex-col min-w-0 ${index < 3 ? "lg:col-span-2" : "lg:col-span-2 lg:col-start-2 lg:[&:last-child]:col-start-4"
+                }`}
             >
               <CornerBrackets />
 
@@ -97,11 +96,10 @@ export function Projects() {
                       {project.name}
                     </h3>
                     <span
-                      className={`inline-flex items-center px-2 py-1 text-xs font-mono uppercase tracking-wider shrink-0 ${
-                        project.status === "Flagship"
+                      className={`inline-flex items-center px-2 py-1 text-xs font-mono uppercase tracking-wider shrink-0 ${project.status === "Flagship"
                           ? "bg-primary/10 text-primary border-2 border-primary/30"
                           : "bg-secondary/10 text-secondary border-2 border-secondary/30"
-                      }`}
+                        }`}
                     >
                       {project.status}
                     </span>
