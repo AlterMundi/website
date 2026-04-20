@@ -10,7 +10,6 @@ import { cn } from "@/lib/utils"
 import { useScrollSpy } from "@/hooks/use-scroll-spy"
 
 const navLinks: { id: string; label: string; scrollBlock?: "start" | "center" | "end"; href?: string }[] = [
-  { id: "about", label: "About", href: "/about" },
   { id: "projects", label: "Projects", scrollBlock: "start" },
   { id: "contact", label: "Contact" },
 ]

@@ -1,5 +1,5 @@
 import { ScrollLink } from "@/components/ui/scroll-link"
-import { HeroDecorations } from "@/components/hero-decorations"
+import { Button } from "@/components/ui/button"
 
 // Per-letter offsets: alternate above/below with slight horizontal drift
 // so each letter feels like it's arriving from its own place on screen
@@ -24,8 +24,6 @@ export function Hero() {
       id="hero"
       className="relative flex flex-col items-center justify-center h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] md:h-[calc(100dvh-5rem)] overflow-hidden px-4"
     >
-      <HeroDecorations />
-
       {/* Animated AlterMundi title */}
       <h1
         className="font-sans font-black text-center px-4 select-none z-10 mb-8"
@@ -84,6 +82,9 @@ export function Hero() {
           production, monitoring and prevention, health, and AI. We currently
           work with human-AI multi-agent systems across most of our projects.
         </p>
+        <Button asChild variant="outline" size="sm" className="mt-2">
+          <a href="/about">Learn more</a>
+        </Button>
       </div>
 
       {/* Scroll arrow */}

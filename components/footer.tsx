@@ -21,12 +21,12 @@ export function Footer() {
               {"// Navigation"}
             </h3>
             <nav className="flex flex-col gap-1.5 sm:gap-2">
-              <ScrollLink
-                targetId="about"
+              <a
+                href="/about"
                 className="text-xs sm:text-sm font-mono text-foreground/70 hover:text-primary transition-colors text-left"
               >
                 &gt; About_Us
-              </ScrollLink>
+              </a>
               <ScrollLink
                 targetId="projects"
                 scrollBlock="start"
@@ -70,7 +70,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="pt-6 sm:pt-8 border-t-2 border-border flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center sm:text-left">
           <p className="text-[10px] sm:text-xs text-foreground/60 font-mono">© {currentYear} AlterMundi · Asociación Civil Sin Fines de Lucro</p>
-          <p className="text-[10px] sm:text-xs text-primary/70 font-mono crt-glow">[ mesh · armónico · territorio · común ]</p>
+          <p className="text-[10px] sm:text-xs text-primary/70 font-mono crt-glow">[ mesh · harmonic · territory · common ]</p>
         </div>
       </div>
     </footer>
