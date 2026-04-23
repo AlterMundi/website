@@ -1,0 +1,14 @@
+domain: altermundi.net
+slug: altermundi-website
+has_contact_form: false
+notes: >
+  First tenant of the AlterMundi multi-site static hosting platform.
+  Hosted on yupanki CT 127. Infra-as-code: AlterMundi/Alter-infra
+  yupanki/static-sites/. Design spec: docs/superpowers/specs/
+  2026-04-22-altermundi-static-sites-platform-design.md.
+
+  Current Contact section is a mailto link + GitHub link; no form.
+  If a form is reintroduced, add an n8n webhook workflow
+  (contact-altermundi) and POST JSON to
+  https://n8n.altermundi.net/webhook/contact-altermundi with
+  {name, email, message, site: "altermundi-website", website: hp}.

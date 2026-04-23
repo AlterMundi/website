@@ -20,7 +20,7 @@ const PROJECTS: Project[] = [
       "An open-hardware WiFi router and companion mesh networking firmware, purpose-built for community networks. Designed to be affordable, durable, and deployable with low technical barriers, already powering initiatives like QuintanaLibre in rural Cordoba.",
     tags: ["Networking", "Hardware", "Firmware"],
     status: "Flagship",
-    url: "https://libremesh.org/",
+    url: "https://conectividad.altermundi.net/",
     repoUrl: "https://gitlab.com/librerouter/",
   },
   {
