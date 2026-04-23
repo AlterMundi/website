@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 const SITE_URL = "https://altermundi.net"
 const SITE_TITLE = "AlterMundi - Community Networks & Open Technology"
 const SITE_DESCRIPTION =
-  "AlterMundi is a non-profit building open hardware, libre software, and tools for community networks — helping communities deploy affordable, autonomous connectivity."
+  "AlterMundi builds open hardware and libre software for community networks, helping communities deploy affordable, autonomous connectivity."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
