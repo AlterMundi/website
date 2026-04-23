@@ -16,13 +16,48 @@ const montserrat = Montserrat({
   variable: "--font-sans",
 })
 
+const SITE_URL = "https://altermundi.net"
+const SITE_TITLE = "AlterMundi - Community Networks & Open Technology"
+const SITE_DESCRIPTION =
+  "AlterMundi is a non-profit building open hardware, libre software, and tools for community networks — helping communities deploy affordable, autonomous connectivity."
+
 export const metadata: Metadata = {
-  title: "AlterMundi - Community Networks & Open Technology",
-  description: "Building community networks and open technology solutions for digital inclusion and connectivity.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   generator: "v0.app",
   icons: {
     icon: "/isotipo-alter-negro.svg",
     apple: "/isotipo-alter-negro.svg",
+  },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: "AlterMundi",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    locale: "en_US",
+    images: [
+      {
+        url: "/logo-blanco-aM.png",
+        width: 1200,
+        height: 630,
+        alt: "AlterMundi",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ["/logo-blanco-aM.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 

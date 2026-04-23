@@ -151,6 +151,7 @@ export function Navbar() {
           className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${isMobileMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
             }`}
           aria-hidden={!isMobileMenuOpen}
+          inert={!isMobileMenuOpen}
         >
           <div className="py-4 pb-6 border-t border-border flex flex-col gap-1">
             {navLinks.map(({ id, label, scrollBlock, href }) => {
