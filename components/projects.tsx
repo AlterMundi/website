@@ -29,7 +29,7 @@ const PROJECTS: Project[] = [
       "An open-source poultry incubator system for family farming, developed with CTO. It integrates temperature and humidity monitoring and control, local WiFi access through a mobile app, and remote dashboard data for practical field use.",
     tags: ["IoT", "Agriculture", "Hardware"],
     status: "Active",
-    url: "https://github.com/AlterMundi-MonitoreoyControl/Proyecto-Incubadora",
+    url: "https://libreincu.altermundi.net/",
     repoUrl: "https://github.com/AlterMundi-MonitoreoyControl/Proyecto-Incubadora",
   },
   {
