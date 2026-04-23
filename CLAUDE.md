@@ -28,7 +28,7 @@ Navigation is entirely scroll-based — there are no client-side routes. `<Scrol
 - **`"use client"` boundary**: Only interactive components declare `"use client"`. Most section components are server components.
 - **Project data**: Defined as a static `PROJECTS` array directly inside `components/projects.tsx`. To add/edit projects, modify that array.
 - **3D model animation**: `components/project-animation.tsx` uses `@santiagocetran/ascii-3d-animation` loaded dynamically (`next/dynamic` with `ssr: false`) to render STL files as ASCII art. Models are served from `public/models/`.
-- **Contact API**: `app/api/contact/route.ts` — a POST endpoint that uses Resend to email `info@altermundi.net`. Requires `RESEND_API_KEY` environment variable.
+- **Contact**: `components/contact.tsx` is a mailto link + GitHub link — no form, no server endpoint. If a form is reintroduced, POST to the AlterMundi n8n webhook (see `SITE.yml`) rather than a Next.js API route (this site is `output: "export"` / static).
 
 ### Design system
 
@@ -47,6 +47,12 @@ Navigation is entirely scroll-based — there are no client-side routes. `<Scrol
 
 ### Environment variables
 
-| Variable | Required | Purpose |
-|---|---|---|
-| `RESEND_API_KEY` | Yes (contact form) | Resend email service API key |
+None. The site is fully static (`output: "export"`) and ships no runtime secrets.
+
+### Deploy
+
+GitHub Actions (`runs-on: [self-hosted, yupanki]`) builds on the AlterMundi
+org self-hosted runner on the yupanki PVE host, then streams `out/` into
+CT 127 (`/srv/www/altermundi-website/`) via `sudo pct exec` tar-pipe. See
+`.github/workflows/deploy.yml` and `SITE.yml`. Infra-as-code lives in
+the `AlterMundi/Alter-infra` repo under `yupanki/static-sites/`.
