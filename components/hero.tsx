@@ -83,7 +83,7 @@ export function Hero() {
           work with human-AI multi-agent systems across most of our projects.
         </p>
         <Button asChild variant="outline" size="sm" className="mt-2">
-          <a href="/about">Learn more</a>
+          <a href="/about/">Learn more</a>
         </Button>
       </div>
 

@@ -45,7 +45,7 @@ export function About() {
         </div>
 
         <a
-          href="/learnmore"
+          href="/learnmore/"
           className="inline-flex items-center gap-1 text-sm font-mono text-primary/70 hover:text-primary transition-colors underline underline-offset-4"
         >
           Read more →

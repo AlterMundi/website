@@ -22,7 +22,7 @@ export function Footer() {
             </h3>
             <nav className="flex flex-col gap-1.5 sm:gap-2">
               <a
-                href="/about"
+                href="/about/"
                 className="text-xs sm:text-sm font-mono text-foreground/70 hover:text-primary transition-colors text-left"
               >
                 &gt; About_Us
