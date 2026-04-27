@@ -4,10 +4,13 @@ import { Footer } from "@/components/footer"
 import { PageBackground } from "@/components/page-background"
 import { HeroDecorations } from "@/components/hero-decorations"
 import { CornerBrackets } from "@/components/ui/corner-brackets"
+import type { Metadata } from "next"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "About AlterMundi",
   description: "AlterMundi is a research and experimentation ecosystem exploring Harmonic Information Theory and developing technologies for harmonic pattern analysis.",
+  alternates: { canonical: "/learnmore/" },
+  openGraph: { url: "/learnmore/" },
 }
 
 const paragraphs = [
