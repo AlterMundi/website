@@ -2,6 +2,14 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { PageBackground } from "@/components/page-background"
 import { AboutDecorations } from "@/components/section-decorations"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About — AlterMundi",
+  description: "AlterMundi builds open hardware and libre software for community networks, helping communities deploy affordable, autonomous connectivity.",
+  alternates: { canonical: "/about/" },
+  openGraph: { url: "/about/" },
+}
 
 export default function AboutPage() {
   return (
