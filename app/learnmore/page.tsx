@@ -26,8 +26,6 @@ const paragraphs = [
   `AlterMundi has recently published the Harmonic Information Theory Foundations manuscript. You can access the book's portal at hit.altermundi.net.`,
 ]
 
-const SPIRAL = "M 89 0 A 55 55 0 0 1 34 55 A 34 34 0 0 1 0 21 A 21 21 0 0 1 21 0 A 13 13 0 0 1 34 13 A 8 8 0 0 1 26 21"
-const SMALL = "M 26 21 A 8 8 0 0 0 34 13 A 13 13 0 0 0 21 0 A 21 21 0 0 0 0 21"
 const p = "#5ec974"
 const f = "#5aaa7a"
 const l = "#9ed64e"
@@ -42,26 +40,6 @@ export default function LearnMorePage() {
       <main className="pt-14 sm:pt-16 md:pt-20">
         {/* Title section */}
         <section className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-24 pb-4">
-          {/* Title area spirals */}
-          <div className="absolute inset-0 pointer-events-none overflow-visible" aria-hidden="true">
-            <svg className="absolute top-8 right-8 lg:right-16 w-24 lg:w-36 opacity-30 animate-[float_11s_ease-in-out_infinite]"
-              viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}>
-              <g transform="scale(-1,1) translate(-95,0)">
-                <path d={SPIRAL} stroke={p} strokeWidth="1.5" strokeLinecap="round" />
-                <circle cx="89" cy="0" r="3" fill={p} fillOpacity="0.6" />
-                <circle cx="34" cy="55" r="2.5" fill={f} fillOpacity="0.6" />
-                <circle cx="0" cy="21" r="2" fill={l} fillOpacity="0.6" />
-                <circle cx="21" cy="0" r="1.5" fill={p} fillOpacity="0.6" />
-              </g>
-            </svg>
-            <svg className="absolute top-16 left-4 lg:left-12 w-16 lg:w-24 opacity-25 animate-[float_14s_ease-in-out_2s_infinite]"
-              viewBox="0 0 40 25" fill="none" overflow="visible" style={{ height: "auto" }}>
-              <path d={SMALL} stroke={f} strokeWidth="1.5" strokeLinecap="round" />
-              <circle cx="0" cy="21" r="2" fill={f} fillOpacity="0.5" />
-              <circle cx="21" cy="0" r="1.5" fill={l} fillOpacity="0.5" />
-            </svg>
-          </div>
-
           <div className="relative z-10 max-w-3xl mx-auto space-y-3">
             <Link
               href="/"
@@ -80,50 +58,8 @@ export default function LearnMorePage() {
 
         {/* Content section */}
         <section className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20">
-          {/* Content area spirals */}
+          {/* Fibonacci dot columns flanking card */}
           <div className="absolute inset-0 pointer-events-none overflow-visible" aria-hidden="true">
-            {/* Left flank */}
-            <svg className="absolute top-[10%] left-2 lg:left-6 w-20 lg:w-32 opacity-25 animate-[float_9s_ease-in-out_1s_infinite]"
-              viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}>
-              <path d={SPIRAL} stroke={f} strokeWidth="1.5" strokeLinecap="round" />
-              <circle cx="89" cy="0" r="3" fill={f} fillOpacity="0.5" />
-              <circle cx="34" cy="55" r="2.5" fill={p} fillOpacity="0.5" />
-            </svg>
-            <svg className="absolute top-[38%] left-4 lg:left-8 w-12 lg:w-20 opacity-30 animate-[float_13s_ease-in-out_3s_infinite]"
-              viewBox="0 0 40 25" fill="none" overflow="visible" style={{ height: "auto" }}>
-              <path d={SMALL} stroke={l} strokeWidth="1.5" strokeLinecap="round" />
-              <circle cx="0" cy="21" r="2" fill={l} fillOpacity="0.5" />
-            </svg>
-            <svg className="absolute top-[65%] left-2 lg:left-6 w-16 lg:w-24 opacity-20 animate-[float_16s_ease-in-out_5s_infinite]"
-              viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}>
-              <g transform="scale(1,-1) translate(0,-60)">
-                <path d={SPIRAL} stroke={p} strokeWidth="1" strokeLinecap="round" />
-              </g>
-            </svg>
-            {/* Right flank */}
-            <svg className="absolute top-[5%] right-2 lg:right-6 w-20 lg:w-32 opacity-25 animate-[float_12s_ease-in-out_2s_infinite]"
-              viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}>
-              <g transform="scale(-1,1) translate(-95,0)">
-                <path d={SPIRAL} stroke={l} strokeWidth="1.5" strokeLinecap="round" />
-                <circle cx="89" cy="0" r="3" fill={l} fillOpacity="0.5" />
-                <circle cx="0" cy="21" r="2" fill={p} fillOpacity="0.5" />
-              </g>
-            </svg>
-            <svg className="absolute top-[50%] right-4 lg:right-8 w-14 lg:w-20 opacity-30 animate-[float_8s_ease-in-out_4s_infinite]"
-              viewBox="0 0 40 25" fill="none" overflow="visible" style={{ height: "auto" }}>
-              <g transform="scale(-1,1) translate(-40,0)">
-                <path d={SMALL} stroke={p} strokeWidth="1.5" strokeLinecap="round" />
-                <circle cx="0" cy="21" r="2" fill={p} fillOpacity="0.5" />
-              </g>
-            </svg>
-            <svg className="absolute top-[78%] right-2 lg:right-6 w-20 lg:w-28 opacity-20 animate-[float_18s_ease-in-out_1s_infinite]"
-              viewBox="0 0 95 60" fill="none" overflow="visible" style={{ height: "auto" }}>
-              <g transform="scale(-1,-1) translate(-95,-60)">
-                <path d={SPIRAL} stroke={f} strokeWidth="1" strokeLinecap="round" />
-                <circle cx="89" cy="0" r="2.5" fill={f} fillOpacity="0.4" />
-              </g>
-            </svg>
-            {/* Fibonacci dot columns flanking card */}
             <svg className="absolute left-[8%] top-[20%] w-2 h-32 opacity-40 animate-[float-wide_14s_ease-in-out_infinite]"
               viewBox="0 0 8 130" fill="none">
               {[8, 21, 42, 76, 121].map((y, i) => (

@@ -161,12 +161,6 @@
     to   { stroke-dashoffset: 0; }
   }
 
-  /* Larger float variants for hero spiral decorations */
-  @keyframes float-hero {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-22px); }
-  }
-
   @keyframes float-hero-wide {
     0%, 100% { transform: translateY(0) rotate(0deg); }
     50%       { transform: translateY(-26px) rotate(3.5deg); }
