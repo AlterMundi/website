@@ -60,6 +60,15 @@ const PROJECTS: Project[] = [
     url: "https://harmonicbeacon.com",
     repoUrl: "https://github.com/altermundi",
   },
+  {
+    name: "DaemonCraft",
+    shortDescription:
+      "An AI companion — a daemon — that lives inside Minecraft, powered by local, self-hosted models. Players summon and converse with it as it perceives and acts within the world, turning the game into a hands-on playground for open-source AI and digital sovereignty.",
+    tags: ["Local AI", "Education", "Minecraft"],
+    status: "Active",
+    url: "https://daemoncraft.altermundi.net",
+    repoUrl: "https://github.com/AlterMundi/saoul_daemoncraft",
+  },
 ]
 
 export function Projects() {
@@ -80,11 +89,10 @@ export function Projects() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 auto-rows-fr">
-          {PROJECTS.map((project, index) => (
+          {PROJECTS.map((project) => (
             <div
               key={project.name}
-              className={`relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(94,201,116,0.2)] group flex flex-col min-w-0 ${index < 3 ? "lg:col-span-2" : "lg:col-span-2 lg:col-start-2 lg:[&:last-child]:col-start-4"
-                }`}
+              className="relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(94,201,116,0.2)] group flex flex-col min-w-0 lg:col-span-2"
             >
               <CornerBrackets />
 
