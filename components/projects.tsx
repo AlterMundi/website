@@ -1,14 +1,15 @@
 import { Button } from "@/components/ui/button"
 import { CornerBrackets } from "@/components/ui/corner-brackets"
 import { ProjectsDecorations } from "@/components/section-decorations"
-import { ExternalLink, Github } from "lucide-react"
+import { Construction, ExternalLink, Github } from "lucide-react"
 
 type Project = {
   name: string
   shortDescription: string
   tags: string[]
   status: string
-  url: string
+  /** Omit when the project has no public site yet — the card shows a "site in progress" state. */
+  url?: string
   repoUrl: string
   modelUrl?: string
   /** Additional related sites, rendered after the Website/Repo buttons. */
@@ -71,7 +72,6 @@ const PROJECTS: Project[] = [
       "An agent portability layer for AI beings: protocols for identity, continuity, and secure communication across many simultaneous embodiments. The same daemon can inhabit a Minecraft bot, a device, or a terminal while keeping one memory, one history, and one relationship with the human it belongs to.",
     tags: ["AI Agents", "Digital Identity", "Protocol"],
     status: "Active",
-    url: "https://hackmd.io/@nicoechaniz/daimon-matrix",
     repoUrl: "https://github.com/AlterMundi/daimon-matrix",
     extraLinks: [{ label: "DaemonCraft", url: "https://daemoncraft.altermundi.net" }],
   },
@@ -132,12 +132,22 @@ export function Projects() {
 
                 {/* Actions */}
                 <div className="flex flex-col min-[400px]:flex-row min-[400px]:flex-wrap gap-2 pt-3 sm:pt-4 mt-auto">
-                  <Button asChild size="sm" className="min-[400px]:flex-1">
-                    <a href={project.url} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4" />
-                      Website
-                    </a>
-                  </Button>
+                  {project.url ? (
+                    <Button asChild size="sm" className="min-[400px]:flex-1">
+                      <a href={project.url} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4" />
+                        Website
+                      </a>
+                    </Button>
+                  ) : (
+                    <span
+                      className="inline-flex items-center justify-center gap-1.5 h-8 px-3 min-[400px]:flex-1 text-sm font-medium font-mono uppercase tracking-wider border-2 border-dashed border-border text-foreground/50"
+                      aria-label="Website under construction"
+                    >
+                      <Construction className="w-4 h-4" />
+                      Site in progress
+                    </span>
+                  )}
                   <Button asChild variant="outline" size="sm">
                     <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4" />
