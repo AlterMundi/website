@@ -65,6 +65,16 @@ const PROJECTS: Project[] = [
     url: "https://harmonicbeacon.com",
     repoUrl: "https://github.com/altermundi",
   },
+  {
+    name: "DaemonMatrix",
+    shortDescription:
+      "An agent portability layer for AI beings: protocols for identity, continuity, and secure communication across many simultaneous embodiments. The same daemon can inhabit a Minecraft bot, a device, or a terminal while keeping one memory, one history, and one relationship with the human it belongs to.",
+    tags: ["AI Agents", "Digital Identity", "Protocol"],
+    status: "Active",
+    url: "https://hackmd.io/@nicoechaniz/daimon-matrix",
+    repoUrl: "https://github.com/AlterMundi/daimon-matrix",
+    extraLinks: [{ label: "DaemonCraft", url: "https://daemoncraft.altermundi.net" }],
+  },
 ]
 
 export function Projects() {
@@ -85,11 +95,10 @@ export function Projects() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 auto-rows-fr">
-          {PROJECTS.map((project, index) => (
+          {PROJECTS.map((project) => (
             <div
               key={project.name}
-              className={`relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(94,201,116,0.2)] group flex flex-col min-w-0 ${index < 3 ? "lg:col-span-2" : "lg:col-span-2 lg:col-start-2 lg:[&:last-child]:col-start-4"
-                }`}
+              className="relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(94,201,116,0.2)] group flex flex-col min-w-0 lg:col-span-2"
             >
               <CornerBrackets />
 
