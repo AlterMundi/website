@@ -11,6 +11,8 @@ type Project = {
   url: string
   repoUrl: string
   modelUrl?: string
+  /** Additional related sites, rendered after the Website/Repo buttons. */
+  extraLinks?: { label: string; url: string }[]
 }
 
 const PROJECTS: Project[] = [
@@ -31,6 +33,9 @@ const PROJECTS: Project[] = [
     status: "Active",
     url: "https://libreincu.altermundi.net/",
     repoUrl: "https://github.com/AlterMundi-MonitoreoyControl/Proyecto-Incubadora",
+    extraLinks: [
+      { label: "Cartilla avícola", url: "https://materialavicola.altermundi.net/" },
+    ],
   },
   {
     name: "SAI (Sistema de Alerta de Incendios)",
@@ -117,8 +122,8 @@ export function Projects() {
                 </div>
 
                 {/* Actions */}
-                <div className="flex flex-col min-[400px]:flex-row gap-2 pt-3 sm:pt-4 mt-auto">
-                  <Button asChild size="sm" className="flex-1">
+                <div className="flex flex-col min-[400px]:flex-row min-[400px]:flex-wrap gap-2 pt-3 sm:pt-4 mt-auto">
+                  <Button asChild size="sm" className="min-[400px]:flex-1">
                     <a href={project.url} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-4 h-4" />
                       Website
@@ -130,6 +135,14 @@ export function Projects() {
                       Repo
                     </a>
                   </Button>
+                  {project.extraLinks?.map((link) => (
+                    <Button key={link.url} asChild variant="outline" size="sm" className="min-[400px]:flex-1">
+                      <a href={link.url} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4" />
+                        {link.label}
+                      </a>
+                    </Button>
+                  ))}
                 </div>
               </div>
             </div>
