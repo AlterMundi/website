@@ -1,16 +1,19 @@
 import { Button } from "@/components/ui/button"
 import { CornerBrackets } from "@/components/ui/corner-brackets"
 import { ProjectsDecorations } from "@/components/section-decorations"
-import { ExternalLink, Github } from "lucide-react"
+import { Construction, ExternalLink, Github } from "lucide-react"
 
 type Project = {
   name: string
   shortDescription: string
   tags: string[]
   status: string
-  url: string
+  /** Omit when the project has no public site yet — the card shows a "site in progress" state. */
+  url?: string
   repoUrl: string
   modelUrl?: string
+  /** Additional related sites, rendered after the Website/Repo buttons. */
+  extraLinks?: { label: string; url: string }[]
 }
 
 const PROJECTS: Project[] = [
@@ -31,6 +34,9 @@ const PROJECTS: Project[] = [
     status: "Active",
     url: "https://libreincu.altermundi.net/",
     repoUrl: "https://github.com/AlterMundi-MonitoreoyControl/Proyecto-Incubadora",
+    extraLinks: [
+      { label: "Cartilla avícola", url: "https://materialavicola.altermundi.net/" },
+    ],
   },
   {
     name: "SAI (Sistema de Alerta de Incendios)",
@@ -60,6 +66,15 @@ const PROJECTS: Project[] = [
     url: "https://harmonicbeacon.com",
     repoUrl: "https://github.com/altermundi",
   },
+  {
+    name: "DaemonMatrix",
+    shortDescription:
+      "An agent portability layer for AI beings: protocols for identity, continuity, and secure communication across many simultaneous embodiments. The same daemon can inhabit a Minecraft bot, a device, or a terminal while keeping one memory, one history, and one relationship with the human it belongs to.",
+    tags: ["AI Agents", "Digital Identity", "Protocol"],
+    status: "Active",
+    repoUrl: "https://github.com/AlterMundi/daimon-matrix",
+    extraLinks: [{ label: "DaemonCraft", url: "https://daemoncraft.altermundi.net" }],
+  },
 ]
 
 export function Projects() {
@@ -80,11 +95,10 @@ export function Projects() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 auto-rows-fr">
-          {PROJECTS.map((project, index) => (
+          {PROJECTS.map((project) => (
             <div
               key={project.name}
-              className={`relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(94,201,116,0.2)] group flex flex-col min-w-0 ${index < 3 ? "lg:col-span-2" : "lg:col-span-2 lg:col-start-2 lg:[&:last-child]:col-start-4"
-                }`}
+              className="relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(94,201,116,0.2)] group flex flex-col min-w-0 lg:col-span-2"
             >
               <CornerBrackets />
 
@@ -117,19 +131,37 @@ export function Projects() {
                 </div>
 
                 {/* Actions */}
-                <div className="flex flex-col min-[400px]:flex-row gap-2 pt-3 sm:pt-4 mt-auto">
-                  <Button asChild size="sm" className="flex-1">
-                    <a href={project.url} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4" />
-                      Website
-                    </a>
-                  </Button>
+                <div className="flex flex-col min-[400px]:flex-row min-[400px]:flex-wrap gap-2 pt-3 sm:pt-4 mt-auto">
+                  {project.url ? (
+                    <Button asChild size="sm" className="min-[400px]:flex-1">
+                      <a href={project.url} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4" />
+                        Website
+                      </a>
+                    </Button>
+                  ) : (
+                    <span
+                      className="inline-flex items-center justify-center gap-1.5 h-8 px-3 min-[400px]:flex-1 text-sm font-medium font-mono uppercase tracking-wider border-2 border-dashed border-border text-foreground/50"
+                      aria-label="Website under construction"
+                    >
+                      <Construction className="w-4 h-4" />
+                      Site in progress
+                    </span>
+                  )}
                   <Button asChild variant="outline" size="sm">
                     <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4" />
                       Repo
                     </a>
                   </Button>
+                  {project.extraLinks?.map((link) => (
+                    <Button key={link.url} asChild variant="outline" size="sm" className="min-[400px]:flex-1">
+                      <a href={link.url} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4" />
+                        {link.label}
+                      </a>
+                    </Button>
+                  ))}
                 </div>
               </div>
             </div>
