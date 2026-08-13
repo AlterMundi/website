@@ -1,37 +1,42 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { CornerBrackets } from "@/components/ui/corner-brackets"
 import { ProjectsDecorations } from "@/components/section-decorations"
+import { useLanguage } from "@/lib/i18n"
+import type { Dictionary, ProjectId } from "@/lib/dictionaries"
 import { Construction, ExternalLink, Github } from "lucide-react"
 
 type Project = {
+  /** Key into the dictionary, where the description and tags live. */
+  id: ProjectId
+  /** Proper name — the same in every language. */
   name: string
-  shortDescription: string
-  tags: string[]
-  status: string
+  status: keyof Dictionary["projects"]["status"]
   /** Omit when the project has no public site yet — the card shows a "site in progress" state. */
   url?: string
   repoUrl: string
   modelUrl?: string
-  /** Additional related sites, rendered after the Website/Repo buttons. */
+  /**
+   * Additional related sites, rendered after the Website/Repo buttons. Labels
+   * are deliberately not translated: they name a specific resource, and the
+   * anchor text is what search engines read.
+   */
   extraLinks?: { label: string; url: string }[]
 }
 
 const PROJECTS: Project[] = [
   {
+    id: "conectividad",
     name: "Conectividad",
-    shortDescription:
-      "An open-hardware WiFi router and companion mesh networking firmware, purpose-built for community networks. Designed to be affordable, durable, and deployable with low technical barriers, already powering initiatives like QuintanaLibre in rural Cordoba.",
-    tags: ["Networking", "Hardware", "Firmware"],
-    status: "Flagship",
+    status: "flagship",
     url: "https://conectividad.altermundi.net/",
     repoUrl: "https://gitlab.com/librerouter/",
   },
   {
+    id: "libreagro",
     name: "LibreAgro",
-    shortDescription:
-      "An open-source poultry incubator system for family farming, developed with CTO. It integrates temperature and humidity monitoring and control, local WiFi access through a mobile app, and remote dashboard data for practical field use.",
-    tags: ["IoT", "Agriculture", "Hardware"],
-    status: "Active",
+    status: "active",
     url: "https://libreincu.altermundi.net/",
     repoUrl: "https://github.com/AlterMundi-MonitoreoyControl/Proyecto-Incubadora",
     extraLinks: [
@@ -39,45 +44,39 @@ const PROJECTS: Project[] = [
     ],
   },
   {
+    id: "sai",
     name: "SAI (Sistema de Alerta de Incendios)",
-    shortDescription:
-      "A distributed early wildfire detection system that combines computer vision, edge devices, and automated alerts. Built as robust, scalable infrastructure for communities, municipalities, and private landowners protecting forests and agricultural land.",
-    tags: ["Computer Vision", "IoT", "Safety"],
-    status: "Active",
+    status: "active",
     url: "https://sainet.info/",
     repoUrl: "https://github.com/AlterMundi/sai-cam",
     modelUrl: "/models/sai-prueba-pagina.stl",
   },
   {
+    id: "phideus",
     name: "Phideus",
-    shortDescription:
-      "An open research platform for analyzing harmonic patterns across audio, physiological, and other time-based signals. It combines interpretable descriptors and machine learning to support cross-domain experiments, comparative analysis, and the development of proportion-aware AI.",
-    tags: ["opensource", "research", "ai"],
-    status: "Active",
+    status: "active",
     url: "https://phideus.net",
     repoUrl: "https://github.com/AlterMundi/Phideus",
   },
   {
+    id: "beacon",
     name: "Harmonic Beacon",
-    shortDescription:
-      "An open acoustic platform for generating sustained harmonic fields in physical spaces. It is designed for research, live experimentation, and wellness-oriented practices around resonance, interference, and embodied sound.",
-    tags: ["acoustics", "wellness", "open hardware"],
-    status: "Active",
+    status: "active",
     url: "https://harmonicbeacon.com",
     repoUrl: "https://github.com/altermundi",
   },
   {
+    id: "daemonmatrix",
     name: "DaemonMatrix",
-    shortDescription:
-      "An agent portability layer for AI beings: protocols for identity, continuity, and secure communication across many simultaneous embodiments. The same daemon can inhabit a Minecraft bot, a device, or a terminal while keeping one memory, one history, and one relationship with the human it belongs to.",
-    tags: ["AI Agents", "Digital Identity", "Protocol"],
-    status: "Active",
+    status: "active",
     repoUrl: "https://github.com/AlterMundi/daimon-matrix",
     extraLinks: [{ label: "DaemonCraft", url: "https://daemoncraft.altermundi.net" }],
   },
 ]
 
 export function Projects() {
+  const { t } = useLanguage()
+
   return (
     <section
       id="projects"
@@ -86,86 +85,89 @@ export function Projects() {
       <ProjectsDecorations />
       <div className="relative z-10 flex flex-col flex-1 space-y-8 sm:space-y-12">
         <div className="space-y-3 sm:space-y-4">
-          <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">&gt; FEATURED_WORK</span>
-          <h2 className="font-mono text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">Our Projects</h2>
+          <span className="text-xs font-mono uppercase tracking-wider text-primary crt-glow">{t.projects.eyebrow}</span>
+          <h2 className="font-mono text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">{t.projects.heading}</h2>
           <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-2xl">
-            Nodes in a distributed nervous system — perceptors, integrators, and intelligences that communities can own,
-            understand, and extend.
+            {t.projects.intro}
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 auto-rows-fr">
-          {PROJECTS.map((project) => (
-            <div
-              key={project.name}
-              className="relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(94,201,116,0.2)] group flex flex-col min-w-0 lg:col-span-2"
-            >
-              <CornerBrackets />
+          {PROJECTS.map((project) => {
+            const copy = t.projects.items[project.id]
 
-              <div className="bg-card p-4 sm:p-6 flex flex-col flex-1 min-h-0">
-                {/* Header */}
-                <div className="space-y-2 sm:space-y-3">
-                  <div className="flex items-start justify-between gap-2 min-w-0">
-                    <h3 className="font-mono text-base sm:text-lg font-bold leading-tight text-balance group-hover:text-primary transition-colors min-w-0">
-                      {project.name}
-                    </h3>
-                    <span
-                      className={`inline-flex items-center px-2 py-1 text-xs font-mono uppercase tracking-wider shrink-0 ${project.status === "Flagship"
-                          ? "bg-primary/10 text-primary border-2 border-primary/30"
-                          : "bg-secondary/10 text-secondary border-2 border-secondary/30"
-                        }`}
-                    >
-                      {project.status}
-                    </span>
+            return (
+              <div
+                key={project.id}
+                className="relative bg-card border-2 border-border overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(94,201,116,0.2)] group flex flex-col min-w-0 lg:col-span-2"
+              >
+                <CornerBrackets />
+
+                <div className="bg-card p-4 sm:p-6 flex flex-col flex-1 min-h-0">
+                  {/* Header */}
+                  <div className="space-y-2 sm:space-y-3">
+                    <div className="flex items-start justify-between gap-2 min-w-0">
+                      <h3 className="font-mono text-base sm:text-lg font-bold leading-tight text-balance group-hover:text-primary transition-colors min-w-0">
+                        {project.name}
+                      </h3>
+                      <span
+                        className={`inline-flex items-center px-2 py-1 text-xs font-mono uppercase tracking-wider shrink-0 ${project.status === "flagship"
+                            ? "bg-primary/10 text-primary border-2 border-primary/30"
+                            : "bg-secondary/10 text-secondary border-2 border-secondary/30"
+                          }`}
+                      >
+                        {t.projects.status[project.status]}
+                      </span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed text-pretty">{copy.description}</p>
                   </div>
-                  <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed text-pretty">{project.shortDescription}</p>
-                </div>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="text-[10px] sm:text-xs font-mono uppercase tracking-wider px-1.5 sm:px-2 py-0.5 sm:py-1 bg-surface border-2 border-border">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4">
+                    {copy.tags.map((tag) => (
+                      <span key={tag} className="text-[10px] sm:text-xs font-mono uppercase tracking-wider px-1.5 sm:px-2 py-0.5 sm:py-1 bg-surface border-2 border-border">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-                {/* Actions */}
-                <div className="flex flex-col min-[400px]:flex-row min-[400px]:flex-wrap gap-2 pt-3 sm:pt-4 mt-auto">
-                  {project.url ? (
-                    <Button asChild size="sm" className="min-[400px]:flex-1">
-                      <a href={project.url} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4" />
-                        Website
+                  {/* Actions */}
+                  <div className="flex flex-col min-[400px]:flex-row min-[400px]:flex-wrap gap-2 pt-3 sm:pt-4 mt-auto">
+                    {project.url ? (
+                      <Button asChild size="sm" className="min-[400px]:flex-1">
+                        <a href={project.url} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4" />
+                          {t.projects.website}
+                        </a>
+                      </Button>
+                    ) : (
+                      <span
+                        className="inline-flex items-center justify-center gap-1.5 h-8 px-3 min-[400px]:flex-1 text-sm font-medium font-mono uppercase tracking-wider border-2 border-dashed border-border text-foreground/50"
+                        aria-label={t.projects.noSiteAria}
+                      >
+                        <Construction className="w-4 h-4" />
+                        {t.projects.noSite}
+                      </span>
+                    )}
+                    <Button asChild variant="outline" size="sm">
+                      <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4" />
+                        {t.projects.repo}
                       </a>
                     </Button>
-                  ) : (
-                    <span
-                      className="inline-flex items-center justify-center gap-1.5 h-8 px-3 min-[400px]:flex-1 text-sm font-medium font-mono uppercase tracking-wider border-2 border-dashed border-border text-foreground/50"
-                      aria-label="Website under construction"
-                    >
-                      <Construction className="w-4 h-4" />
-                      Site in progress
-                    </span>
-                  )}
-                  <Button asChild variant="outline" size="sm">
-                    <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4" />
-                      Repo
-                    </a>
-                  </Button>
-                  {project.extraLinks?.map((link) => (
-                    <Button key={link.url} asChild variant="outline" size="sm" className="min-[400px]:flex-1">
-                      <a href={link.url} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4" />
-                        {link.label}
-                      </a>
-                    </Button>
-                  ))}
+                    {project.extraLinks?.map((link) => (
+                      <Button key={link.url} asChild variant="outline" size="sm" className="min-[400px]:flex-1">
+                        <a href={link.url} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4" />
+                          {link.label}
+                        </a>
+                      </Button>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

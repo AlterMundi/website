@@ -8,10 +8,12 @@ import { ScrollLink } from "@/components/ui/scroll-link"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useScrollSpy } from "@/hooks/use-scroll-spy"
+import { useLanguage } from "@/lib/i18n"
+import { LanguageToggle } from "@/components/ui/language-toggle"
 
-const navLinks: { id: string; label: string; scrollBlock?: "start" | "center" | "end"; href?: string }[] = [
-  { id: "projects", label: "Projects", scrollBlock: "start" },
-  { id: "contact", label: "Contact" },
+const navLinks: { id: "projects" | "contact"; scrollBlock?: "start" | "center" | "end"; href?: string }[] = [
+  { id: "projects", scrollBlock: "start" },
+  { id: "contact" },
 ]
 
 export function Navbar() {
@@ -20,6 +22,7 @@ export function Navbar() {
   const { activeId, setActiveId } = useScrollSpy(["hero", "projects", "contact"])
   const pathname = usePathname()
   const isHome = pathname === "/"
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +61,11 @@ export function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-[slide-in-from-top_400ms_ease-out_both]",
-        isScrolled ? "bg-background/95 backdrop-blur-sm border-b-2 border-border" : "bg-transparent"
+        // The open mobile panel needs a ground of its own: at the top of the page
+        // the bar is transparent, and the menu would otherwise sit over the hero.
+        isScrolled || isMobileMenuOpen
+          ? "bg-background/95 backdrop-blur-sm border-b-2 border-border"
+          : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,20 +74,21 @@ export function Navbar() {
             <button
               type="button"
               className="flex items-center hover:opacity-80 transition-opacity group shrink-0"
-              aria-label="AlterMundi Home"
+              aria-label={t.nav.home}
               onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu() }}
             >
               <AlterMundiLogo className="h-10 sm:h-12 md:h-16 w-auto mt-1" />
             </button>
           ) : (
-            <a href="/" className="flex items-center hover:opacity-80 transition-opacity group shrink-0" aria-label="AlterMundi Home">
+            <a href="/" className="flex items-center hover:opacity-80 transition-opacity group shrink-0" aria-label={t.nav.home}>
               <AlterMundiLogo className="h-10 sm:h-12 md:h-16 w-auto mt-1" />
             </a>
           )}
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-4 lg:gap-6">
-            {navLinks.map(({ id, label, scrollBlock, href }) => {
+            {navLinks.map(({ id, scrollBlock, href }) => {
+              const label = t.nav[id]
               // If it has an href (like /about), use it directly
               if (href) {
                 const isActive = pathname === href
@@ -119,11 +127,13 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-2">
+            <LanguageToggle className="hidden sm:inline-flex" />
+
             <Button asChild size="sm" className="hidden sm:inline-flex">
               {isHome ? (
-                <ScrollLink targetId="contact">Work with us</ScrollLink>
+                <ScrollLink targetId="contact">{t.nav.workWithUs}</ScrollLink>
               ) : (
-                <a href="/#contact">Work with us</a>
+                <a href="/#contact">{t.nav.workWithUs}</a>
               )}
             </Button>
 
@@ -133,7 +143,7 @@ export function Navbar() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 -mr-2 rounded-md border-2 border-transparent hover:border-primary/30 focus:outline-none focus-visible:border-primary/50 focus-visible:ring-2 focus-visible:ring-primary/20 text-foreground"
               aria-expanded={isMobileMenuOpen}
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-label={isMobileMenuOpen ? t.nav.closeMenu : t.nav.openMenu}
               aria-controls="mobile-nav"
             >
               {isMobileMenuOpen ? (
@@ -153,7 +163,8 @@ export function Navbar() {
           inert={!isMobileMenuOpen}
         >
           <div className="py-4 pb-6 border-t border-border flex flex-col gap-1">
-            {navLinks.map(({ id, label, scrollBlock, href }) => {
+            {navLinks.map(({ id, scrollBlock, href }) => {
+              const label = t.nav[id]
               if (href) {
                 const isActive = pathname === href
                 return (
@@ -188,12 +199,15 @@ export function Navbar() {
                 </a>
               )
             })}
-            <div className="pt-2 mt-2 border-t border-border sm:hidden">
+            <div className="pt-2 mt-2 border-t border-border sm:hidden space-y-3">
+              <div className="px-4">
+                <LanguageToggle onSelect={closeMenu} />
+              </div>
               <Button asChild size="default" className="w-full justify-center">
                 {isHome ? (
-                  <ScrollLink targetId="contact" onClick={closeMenu}>Work with us</ScrollLink>
+                  <ScrollLink targetId="contact" onClick={closeMenu}>{t.nav.workWithUs}</ScrollLink>
                 ) : (
-                  <a href="/#contact" onClick={closeMenu}>Work with us</a>
+                  <a href="/#contact" onClick={closeMenu}>{t.nav.workWithUs}</a>
                 )}
               </Button>
             </div>

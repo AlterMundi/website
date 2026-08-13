@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Source_Code_Pro, Montserrat } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { LanguageProvider } from "@/lib/i18n"
 import "./globals.css"
 
 const sourceCodePro = Source_Code_Pro({
@@ -79,7 +80,7 @@ export default function RootLayout({
         <noscript>
           <style>{`[class*="animate-[fade-in"],[class*="animate-[slide-in"]{animation:none!important;opacity:1!important}`}</style>
         </noscript>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
         <Analytics />
       </body>
     </html>
