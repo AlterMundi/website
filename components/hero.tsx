@@ -1,5 +1,8 @@
+"use client"
+
 import { ScrollLink } from "@/components/ui/scroll-link"
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/lib/i18n"
 
 // Per-letter offsets: alternate above/below with slight horizontal drift
 // so each letter feels like it's arriving from its own place on screen
@@ -19,6 +22,8 @@ const LETTER_OFFSETS: { ty: string; tx: string }[] = [
 const WORD = "AlterMundi"
 
 export function Hero() {
+  const { t } = useLanguage()
+
   return (
     <section
       id="hero"
@@ -59,31 +64,25 @@ export function Hero() {
           className="text-foreground/80 leading-relaxed"
           style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.15rem)", maxWidth: "540px" }}
         >
-          AlterMundi is a research and experimentation ecosystem converging
-          on a common core: the exploration of{" "}
+          {t.hero.leadBeforeLink}
           <a
             href="https://hit.altermundi.net"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary font-semibold hover:underline underline-offset-4"
           >
-            Harmonic Information Theory (HIT)
-          </a>{" "}
-          and the development of technologies capable of investigating,
-          translating, and applying harmonic patterns across physical,
-          biological, perceptual, and computational systems.
+            {t.hero.leadLink}
+          </a>
+          {t.hero.leadAfterLink}
         </p>
         <p
           className="text-foreground/60 leading-relaxed"
           style={{ fontSize: "clamp(0.85rem, 1.5vw, 1rem)", maxWidth: "540px" }}
         >
-          With this perspective and a human-centered focus, it sustains and
-          projects other areas of work linked to connectivity, agroecological
-          production, monitoring and prevention, health, and AI. We currently
-          work with human-AI multi-agent systems across most of our projects.
+          {t.hero.secondary}
         </p>
         <Button asChild variant="outline" size="sm" className="mt-2">
-          <a href="/about/">Learn more</a>
+          <a href="/about/">{t.hero.learnMore}</a>
         </Button>
       </div>
 
@@ -95,7 +94,7 @@ export function Hero() {
         <ScrollLink
           targetId="projects"
           className="text-primary/50 hover:text-primary transition-colors duration-300 focus:outline-none block"
-          aria-label="Scroll to Projects"
+          aria-label={t.hero.scrollAria}
         >
           <svg
             width="36"

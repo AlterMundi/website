@@ -1,10 +1,15 @@
+"use client"
+
 import { AlterMundiLogo } from "@/components/altermundi-logo"
 import { ScrollLink } from "@/components/ui/scroll-link"
 import { FooterDecorations } from "@/components/section-decorations"
+import { useLanguage } from "@/lib/i18n"
 
 const currentYear = new Date().getFullYear()
 
 export function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer className="relative border-t-2 border-border bg-card">
       <FooterDecorations />
@@ -18,27 +23,27 @@ export function Footer() {
           {/* Navigation */}
           <div className="space-y-3 sm:space-y-4">
             <h3 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-primary">
-              {"// Navigation"}
+              {t.footer.navigation}
             </h3>
             <nav className="flex flex-col gap-1.5 sm:gap-2">
               <a
                 href="/about/"
                 className="text-xs sm:text-sm font-mono text-foreground/70 hover:text-primary transition-colors text-left"
               >
-                &gt; About_Us
+                {t.footer.aboutUs}
               </a>
               <ScrollLink
                 targetId="projects"
                 scrollBlock="start"
                 className="text-xs sm:text-sm font-mono text-foreground/70 hover:text-primary transition-colors text-left"
               >
-                &gt; Projects
+                {t.footer.projects}
               </ScrollLink>
               <ScrollLink
                 targetId="contact"
                 className="text-xs sm:text-sm font-mono text-foreground/70 hover:text-primary transition-colors text-left"
               >
-                &gt; Contact
+                {t.footer.contact}
               </ScrollLink>
             </nav>
           </div>
@@ -46,7 +51,7 @@ export function Footer() {
           {/* Connect */}
           <div className="space-y-3 sm:space-y-4">
             <h3 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-primary">
-              {"// Connect"}
+              {t.footer.connect}
             </h3>
             <div className="flex flex-col gap-1.5 sm:gap-2">
               <a
@@ -69,8 +74,8 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="pt-6 sm:pt-8 border-t-2 border-border flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center sm:text-left">
-          <p className="text-[10px] sm:text-xs text-foreground/60 font-mono">© {currentYear} AlterMundi · Asociación Civil Sin Fines de Lucro</p>
-          <p className="text-[10px] sm:text-xs text-primary/70 font-mono crt-glow">[ frequency · relation · pattern · uptake ]</p>
+          <p className="text-[10px] sm:text-xs text-foreground/60 font-mono">© {currentYear} {t.footer.legal}</p>
+          <p className="text-[10px] sm:text-xs text-primary/70 font-mono crt-glow">{t.footer.motto}</p>
         </div>
       </div>
     </footer>
