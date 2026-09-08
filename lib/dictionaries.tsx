@@ -43,7 +43,7 @@ const en = {
     eyebrow: "> FEATURED_WORK",
     heading: "Our Projects",
     intro:
-      "Nodes in a distributed nervous system — perceptors, integrators, and intelligences that communities can own, understand, and extend.",
+      "Open technologies that help communities connect, produce, protect their land, study living signals, and work with AI.",
     website: "Website",
     repo: "Repo",
     noSite: "Site in progress",
@@ -55,32 +55,32 @@ const en = {
     items: {
       conectividad: {
         description:
-          "An open-hardware WiFi router and companion mesh networking firmware, purpose-built for community networks. Designed to be affordable, durable, and deployable with low technical barriers, already powering initiatives like QuintanaLibre in rural Cordoba.",
+          "Open WiFi routers and software that let communities build and manage their own local networks. They make reliable connectivity possible in rural and underserved places with technology people can understand and adapt.",
         tags: ["Networking", "Hardware", "Firmware"],
       },
       libreagro: {
         description:
-          "An open-source poultry incubator system for family farming, developed with CTO. It integrates temperature and humidity monitoring and control, local WiFi access through a mobile app, and remote dashboard data for practical field use.",
+          "Tools that help family farmers monitor and control poultry incubators from a phone. Open hardware and software track temperature and humidity, automate care, and can be repaired or adapted locally.",
         tags: ["IoT", "Agriculture", "Hardware"],
       },
       sai: {
         description:
-          "A distributed early wildfire detection system that combines computer vision, edge devices, and automated alerts. Built as robust, scalable infrastructure for communities, municipalities, and private landowners protecting forests and agricultural land.",
+          "Cameras and computer vision watch rural landscapes for possible smoke or fire and send an early alert. This helps communities and response teams check sooner, when every minute matters.",
         tags: ["Computer Vision", "IoT", "Safety"],
       },
       phideus: {
         description:
-          "An open research platform for analyzing harmonic patterns across audio, physiological, and other time-based signals. It combines interpretable descriptors and machine learning to support cross-domain experiments, comparative analysis, and the development of proportion-aware AI.",
+          "A research toolkit that finds and compares patterns in sound, body signals, and other data that changes over time. It helps test whether AI can recognize the same underlying relationship across different kinds of signals.",
         tags: ["opensource", "research", "ai"],
       },
       beacon: {
         description:
-          "An open acoustic platform for generating sustained harmonic fields in physical spaces. It is designed for research, live experimentation, and wellness-oriented practices around resonance, interference, and embodied sound.",
+          "An open platform that creates continuous, slowly changing fields of sound for listening, research, and well-being practices. It lets people explore how resonance and interference are perceived in bodies and spaces.",
         tags: ["acoustics", "wellness", "open hardware"],
       },
       daemonmatrix: {
         description:
-          "An agent portability layer for AI beings: protocols for identity, continuity, and secure communication across many simultaneous embodiments. The same daemon can inhabit a Minecraft bot, a device, or a terminal while keeping one memory, one history, and one relationship with the human it belongs to.",
+          "A way for an AI agent to keep a stable identity and verifiable history while working through places such as a Minecraft character, a device, or a terminal. Each body keeps its own experience and can synchronize without erasing differences.",
         tags: ["AI Agents", "Digital Identity", "Protocol"],
       },
     },
@@ -192,7 +192,7 @@ const es: Dictionary = {
     eyebrow: "> TRABAJO_DESTACADO",
     heading: "Nuestros proyectos",
     intro:
-      "Nodos de un sistema nervioso distribuido: perceptores, integradores e inteligencias que las comunidades pueden hacer propios, comprender y extender.",
+      "Tecnologías abiertas para que las comunidades puedan conectarse, producir, cuidar su territorio, estudiar señales vivas y trabajar con IA.",
     website: "Sitio",
     repo: "Repo",
     noSite: "Sitio en construcción",
@@ -204,32 +204,32 @@ const es: Dictionary = {
     items: {
       conectividad: {
         description:
-          "Un router WiFi de hardware abierto y su firmware de red mesh, hechos a medida para redes comunitarias. Accesible, durable y desplegable con barreras técnicas bajas, ya sostiene iniciativas como QuintanaLibre en la Córdoba rural.",
+          "Routers WiFi y software abiertos para que las comunidades construyan y administren sus propias redes locales. Hacen posible una conectividad confiable en zonas rurales y desatendidas con tecnología que se puede comprender y adaptar.",
         tags: ["Redes", "Hardware", "Firmware"],
       },
       libreagro: {
         description:
-          "Un sistema de incubadora avícola de código abierto para la agricultura familiar, desarrollado junto al CTO. Integra monitoreo y control de temperatura y humedad, acceso local por WiFi desde una aplicación móvil y datos en un tablero remoto para el trabajo cotidiano a campo.",
+          "Herramientas para que familias productoras monitoreen y controlen incubadoras avícolas desde un teléfono. El hardware y el software abiertos miden temperatura y humedad, automatizan cuidados y pueden repararse o adaptarse localmente.",
         tags: ["IoT", "Agricultura", "Hardware"],
       },
       sai: {
         description:
-          "Un sistema distribuido de detección temprana de incendios que combina visión por computadora, dispositivos en el borde y alertas automáticas. Es infraestructura robusta y escalable para comunidades, municipios y propietarios que protegen bosques y tierras productivas.",
+          "Cámaras y visión por computadora observan territorios rurales en busca de posible humo o fuego y envían una alerta temprana. Así, las comunidades y los equipos de respuesta pueden verificar antes, cuando cada minuto importa.",
         tags: ["Visión por computadora", "IoT", "Seguridad"],
       },
       phideus: {
         description:
-          "Una plataforma abierta de investigación para analizar patrones armónicos en señales de audio, fisiológicas y otras series temporales. Combina descriptores interpretables y aprendizaje automático para sostener experimentos entre dominios, análisis comparativo y el desarrollo de una IA sensible a la proporción.",
+          "Una herramienta de investigación que encuentra y compara patrones en sonidos, señales del cuerpo y otros datos que cambian en el tiempo. Permite probar si una IA puede reconocer la misma relación de fondo en distintos tipos de señales.",
         tags: ["código abierto", "investigación", "ia"],
       },
       beacon: {
         description:
-          "Una plataforma acústica abierta que sostiene campos armónicos en espacios físicos. Está pensada para la investigación, la experimentación en vivo y prácticas orientadas al bienestar en torno a la resonancia, la interferencia y el sonido encarnado.",
+          "Una plataforma abierta que crea campos sonoros continuos y de cambio lento para la escucha, la investigación y prácticas de bienestar. Permite explorar cómo se perciben la resonancia y la interferencia en el cuerpo y el espacio.",
         tags: ["acústica", "bienestar", "hardware abierto"],
       },
       daemonmatrix: {
         description:
-          "Una capa de portabilidad para agentes de inteligencia artificial: protocolos de identidad, continuidad y comunicación segura entre múltiples encarnaciones simultáneas. El mismo daemon puede habitar un bot de Minecraft, un dispositivo o una terminal conservando una sola memoria, una sola historia y un solo vínculo con la persona a la que pertenece.",
+          "Una forma de que un agente de IA conserve una identidad estable y una historia verificable mientras actúa desde lugares como un personaje de Minecraft, un dispositivo o una terminal. Cada cuerpo mantiene su experiencia y puede sincronizarse sin borrar diferencias.",
         tags: ["Agentes IA", "Identidad digital", "Protocolo"],
       },
     },

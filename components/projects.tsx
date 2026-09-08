@@ -47,7 +47,7 @@ const PROJECTS: Project[] = [
     id: "sai",
     name: "SAI (Sistema de Alerta de Incendios)",
     status: "active",
-    url: "https://sainet.info/",
+    url: "https://sai.altermundi.net/",
     repoUrl: "https://github.com/AlterMundi/sai-cam",
     modelUrl: "/models/sai-prueba-pagina.stl",
   },

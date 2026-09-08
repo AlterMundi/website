@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { AlterMundiLogo } from "@/components/altermundi-logo"
@@ -80,9 +81,9 @@ export function Navbar() {
               <AlterMundiLogo className="h-10 sm:h-12 md:h-16 w-auto mt-1" />
             </button>
           ) : (
-            <a href="/" className="flex items-center hover:opacity-80 transition-opacity group shrink-0" aria-label={t.nav.home}>
+            <Link href="/" className="flex items-center hover:opacity-80 transition-opacity group shrink-0" aria-label={t.nav.home}>
               <AlterMundiLogo className="h-10 sm:h-12 md:h-16 w-auto mt-1" />
-            </a>
+            </Link>
           )}
 
           {/* Desktop nav */}
@@ -119,9 +120,9 @@ export function Navbar() {
                   {label}
                 </ScrollLink>
               ) : (
-                <a key={id} href={`/#${id}`} className={navLinkClass(id)}>
+                <Link key={id} href={`/#${id}`} className={navLinkClass(id)}>
                   {label}
-                </a>
+                </Link>
               )
             })}
           </div>
@@ -133,7 +134,7 @@ export function Navbar() {
               {isHome ? (
                 <ScrollLink targetId="contact">{t.nav.workWithUs}</ScrollLink>
               ) : (
-                <a href="/#contact">{t.nav.workWithUs}</a>
+                <Link href="/#contact">{t.nav.workWithUs}</Link>
               )}
             </Button>
 
@@ -194,9 +195,9 @@ export function Navbar() {
                   {label}
                 </ScrollLink>
               ) : (
-                <a key={id} href={`/#${id}`} className={navLinkClass(id, true)} onClick={closeMenu}>
+                <Link key={id} href={`/#${id}`} className={navLinkClass(id, true)} onClick={closeMenu}>
                   {label}
-                </a>
+                </Link>
               )
             })}
             <div className="pt-2 mt-2 border-t border-border sm:hidden space-y-3">
@@ -207,7 +208,7 @@ export function Navbar() {
                 {isHome ? (
                   <ScrollLink targetId="contact" onClick={closeMenu}>{t.nav.workWithUs}</ScrollLink>
                 ) : (
-                  <a href="/#contact" onClick={closeMenu}>{t.nav.workWithUs}</a>
+                  <Link href="/#contact" onClick={closeMenu}>{t.nav.workWithUs}</Link>
                 )}
               </Button>
             </div>
