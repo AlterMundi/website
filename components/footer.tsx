@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { AlterMundiLogo } from "@/components/altermundi-logo"
 import { ScrollLink } from "@/components/ui/scroll-link"
 import { FooterDecorations } from "@/components/section-decorations"
@@ -39,6 +40,12 @@ export function Footer() {
               >
                 {t.footer.projects}
               </ScrollLink>
+              <Link
+                href="/equipo/"
+                className="text-xs sm:text-sm font-mono text-foreground/70 hover:text-primary transition-colors text-left"
+              >
+                {t.footer.team}
+              </Link>
               <ScrollLink
                 targetId="contact"
                 className="text-xs sm:text-sm font-mono text-foreground/70 hover:text-primary transition-colors text-left"
