@@ -25,26 +25,25 @@ export function TeamProfile({ member }: { member: TeamMember }) {
           <ArrowLeft className="size-4" aria-hidden />{strings.back}
         </Link>
 
-        <header className="grid overflow-hidden border-2 border-border bg-card lg:grid-cols-[minmax(19rem,0.8fr)_1.2fr]">
-          <div className="relative min-h-[22rem] bg-background sm:min-h-[30rem] lg:min-h-full">
+        <header className="flex flex-col items-start gap-6 overflow-hidden border-2 border-border bg-card p-6 sm:flex-row sm:items-center sm:gap-9 sm:p-10 lg:p-12">
+          <div className="relative size-36 shrink-0 overflow-hidden rounded-full border-2 border-primary/40 bg-background shadow-[0_0_0_6px_rgba(94,201,116,0.05)] sm:size-44 lg:size-52">
             {member.portrait ? (
               <Image
                 src={member.portrait}
                 alt={`${strings.portrait} ${member.name}`}
                 fill
                 priority
-                sizes="(max-width: 1024px) 100vw, 42vw"
+                sizes="(max-width: 640px) 144px, (max-width: 1024px) 176px, 208px"
                 className="object-cover grayscale-[15%] contrast-[1.06]"
                 style={{ objectPosition: member.portraitPosition ?? "50% 50%" }}
               />
             ) : null}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
           </div>
 
-          <div className="flex flex-col justify-center p-6 sm:p-10 lg:p-12">
+          <div className="flex min-w-0 flex-col justify-center">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-primary">{member.role[lang]}</p>
-            <h1 className="mt-4 text-4xl font-extrabold leading-[0.98] tracking-tight sm:text-5xl lg:text-6xl">{member.name}</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/75 sm:text-xl">{member.summary[lang]}</p>
+            <h1 className="mt-3 text-3xl font-extrabold leading-[1.02] tracking-tight sm:text-4xl lg:text-5xl">{member.name}</h1>
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/75 sm:text-lg">{member.summary[lang]}</p>
           </div>
         </header>
 
@@ -85,4 +84,3 @@ export function TeamProfile({ member }: { member: TeamMember }) {
     </article>
   )
 }
-
