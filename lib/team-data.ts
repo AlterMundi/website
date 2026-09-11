@@ -216,14 +216,15 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "javier-jorge",
     name: "Javier Jorge",
-    role: { es: "Ingeniero e investigador tecnológico · INTI y AlterMundi", en: "Engineer and technology researcher · INTI and AlterMundi" },
+    role: { es: "Ingeniero, investigador y docente · INTI, UNC y AlterMundi", en: "Engineer, researcher and lecturer · INTI, UNC and AlterMundi" },
     summary: {
-      es: "Investiga y desarrolla sistemas embebidos, informática industrial, IoT y software libre, articulando su trabajo en INTI Córdoba con proyectos de AlterMundi.",
-      en: "He researches and develops embedded systems, industrial computing, IoT and open-source software, connecting his work at INTI Córdoba with AlterMundi projects.",
+      es: "Investiga, desarrolla y enseña sobre sistemas embebidos, informática industrial, IoT, ciberseguridad y software libre desde INTI Córdoba, la UNC y AlterMundi.",
+      en: "He researches, develops and teaches embedded systems, industrial computing, IoT, cybersecurity and open-source software through INTI Córdoba, UNC and AlterMundi.",
     },
     biography: {
       es: [
         "Javier es ingeniero e investigador tecnológico del INTI Córdoba, donde trabaja en electrónica e informática aplicada. Su trayectoria reúne sistemas embebidos, informática industrial, Internet Industrial de las Cosas, edge y cloud computing, visión computacional, metrología y transferencia tecnológica.",
+        "Es Ingeniero en Computación y Especialista en Sistemas y Servicios Distribuidos por la Universidad Nacional de Córdoba. Integra el equipo docente de la Diplomatura Universitaria en Ciberseguridad de FaMAF y FCEFyN, donde tiene a cargo el módulo de Autenticación, Autorización, Auditoría y Control de Acceso.",
         "Desde 2008 integra el trabajo del INTI en sistemas de pesaje dinámico para vehículos. Participó en el desarrollo de una tecnología transferida a empresas argentinas, la elaboración de criterios técnicos y la evaluación de equipamiento. También representó al INTI en el comité directivo de la Sociedad Internacional de Pesaje en Movimiento y participó de su comité científico.",
         "Es autor principal de una publicación técnica del INTI sobre una plataforma de servicios de Industria 4.0 que integra dispositivos IIoT, infraestructura cloud y algoritmos de análisis en tiempo real. En 2022 estuvo a cargo de una asistencia que permitió integrar sensores industriales de distintos fabricantes para una pyme cordobesa que exportó servicios de mantenimiento predictivo a veintitrés plantas de Europa y Asia.",
         "También participó en desarrollos abiertos de visión computacional, entre ellos una aplicación móvil para reconocer billetes destinada a personas con discapacidad visual, compartida con la comunidad de desarrolladores como software libre.",
@@ -231,6 +232,7 @@ export const teamMembers: TeamMember[] = [
       ],
       en: [
         "Javier is an engineer and technology researcher at INTI Córdoba, where he works on applied electronics and computing. His trajectory spans embedded systems, industrial computing, the Industrial Internet of Things, edge and cloud computing, computer vision, metrology and technology transfer.",
+        "He holds a Computer Engineering degree and a postgraduate specialization in Distributed Systems and Services from the National University of Córdoba. He is part of the teaching team for the University Diploma in Cybersecurity at FaMAF and FCEFyN, where he leads the module on authentication, authorization, auditing and access control.",
         "Since 2008 he has contributed to INTI’s work on weigh-in-motion systems for vehicles. He participated in developing technology transferred to Argentine companies, drafting technical criteria and evaluating equipment. He also represented INTI on the board of the International Society for Weigh-In-Motion and participated in its scientific committee.",
         "He is the lead author of an INTI technical paper on an Industry 4.0 services platform integrating IIoT devices, cloud infrastructure and real-time analysis algorithms. In 2022 he led technical assistance that integrated industrial sensors from different manufacturers for a Córdoba company that exported predictive-maintenance services to twenty-three plants across Europe and Asia.",
         "He also participated in open computer-vision developments, including a mobile banknote-recognition application for visually impaired people that was shared with the developer community as open-source software.",
@@ -238,11 +240,13 @@ export const teamMembers: TeamMember[] = [
       ],
     },
     areas: {
-      es: ["Investigación en INTI", "Sistemas embebidos e IIoT", "LibreMesh y OpenWrt", "Industria 4.0"],
-      en: ["Research at INTI", "Embedded systems and IIoT", "LibreMesh and OpenWrt", "Industry 4.0"],
+      es: ["Investigación en INTI", "Docencia y ciberseguridad", "Sistemas embebidos e IIoT", "LibreMesh y OpenWrt"],
+      en: ["Research at INTI", "Teaching and cybersecurity", "Embedded systems and IIoT", "LibreMesh and OpenWrt"],
     },
     links: [
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/javierjorge/", kind: "website" },
       { label: "GitHub", href: "https://github.com/javierbrk", kind: "github" },
+      { label: "Docencia · UNC", href: "https://ciberseguridad.diplomatura.unc.edu.ar/equipo-docente/index.html", kind: "project" },
       { label: "INTI · Industria 4.0", href: "https://www.argentina.gob.ar/noticias/una-pyme-cordobesa-exporta-sistemas-de-mantenimiento-40-al-mercado-europeo-y-asiatico-con", kind: "project" },
       { label: "Publicación técnica INTI", href: "https://app.inti.gob.ar/greenstone3/sites/localsite/collect/nuevadc/index/assoc/2022Jorg.dir/doc.pdf", kind: "project" },
       { label: "INTI · Pesaje dinámico", href: "https://www.inti.gob.ar/noticias/21-asistencia-regional/580-incorporan-a-inti-como-miembro-de-la-sociedad-internacional-de-pesaje-dinamico", kind: "project" },
