@@ -301,8 +301,8 @@ export const teamMembers: TeamMember[] = [
     name: "Saira Asua",
     role: { es: "Vibe coding, diseño web y articulación", en: "Vibe coding, web design and partnerships" },
     summary: {
-      es: "Diseña productos digitales orquestando agentes de IA y conecta esa práctica con años de trabajo comunitario, feminista y de gestión pública local.",
-      en: "She designs digital products by orchestrating AI agents and connects that practice with years of community, feminist and local public-sector work.",
+      es: "Diseña productos digitales orquestando agentes de IA y conecta esa práctica con años de trabajo comunitario y de gestión pública local.",
+      en: "She designs digital products by orchestrating AI agents and connects that practice with years of community and local public-sector work.",
     },
     biography: {
       es: [
