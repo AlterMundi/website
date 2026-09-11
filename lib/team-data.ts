@@ -370,26 +370,28 @@ export const teamMembers: TeamMember[] = [
     name: "Santiago Cetran",
     role: { es: "Desarrollador de software · backend e IoT", en: "Software developer · backend and IoT" },
     summary: {
-      es: "Desarrolla aplicaciones que conectan software, hardware y territorio. En AlterMundi trabaja en LibreIncu, WANDA y SAI con backend, IoT y metodologías asistidas por IA.",
-      en: "He develops applications connecting software, hardware and territory. At AlterMundi he works on LibreIncu, WANDA and SAI through backend, IoT and AI-assisted methods.",
+      es: "Desarrollador formado en multimedia que conecta backend, IoT y aplicaciones web. Entre 2022 y 2026 trabajó en AlterMundi en LibreIncu, WANDA y SAI.",
+      en: "A multimedia-trained developer connecting backend systems, IoT and web applications. From 2022 to 2026, he worked at AlterMundi on LibreIncu, WANDA and SAI.",
     },
     biography: {
       es: [
-        "Santiago es desarrollador de software con experiencia en backend —principalmente Python y Flask—, aplicaciones web e integración de sistemas IoT. Trabaja en AlterMundi desde enero de 2023, en proyectos que articulan hardware, software abierto y problemas concretos del territorio. En ese recorrido incorporó metodologías de desarrollo asistido por inteligencia artificial.",
+        "Santiago es desarrollador de software con experiencia en backend —principalmente Python y Flask—, Linux, AWS, aplicaciones web e integración de sistemas IoT. Desde julio de 2026 trabaja a tiempo completo en Líneas Marítimas Riccitelli. Antes integró AlterMundi, también a tiempo completo, entre septiembre de 2022 y abril de 2026, donde desarrolló proyectos que articulan hardware, software abierto y necesidades concretas del territorio mediante metodologías asistidas por inteligencia artificial.",
         "En LibreIncu colaboró en el primer prototipo funcional del sistema de monitoreo para incubadoras, integrando sensores de temperatura y humedad. Esas unidades se encuentran en uso en comunidades de Córdoba como parte de una infraestructura productiva abierta para la agricultura familiar.",
         "En WANDA lideró el desarrollo de una aplicación web para telescopios basados en Raspberry Pi 5, orientada a controlar sesiones de astrofotografía de manera remota y a explorar una futura red distribuida de observación. En SAI participó en la planificación conceptual del sistema de alerta temprana de incendios y presentó avances del proyecto junto al equipo en Edge City Patagonia en 2025.",
-        "Su producción pública también incluye BitmapForge, una herramienta abierta para generar animaciones bitmap a partir de modelos 3D, además de experimentos con redes distribuidas, MCP y agentes de IA. Se formó en Escuela Da Vinci entre 2020 y 2024.",
+        "También fue desarrollador junior en Blinktrip entre 2024 y 2025 y trabajó como diseñador en Grupo Wellness Latina entre 2021 y 2022. Su producción pública incluye BitmapForge, una herramienta abierta para generar animaciones bitmap a partir de modelos 3D, además de experimentos con redes distribuidas, MCP y agentes de IA.",
+        "Completó una formación de grado en Intermedia/Multimedia en Escuela Da Vinci entre 2020 y 2024, con herramientas de animación, diseño gráfico y producción visual. Cursó la educación secundaria en St Lukes College, una escuela bilingüe.",
       ],
       en: [
-        "Santiago is a software developer with experience in backend development —primarily Python and Flask—, web applications and IoT systems integration. He has worked at AlterMundi since January 2023 on projects connecting hardware, open software and concrete territorial needs. Along the way, he has incorporated AI-assisted development methods.",
+        "Santiago is a software developer with experience in backend development —primarily Python and Flask—, Linux, AWS, web applications and IoT systems integration. Since July 2026 he has worked full-time at Líneas Marítimas Riccitelli. He previously worked full-time at AlterMundi from September 2022 to April 2026, developing projects that connected hardware, open software and concrete territorial needs through AI-assisted methods.",
         "At LibreIncu, he contributed to the first functional prototype of the incubator-monitoring system, integrating temperature and humidity sensors. These units are in use in communities across Córdoba as part of open productive infrastructure for family farming.",
         "For WANDA, he led the development of a web application for Raspberry Pi 5-based telescopes, designed to control astrophotography sessions remotely and explore a future distributed observation network. In SAI, he participated in the conceptual planning of the early wildfire-alert system and presented project updates with the team at Edge City Patagonia in 2025.",
-        "His public work also includes BitmapForge, an open tool for generating bitmap animations from 3D models, as well as experiments with distributed networks, MCP and AI agents. He studied at Escuela Da Vinci from 2020 to 2024.",
+        "He was also a junior software developer at Blinktrip from 2024 to 2025 and worked as a designer at Grupo Wellness Latina from 2021 to 2022. His public work includes BitmapForge, an open tool for generating bitmap animations from 3D models, as well as experiments with distributed networks, MCP and AI agents.",
+        "He completed a degree programme in Intermedia/Multimedia at Escuela Da Vinci from 2020 to 2024, covering animation, graphic design and visual production. He attended St Lukes College, a bilingual secondary school.",
       ],
     },
     areas: {
-      es: ["Backend y Python", "IoT", "Aplicaciones web", "Desarrollo asistido por IA"],
-      en: ["Backend and Python", "IoT", "Web applications", "AI-assisted development"],
+      es: ["Backend y Python", "IoT", "Linux y AWS", "Desarrollo asistido por IA"],
+      en: ["Backend and Python", "IoT", "Linux and AWS", "AI-assisted development"],
     },
     links: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/santiago-rodriguez-cetran/", kind: "website" },
