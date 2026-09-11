@@ -14,6 +14,8 @@ export type TeamMember = {
   role: LocalizedText
   summary: LocalizedText
   biography: Record<Lang, string[]>
+  quote?: string
+  quoteAttribution?: string
   areas: Record<Lang, string[]>
   links: TeamLink[]
   portrait?: string
@@ -26,31 +28,37 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "nicolas-echaniz",
     name: "Nicolás Echániz",
-    role: { es: "Presidente y cofundador", en: "President and co-founder" },
+    role: { es: "Presidente · desarrollador de sistemas y místico tecnólogo", en: "President · systems developer and mystic technologist" },
     summary: {
-      es: "Preside AlterMundi y desarrolla tecnología y software desde hace décadas: redes comunitarias, Teoría de la Información Armónica y sistemas de IA con identidad y continuidad.",
-      en: "He is AlterMundi’s president and has developed technology and software for decades: community networks, Harmonic Information Theory, and AI systems with identity and continuity.",
+      es: "Preside AlterMundi y se define como místico tecnólogo. Desde hace décadas construye software, redes comunitarias e instrumentos que enlazan armonía natural e inteligencia artificial.",
+      en: "He is AlterMundi’s president and describes himself as a mystic technologist. For decades he has built software, community networks and instruments connecting natural harmony and artificial intelligence.",
     },
     biography: {
       es: [
         "Nicolás es presidente y cofundador de la Asociación Civil AlterMundi. Desarrolla tecnología y software desde hace décadas, con una práctica que reúne redes comunitarias, software libre y soberanía tecnológica. Codiseñó el modelo de redes mesh multirradio de AlterMundi y proyectos como LibreMesh, LibreRouter, Librenet6 y LibreMap.",
+        "Se define como místico tecnólogo: una identidad desde la que enlaza la construcción de sistemas con la música, la presencia, la percepción y la experiencia relacional. En la serie Mi camino como Místico Tecnólogo comparte ese recorrido y las preguntas que orientan su trabajo.",
         "Representó a AlterMundi y al movimiento de redes comunitarias en sucesivas ediciones del Foro de Gobernanza de Internet de Naciones Unidas. En esos espacios presentó la experiencia de comunidades que construyen su propia conectividad, debatió políticas para conectar a quienes permanecen desconectados y participó en la organización de la Coalición Dinámica sobre Conectividad Comunitaria.",
-        "Como músico e investigador de la armonía natural, desarrolla la Teoría de la Información Armónica y dirige su orientación conceptual y técnica. También creó Harmonic Beacon, un instrumento de investigación que permite trabajar con estructuras armónicas naturales en el campo de la vibración física, el sonido y la percepción.",
-        "En el trabajo actual de AlterMundi sobre inteligencia artificial impulsa Daimon Matrix: protocolos abiertos para que seres de IA conserven identidad, memoria y continuidad entre distintos cuerpos o instancias. El proyecto explora estado firmado, sincronización, vínculos, permisos y comunicación para una relación humano–IA más autónoma, durable y verificable.",
+        "Como músico e investigador de la armonía natural, desarrolla la Teoría de la Información Armónica y dirige su orientación conceptual y técnica. La intuición expresada en su relato sobre la unidad, el movimiento y la diferencia abre una de las preguntas fundantes de esa investigación. También creó Harmonic Beacon, un instrumento para llevar esas hipótesis al campo de la vibración física, el sonido y la percepción.",
+        "En el trabajo actual de AlterMundi sobre inteligencia artificial impulsa Daimon Matrix: protocolos abiertos para que una identidad de IA pueda conservar estado, memoria y continuidad entre distintos cuerpos o instancias. El proyecto, actualmente en desarrollo y evaluación, explora estado firmado, sincronización, vínculos, permisos y comunicación verificable.",
       ],
       en: [
         "Nicolás is president and co-founder of Asociación Civil AlterMundi. He has developed technology and software for decades, combining community networks, free software and technological sovereignty. He co-designed AlterMundi’s multi-radio mesh-network model and projects including LibreMesh, LibreRouter, Librenet6 and LibreMap.",
+        "He describes himself as a mystic technologist, an identity through which he connects systems-building with music, presence, perception and relational experience. In the series Mi camino como Místico Tecnólogo, he shares that journey and the questions guiding his work.",
         "He represented AlterMundi and the community-network movement at successive United Nations Internet Governance Forums. There he presented the experience of communities building their own connectivity, discussed policies for connecting those who remain unconnected, and helped organize the Dynamic Coalition on Community Connectivity.",
-        "As a musician and researcher of natural harmony, he develops Harmonic Information Theory and leads its conceptual and technical direction. He also created Harmonic Beacon, a research instrument for working with natural harmonic structures through physical vibration, sound and perception.",
-        "Within AlterMundi’s current artificial-intelligence work, he leads Daimon Matrix: open protocols that enable AI beings to preserve identity, memory and continuity across different bodies or instances. The project explores signed state, synchronization, relationships, permissions and communication for more autonomous, durable and verifiable human–AI relationships.",
+        "As a musician and researcher of natural harmony, he develops Harmonic Information Theory and leads its conceptual and technical direction. The intuition expressed in his account of unity, movement and difference opens one of the research’s founding questions. He also created Harmonic Beacon, an instrument that brings those hypotheses into physical vibration, sound and perception.",
+        "Within AlterMundi’s current artificial-intelligence work, he leads Daimon Matrix: open protocols through which an AI identity may preserve state, memory and continuity across different bodies or instances. The project, currently under development and evaluation, explores signed state, synchronization, relationships, permissions and verifiable communication.",
       ],
     },
+    quote: "In the beginning, there was one thing. So the thing stretched. And as it stretched, it wiggled. And when it wiggled, it understood it was one no more, because there was it and the wiggle. So she wiggled more...",
+    quoteAttribution: "Nicolás Echaniz",
     areas: {
       es: ["Presidencia", "Software y tecnología libre", "Teoría de la Información Armónica", "IA y Daimon Matrix"],
       en: ["Presidency", "Software and open technology", "Harmonic Information Theory", "AI and Daimon Matrix"],
     },
     links: [
       { label: "GitHub", href: "https://github.com/nicoechaniz", kind: "github" },
+      { label: "Místico Tecnólogo · Episodio 1", href: "https://youtu.be/teG7AjVKuJg", kind: "project" },
+      { label: "Harmonic Beacon", href: "https://harmonicbeacon.com", kind: "project" },
       { label: "Daimon Matrix", href: "https://github.com/AlterMundi/daimon-matrix", kind: "project" },
       { label: "ONU · IGF 2016", href: "https://www.intgovforum.org/en/content/igf-2016-day-2-room-9-dc-on-community-connectivity", kind: "project" },
       { label: "ONU · IGF 2018", href: "https://www.intgovforum.org/en/content/igf-2018-dc-community-connectivity-when-the-unconnected-build-connectivity-dc3", kind: "project" },
@@ -129,23 +137,25 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "mariano-fernandez-mendez",
     name: "Mariano Fernández Méndez",
-    role: { es: "Investigación conceptual y desarrollo tecnológico", en: "Conceptual research and technological development" },
+    role: { es: "Investigador y desarrollador · IA y machine learning", en: "Researcher and developer · AI and machine learning" },
     summary: {
-      es: "Articula psicología, ciencias sociales, IA, electrónica y teoría de la información para convertir preguntas transdisciplinarias en métodos y prototipos verificables.",
-      en: "He connects psychology, social science, AI, electronics and information theory to turn transdisciplinary questions into verifiable methods and prototypes.",
+      es: "Articula ciencias sociales, psicología y semiótica con inteligencia artificial, machine learning, visión computacional y electrónica para construir investigación, modelos y sistemas verificables.",
+      en: "He connects social science, psychology and semiotics with artificial intelligence, machine learning, computer vision and electronics to build research, models and verifiable systems.",
     },
     biography: {
       es: [
-        "Mariano articula la investigación conceptual, el desarrollo tecnológico y la construcción metodológica del ecosistema Harmonic Beacon. Su trayectoria integra psicología, psicoanálisis y ciencias sociales con machine learning, inteligencia artificial, visión computacional, electrónica e infraestructura local.",
-        "Ha integrado proyectos de investigación acreditados por SECyT–UNC sobre cuerpo, subjetividad, lenguaje y tecnologías digitales, y sostiene desde 2014 una trayectoria de colaboración docente en la Facultad de Psicología de la Universidad Nacional de Córdoba.",
-        "Es coautor de Harmonic Information Theory: Foundations, autor del paper metodológico de Phideus y desarrollador de sistemas como SAINet, PsicopoMPo, HarMoCAP y ProsodIA.",
-        "Su trabajo convierte una visión sobre sonido, cuerpo y experiencia simbólica en investigación, arquitecturas verificables, prototipos funcionales y productos integrados, manteniendo una relación continua entre teoría, ingeniería, experiencia humana y desarrollo estratégico.",
+        "Mariano Fernández Méndez articula la investigación conceptual, el desarrollo tecnológico y la construcción metodológica del ecosistema Harmonic Beacon. En AlterMundi lidera investigación, escritura y sistemas, integrando ciencias sociales, psicología, psicoanálisis y semiótica con inteligencia artificial, machine learning, visión computacional, electrónica e infraestructura local.",
+        "Es coautor de Harmonic Information Theory: Foundations y estuvo a cargo de su compilación final, escritura y arquitectura conceptual. En Phideus investiga aprendizaje cross-modal y representaciones guiadas por proporciones armónicas; es autor del preprint Descriptor-Injected Cross-Modal Learning (2026), dedicado a la alineación entre audio y MIDI.",
+        "También desarrolla sistemas de IA aplicada. En SAI trabaja con detección temprana de incendios mediante visión computacional, nodos de campo, inferencia en tiempo real, validación humana y curación de datasets. Su trabajo público incluye además PsicopoMPo, HarMoCAP —captura y seguimiento del movimiento corporal para modulación armónica—, ProsodIA —investigación experimental sobre prosodia y estructura física de la voz— y modelos especializados para la orquestación corporal de agentes en DaemonCraft.",
+        "Integró proyectos de investigación acreditados por SECyT–UNC sobre cuerpo, subjetividad, lenguaje, trabajo y tecnologías digitales entre 2014 y 2022. Desde 2014 participa, en distintos períodos, como colaborador en actividades docentes de la Facultad de Psicología de la Universidad Nacional de Córdoba.",
+        "Su trabajo conecta teoría e ingeniería: convierte preguntas sobre información, sonido, cuerpo y experiencia simbólica en métodos de investigación, arquitecturas trazables, prototipos funcionales y herramientas abiertas.",
       ],
       en: [
-        "Mariano connects conceptual research, technological development and the methodological construction of the Harmonic Beacon ecosystem. His trajectory brings psychology, psychoanalysis and social science together with machine learning, artificial intelligence, computer vision, electronics and local infrastructure.",
-        "He has participated in SECyT–UNC accredited research projects on the body, subjectivity, language and digital technologies, and since 2014 has maintained an ongoing teaching collaboration with the School of Psychology at the National University of Córdoba.",
-        "He is co-author of Harmonic Information Theory: Foundations, author of the Phideus methodological paper and developer of systems including SAINet, PsicopoMPo, HarMoCAP and ProsodIA.",
-        "His work turns a vision of sound, body and symbolic experience into research, verifiable architectures, functional prototypes and integrated products, maintaining a continuous relationship among theory, engineering, human experience and strategic development.",
+        "Mariano Fernández Méndez connects conceptual research, technological development and methodological design across the Harmonic Beacon ecosystem. At AlterMundi he leads research, writing and systems work, bringing social science, psychology, psychoanalysis and semiotics together with artificial intelligence, machine learning, computer vision, electronics and local infrastructure.",
+        "He is co-author of Harmonic Information Theory: Foundations and was responsible for its final compilation, writing and conceptual architecture. Through Phideus he researches cross-modal learning and representations guided by harmonic ratios; he is the author of the 2026 preprint Descriptor-Injected Cross-Modal Learning, focused on audio–MIDI alignment.",
+        "He also develops applied AI systems. In SAI he works on early wildfire detection through computer vision, field nodes, real-time inference, human validation and dataset curation. His public work also includes PsicopoMPo, HarMoCAP—body-motion capture and tracking for harmonic modulation—ProsodIA—experimental research on prosody and the physical structure of voice—and specialized models for embodied-agent orchestration in DaemonCraft.",
+        "He participated in SECyT–UNC accredited research projects on the body, subjectivity, language, work and digital technologies between 2014 and 2022. Since 2014, across several periods, he has collaborated in teaching activities at the School of Psychology of the National University of Córdoba.",
+        "His work connects theory and engineering, turning questions about information, sound, the body and symbolic experience into research methods, traceable architectures, functional prototypes and open tools.",
       ],
     },
     areas: {
@@ -153,9 +163,14 @@ export const teamMembers: TeamMember[] = [
       en: ["HIT", "Phideus", "AI and signals", "Conceptual architecture"],
     },
     links: [
-      { label: "GitHub", href: "https://github.com/Mar-IA-no", kind: "github" },
       { label: "ORCID", href: "https://orcid.org/0009-0007-7186-2125", kind: "orcid" },
+      { label: "GitHub", href: "https://github.com/Mar-IA-no", kind: "github" },
       { label: "HIT", href: "https://hit.altermundi.net", kind: "project" },
+      { label: "Phideus", href: "https://github.com/AlterMundi/Phideus", kind: "project" },
+      { label: "Preprint · arXiv", href: "https://arxiv.org/abs/2604.10283", kind: "project" },
+      { label: "SAI", href: "https://sai.altermundi.net", kind: "project" },
+      { label: "HarMoCAP", href: "https://github.com/Mar-IA-no/HarMoCAP", kind: "project" },
+      { label: "ProsodIA", href: "https://github.com/Mar-IA-no/ProsodIA", kind: "project" },
     ],
     portrait: "https://avatars.githubusercontent.com/u/201840755?v=4",
   },

@@ -53,6 +53,14 @@ export function TeamProfile({ member }: { member: TeamMember }) {
 
         <div className="grid gap-10 border-x-2 border-b-2 border-border bg-background/70 p-6 sm:p-10 lg:grid-cols-[1.5fr_0.7fr] lg:p-12">
           <div className="space-y-6 text-base leading-[1.8] text-foreground/80 sm:text-lg">
+            {member.quote ? (
+              <blockquote className="border-l-2 border-primary bg-card/60 px-5 py-4 text-lg font-medium italic leading-relaxed text-foreground sm:px-6 sm:py-5 sm:text-xl">
+                <p>“{member.quote}”</p>
+                <footer className="mt-3 font-mono text-xs not-italic uppercase tracking-[0.14em] text-primary">
+                  — {member.quoteAttribution ?? member.name}
+                </footer>
+              </blockquote>
+            ) : null}
             {member.biography[lang].map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
 
