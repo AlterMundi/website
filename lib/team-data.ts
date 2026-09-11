@@ -92,21 +92,23 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "fabricio-puzio",
     name: "Fabricio Puzio",
-    role: { es: "Coordinación de proyectos de innovación", en: "Innovation project coordination" },
+    role: { es: "Coordinador de proyectos de innovación tecnológica", en: "Technology innovation project coordinator" },
     summary: {
       es: "Gestor de proyectos con veinte años de trayectoria entre educación, tecnología libre y economía social.",
       en: "A project manager with twenty years of experience across education, open technology and the social economy.",
     },
     biography: {
       es: [
-        "Fabricio es gestor de proyectos con una trayectoria que cruza educación, tecnología libre y economía social. Formula y coordina iniciativas complejas junto con organismos públicos, universidades, cooperativas y organizaciones de base.",
-        "En AlterMundi coordina LibreIncu, una incubadora avícola de hardware y software abiertos pensada para la agricultura familiar, y acompaña desarrollos de monitoreo de invernaderos, plataformas productivas y conectividad rural.",
-        "Sus competencias incluyen formulación y rendición ante financiadores, articulación entre Estado, universidades y organizaciones de base, tecnologías IoT, plataformas productivas y formación de formadores.",
+        "Formula, ejecuta y rinde proyectos con financiamiento público nacional, provincial e internacional, y coordina equipos interinstitucionales de hasta veinte personas.",
+        "En LibreIncu llevó una incubadora avícola de hardware y software libre del prototipo al diseño industrial listo para fabricación en escala. También dirigió un ERP y e-commerce de código abierto sobre Odoo, en producción en cinco cooperativas, y un sistema IoT de monitoreo de invernadero operativo en Traslasierra.",
+        "Obtuvo una licencia VARC del ENACOM en la región, concretó la interconexión de una red comunitaria con la fibra óptica provincial y escaló la red de piloto a más de treinta familias. Es fundador de la Cooperativa El Espinillo, integrada por más de cuarenta familias productoras.",
+        "Su formación incluye el Posgrado en Diseño Estratégico de Tecnologías para el Desarrollo Inclusivo Sustentable de la UNQ y Project Manager de Vinculación Tecnológica de la Fundación Sadosky, ambos de 2025.",
       ],
       en: [
-        "Fabricio is a project manager whose work spans education, open technology and the social economy. He designs and coordinates complex initiatives with public agencies, universities, cooperatives and grassroots organizations.",
-        "At AlterMundi he coordinates LibreIncu, an open hardware and software poultry incubator for family farming, and supports greenhouse monitoring, productive platforms and rural connectivity projects.",
-        "His skills include grant writing and reporting, coordination among government, universities and grassroots organizations, IoT technologies, productive platforms and train-the-trainer work.",
+        "He formulates, carries out and reports on projects funded by national, provincial and international public programs, and coordinates inter-institutional teams of up to twenty people.",
+        "With LibreIncu, he took an open-hardware and open-software poultry incubator from prototype to an industrial design ready for manufacturing at scale. He also led an open-source ERP and e-commerce platform based on Odoo, now used by five cooperatives, and an operational IoT greenhouse-monitoring system in Traslasierra.",
+        "He obtained an ENACOM VARC license for the region, connected a community network to the provincial fiber backbone and grew the network from a pilot to more than thirty families. He founded Cooperativa El Espinillo, which now brings together more than forty producer families.",
+        "His training includes the UNQ postgraduate program in Strategic Design of Technologies for Inclusive Sustainable Development and Fundación Sadosky’s Technology Transfer Project Manager program, both from 2025.",
       ],
     },
     areas: {
@@ -119,21 +121,23 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "mariano-fernandez-mendez",
     name: "Mariano Fernández Méndez",
-    role: { es: "Investigación, escritura y desarrollo", en: "Research, writing and development" },
+    role: { es: "Investigación conceptual y desarrollo tecnológico", en: "Conceptual research and technological development" },
     summary: {
       es: "Articula psicología, ciencias sociales, IA, electrónica y teoría de la información para convertir preguntas transdisciplinarias en métodos y prototipos verificables.",
       en: "He connects psychology, social science, AI, electronics and information theory to turn transdisciplinary questions into verifiable methods and prototypes.",
     },
     biography: {
       es: [
-        "Mariano es investigador, escritor y desarrollador. Su trayectoria integra psicología, psicoanálisis y ciencias sociales con machine learning, inteligencia artificial, visión computacional, electrónica e infraestructura local.",
-        "Es coautor de Harmonic Information Theory: Foundations y desarrolló la arquitectura conceptual y la compilación final de la obra. En Phideus trabaja sobre métodos para reconocer relaciones armónicas entre distintas clases de señales.",
-        "En AlterMundi participa en SAI, PsicopoMPo, HarMoCAP y ProsodIA. Su perfil escrito describe su aporte como la conversión de una visión sobre sonido, cuerpo y experiencia simbólica en investigación, arquitecturas, prototipos y productos integrados.",
+        "Mariano articula la investigación conceptual, el desarrollo tecnológico y la construcción metodológica del ecosistema Harmonic Beacon. Su trayectoria integra psicología, psicoanálisis y ciencias sociales con machine learning, inteligencia artificial, visión computacional, electrónica e infraestructura local.",
+        "Ha integrado proyectos de investigación acreditados por SECyT–UNC sobre cuerpo, subjetividad, lenguaje y tecnologías digitales, y sostiene desde 2014 una trayectoria de colaboración docente en la Facultad de Psicología de la Universidad Nacional de Córdoba.",
+        "Es coautor de Harmonic Information Theory: Foundations, autor del paper metodológico de Phideus y desarrollador de sistemas como SAINet, PsicopoMPo, HarMoCAP y ProsodIA.",
+        "Su trabajo convierte una visión sobre sonido, cuerpo y experiencia simbólica en investigación, arquitecturas verificables, prototipos funcionales y productos integrados, manteniendo una relación continua entre teoría, ingeniería, experiencia humana y desarrollo estratégico.",
       ],
       en: [
-        "Mariano is a researcher, writer and developer. His background brings psychology, psychoanalysis and social science together with machine learning, artificial intelligence, computer vision, electronics and local infrastructure.",
-        "He co-authored Harmonic Information Theory: Foundations and shaped the work’s conceptual architecture and final compilation. In Phideus he develops methods for recognizing harmonic relationships across different classes of signal.",
-        "At AlterMundi he contributes to SAI, PsicopoMPo, HarMoCAP and ProsodIA. His written profile describes his contribution as turning a vision of sound, body and symbolic experience into research, architectures, prototypes and integrated products.",
+        "Mariano connects conceptual research, technological development and the methodological construction of the Harmonic Beacon ecosystem. His trajectory brings psychology, psychoanalysis and social science together with machine learning, artificial intelligence, computer vision, electronics and local infrastructure.",
+        "He has participated in SECyT–UNC accredited research projects on the body, subjectivity, language and digital technologies, and since 2014 has maintained an ongoing teaching collaboration with the School of Psychology at the National University of Córdoba.",
+        "He is co-author of Harmonic Information Theory: Foundations, author of the Phideus methodological paper and developer of systems including SAINet, PsicopoMPo, HarMoCAP and ProsodIA.",
+        "His work turns a vision of sound, body and symbolic experience into research, verifiable architectures, functional prototypes and integrated products, maintaining a continuous relationship among theory, engineering, human experience and strategic development.",
       ],
     },
     areas: {
@@ -150,21 +154,21 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "julian-de-la-reta",
     name: "Julián de la Reta",
-    role: { es: "Psicología e investigación experiencial", en: "Psychology and experiential research" },
+    role: { es: "Psicólogo e investigador · Creador de PMP", en: "Psychologist and researcher · Creator of PMP" },
     summary: {
       es: "Investiga la dimensión psicológica, simbólica y grupal de Harmonic Beacon y PsicopoMPo desde la psicología junguiana y el psicodrama.",
       en: "He researches the psychological, symbolic and group dimensions of Harmonic Beacon and PsicopoMPo through Jungian psychology and psychodrama.",
     },
     biography: {
       es: [
-        "Julián es licenciado en Psicología por la Universidad Nacional de Córdoba, con formación en psicología analítica junguiana, psicodrama y sociopsicodrama. Creó la Proyección del Mito Personal, una metodología de exploración simbólica desarrollada durante quince años.",
-        "Integra AlterMundi desde 2014. Primero documentó proyectos como fotógrafo y realizador audiovisual; actualmente aporta a la dimensión psicológica y experiencial de Harmonic Beacon y PsicopoMPo.",
-        "La Proyección del Mito Personal articula la imaginación activa de la psicología analítica, una estructura narrativa inspirada en el monomito y herramientas de psicodrama.",
+        "Julián es licenciado en Psicología por la Universidad Nacional de Córdoba, con formación en psicología analítica junguiana, psicodrama y sociopsicodrama. Es creador de la Proyección del Mito Personal, desarrollada a lo largo de quince años.",
+        "Integra AlterMundi desde 2014, donde actualmente trabaja como psicólogo y participa en Harmonic Beacon y PsicopoMPo. Su trayectoria reúne exploración simbólica, acompañamiento psicológico, investigación interdisciplinaria y experiencia en creación audiovisual, educación y trabajo comunitario.",
+        "La Proyección del Mito Personal articula la imaginación activa de la psicología analítica, una estructura narrativa inspirada en el monomito y herramientas de psicodrama. Actualmente trabaja en su sistematización y en su articulación con el campo sonoro de Harmonic Beacon.",
       ],
       en: [
-        "Julián holds a psychology degree from the National University of Córdoba and trained in Jungian analytical psychology, psychodrama and sociodrama. He created Personal Myth Projection, a symbolic exploration method developed over fifteen years.",
-        "He has been part of AlterMundi since 2014. He first documented projects as a photographer and filmmaker; today he contributes to the psychological and experiential dimensions of Harmonic Beacon and PsicopoMPo.",
-        "Personal Myth Projection brings together active imagination from analytical psychology, a narrative structure inspired by the monomyth and psychodrama tools.",
+        "Julián holds a Psychology degree from the National University of Córdoba and has trained in Jungian analytical psychology, psychodrama and sociodrama. He created Personal Myth Projection, which he has developed over fifteen years.",
+        "He has been part of AlterMundi since 2014, where he currently works as a psychologist and participates in Harmonic Beacon and PsicopoMPo. His trajectory brings together symbolic exploration, psychological support, interdisciplinary research, audiovisual creation, education and community work.",
+        "Personal Myth Projection connects active imagination from analytical psychology, a narrative structure inspired by the monomyth and psychodrama tools. He is currently working on its systematization and its articulation with the Harmonic Beacon sound field.",
       ],
     },
     areas: {
@@ -209,14 +213,14 @@ export const teamMembers: TeamMember[] = [
     },
     biography: {
       es: [
-        "Jeremías es técnico en telecomunicaciones y tecnologías 4.0. Desde 2022 instala y mantiene redes inalámbricas comunitarias, fibra óptica y enlaces WiFi, y desarrolla herramientas para diagnóstico y monitoreo.",
-        "En LibreIncu trabajó sobre firmware para ESP32, APIs embebidas, la aplicación de control y observabilidad con Grafana. También participó en el despliegue físico de SAI y en desarrollos de WANDA y mini-armonic.",
-        "Su práctica actual suma automatización con Python y modelos locales de lenguaje, integración continua y formación en seguridad ofensiva.",
+        "Actualmente cursa las tecnicaturas en Gestión de Telecomunicaciones e Innovación con Tecnologías 4.0 en el ISPC. Tiene una base sólida en redes, Linux y desarrollo con Python, Lua y firmware para ESP32, y orienta su formación hacia la ciberseguridad y el Red Team.",
+        "Desde 2022 trabaja en AlterMundi instalando y manteniendo redes inalámbricas comunitarias, fibra óptica y enlaces WiFi. También desarrolla agentes y scripts de Python para redes y monitoreo, integra modelos locales de lenguaje y administra servidores Linux.",
+        "En LibreIncu desarrolló firmware Lua para ESP32, una API REST embebida, modos WiFi AP y STA, la aplicación Flutter de control y métricas con Grafana. También participó en la instalación de cámaras y el despliegue físico de SAI, y trabajó en WANDA Telescope y mini-armonic.",
       ],
       en: [
-        "Jeremías is a telecommunications and 4.0 technologies technician. Since 2022 he has installed and maintained community wireless networks, fiber and WiFi links, while building diagnostic and monitoring tools.",
-        "In LibreIncu he worked on ESP32 firmware, embedded APIs, the control application and Grafana observability. He also joined SAI field deployments and contributed to WANDA and mini-armonic.",
-        "His current practice adds Python automation and local language models, continuous integration and offensive-security training.",
+        "He is currently studying Telecommunications Management and Innovation with 4.0 Technologies at ISPC. He has a strong base in networking, Linux and development with Python, Lua and ESP32 firmware, and is steering his training toward cybersecurity and Red Team work.",
+        "Since 2022 he has worked at AlterMundi installing and maintaining community wireless networks, fiber and WiFi links. He also develops Python agents and scripts for networks and monitoring, integrates local language models and administers Linux servers.",
+        "For LibreIncu he developed Lua firmware for ESP32, an embedded REST API, WiFi AP and STA modes, the Flutter control application and Grafana metrics. He also participated in camera installation and the physical deployment of SAI, and worked on WANDA Telescope and mini-armonic.",
       ],
     },
     areas: {
@@ -321,21 +325,23 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "pablo-bustos",
     name: "Pablo Bustos",
-    role: { es: "Hardware, electrónica y mecatrónica", en: "Hardware, electronics and mechatronics" },
+    role: { es: "Hardware, electrónica, mecatrónica y redes", en: "Hardware, electronics, mechatronics and networks" },
     summary: {
       es: "Diseña nodos IoT completos y lidera infraestructura inalámbrica, desde el firmware y el hardware hasta los servicios de monitoreo en territorio.",
       en: "He designs complete IoT nodes and leads wireless infrastructure, from firmware and hardware to field monitoring services.",
     },
     biography: {
       es: [
-        "Pablo es técnico en electrónica orientado a telecomunicaciones, con más de veinte años de trabajo entre hardware, mantenimiento industrial y redes. Diseña dispositivos y nodos IoT completos, incluyendo firmware, servicios backend e interfaces de monitoreo.",
-        "En AlterMundi participa en automatizaciones para incubadoras, invernaderos y monitoreo de procesos, y en el despliegue de redes comunitarias junto a universidades y organizaciones sociales.",
-        "También dirigió el desarrollo de una antena MIMO 2×2 de 5 GHz caracterizada por el INTI. Es administrador de sistemas Linux, entusiasta del software libre y radioaficionado.",
+        "Pablo es técnico en electrónica orientado a telecomunicaciones, con más de veinte años de trabajo entre hardware, mantenimiento industrial y redes. Diseña dispositivos y nodos IoT completos: firmware en el microcontrolador, servicios backend e interfaces de monitoreo.",
+        "Conduce equipos técnicos en proyectos de infraestructura de red inalámbrica y lleva los proyectos desde la idea hasta el equipo funcionando en el territorio. Tiene conocimiento avanzado en infraestructura de redes y administración de Linux; es entusiasta del software libre y radioaficionado.",
+        "Desde 2019 trabaja en AlterMundi en investigación y desarrollo de hardware y software abiertos, automatizaciones microcontroladas para incubadoras, invernaderos y monitoreo de procesos, y despliegues de redes comunitarias junto a universidades y organizaciones sociales.",
+        "También dirigió un equipo en el desarrollo y la construcción de una antena MIMO 2×2 de 5 GHz, sectorial y direccional, caracterizada por el INTI.",
       ],
       en: [
-        "Pablo is an electronics technician specializing in telecommunications, with more than twenty years of work across hardware, industrial maintenance and networks. He designs complete IoT devices and nodes, including firmware, backend services and monitoring interfaces.",
-        "At AlterMundi he contributes to automation for incubators, greenhouses and process monitoring, and to community-network deployments with universities and social organizations.",
-        "He also led the development of a 5 GHz 2×2 MIMO antenna characterized by Argentina’s INTI. He is a Linux systems administrator, free-software enthusiast and amateur-radio operator.",
+        "Pablo is an electronics technician specializing in telecommunications, with more than twenty years of work across hardware, industrial maintenance and networks. He designs complete IoT devices and nodes: microcontroller firmware, backend services and monitoring interfaces.",
+        "He leads technical teams on wireless-network infrastructure projects and takes projects from the initial idea to working equipment in the field. He has advanced knowledge of network infrastructure and Linux administration, and is a free-software enthusiast and amateur-radio operator.",
+        "Since 2019 he has worked at AlterMundi on open hardware and software research and development, microcontroller-based automation for incubators, greenhouses and process monitoring, and community-network deployments with universities and social organizations.",
+        "He also led a team in the development and construction of a sectoral and directional 5 GHz 2×2 MIMO antenna characterized by Argentina’s INTI.",
       ],
     },
     areas: {
