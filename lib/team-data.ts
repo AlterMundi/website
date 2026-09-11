@@ -368,22 +368,28 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "santiago-cetran",
     name: "Santiago Cetran",
-    role: { es: "Desarrollador de software", en: "Software developer" },
+    role: { es: "Desarrollador de software · backend e IoT", en: "Software developer · backend and IoT" },
     summary: {
-      es: "Su trabajo público incluye desarrollo web, animación, WANDA, LibreIncu, redes distribuidas y herramientas para agentes.",
-      en: "His public work includes web development, animation, WANDA, LibreIncu, distributed networks and agent tooling.",
+      es: "Desarrolla aplicaciones que conectan software, hardware y territorio. En AlterMundi trabaja en LibreIncu, WANDA y SAI con backend, IoT y metodologías asistidas por IA.",
+      en: "He develops applications connecting software, hardware and territory. At AlterMundi he works on LibreIncu, WANDA and SAI through backend, IoT and AI-assisted methods.",
     },
     biography: {
       es: [
-        "El GitHub público de Santiago reúne herramientas de animación 3D y bitmap, desarrollos para WANDA y LibreIncu, y repositorios vinculados con redes distribuidas, MCP y agentes de IA.",
+        "Santiago es desarrollador de software con experiencia en backend —principalmente Python y Flask—, aplicaciones web e integración de sistemas IoT. Trabaja en AlterMundi desde enero de 2023, en proyectos que articulan hardware, software abierto y problemas concretos del territorio. En ese recorrido incorporó metodologías de desarrollo asistido por inteligencia artificial.",
+        "En LibreIncu colaboró en el primer prototipo funcional del sistema de monitoreo para incubadoras, integrando sensores de temperatura y humedad. Esas unidades se encuentran en uso en comunidades de Córdoba como parte de una infraestructura productiva abierta para la agricultura familiar.",
+        "En WANDA lideró el desarrollo de una aplicación web para telescopios basados en Raspberry Pi 5, orientada a controlar sesiones de astrofotografía de manera remota y a explorar una futura red distribuida de observación. En SAI participó en la planificación conceptual del sistema de alerta temprana de incendios y presentó avances del proyecto junto al equipo en Edge City Patagonia en 2025.",
+        "Su producción pública también incluye BitmapForge, una herramienta abierta para generar animaciones bitmap a partir de modelos 3D, además de experimentos con redes distribuidas, MCP y agentes de IA. Se formó en Escuela Da Vinci entre 2020 y 2024.",
       ],
       en: [
-        "Santiago’s public GitHub brings together 3D and bitmap animation tools, work for WANDA and LibreIncu, and repositories related to distributed networks, MCP and AI agents.",
+        "Santiago is a software developer with experience in backend development —primarily Python and Flask—, web applications and IoT systems integration. He has worked at AlterMundi since January 2023 on projects connecting hardware, open software and concrete territorial needs. Along the way, he has incorporated AI-assisted development methods.",
+        "At LibreIncu, he contributed to the first functional prototype of the incubator-monitoring system, integrating temperature and humidity sensors. These units are in use in communities across Córdoba as part of open productive infrastructure for family farming.",
+        "For WANDA, he led the development of a web application for Raspberry Pi 5-based telescopes, designed to control astrophotography sessions remotely and explore a future distributed observation network. In SAI, he participated in the conceptual planning of the early wildfire-alert system and presented project updates with the team at Edge City Patagonia in 2025.",
+        "His public work also includes BitmapForge, an open tool for generating bitmap animations from 3D models, as well as experiments with distributed networks, MCP and AI agents. He studied at Escuela Da Vinci from 2020 to 2024.",
       ],
     },
     areas: {
-      es: ["Desarrollo web", "Visualización", "Agentes de IA", "Redes distribuidas"],
-      en: ["Web development", "Visualization", "AI agents", "Distributed networks"],
+      es: ["Backend y Python", "IoT", "Aplicaciones web", "Desarrollo asistido por IA"],
+      en: ["Backend and Python", "IoT", "Web applications", "AI-assisted development"],
     },
     links: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/santiago-rodriguez-cetran/", kind: "website" },
