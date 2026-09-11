@@ -27,27 +27,21 @@ const copy = {
   },
 } as const
 
-function MemberCard({ member, prominent = false }: { member: TeamMember; prominent?: boolean }) {
+function MemberCard({ member }: { member: TeamMember }) {
   const { lang } = useLanguage()
   const strings = copy[lang]
 
   return (
-    <article className={cn(
-      "group relative flex min-h-full flex-col overflow-hidden border-2 border-border bg-card p-5 transition-colors hover:border-primary/60 focus-within:border-primary/70 sm:p-6",
-      prominent && "sm:p-7"
-    )}>
-      <CornerBrackets size={prominent ? "md" : "sm"} />
+    <article className="group relative flex min-h-full flex-col overflow-hidden border-2 border-border bg-card p-5 transition-colors hover:border-primary/60 focus-within:border-primary/70 sm:p-6">
+      <CornerBrackets size="sm" />
       <div className="relative z-10 flex items-center gap-4 sm:gap-5">
-        <div className={cn(
-          "relative shrink-0 overflow-hidden rounded-full border-2 border-primary/35 bg-background shadow-[0_0_0_4px_rgba(94,201,116,0.05)]",
-          prominent ? "size-24 sm:size-28" : "size-20 sm:size-24"
-        )}>
+        <div className="relative size-20 shrink-0 overflow-hidden rounded-full border-2 border-primary/35 bg-background shadow-[0_0_0_4px_rgba(94,201,116,0.05)] sm:size-24">
           {member.portrait ? (
             <Image
               src={member.portrait}
               alt={`${strings.portrait} ${member.name}`}
               fill
-              sizes={prominent ? "112px" : "96px"}
+              sizes="96px"
               className="object-cover grayscale-[20%] contrast-[1.06] transition duration-500 group-hover:grayscale-0 group-hover:scale-[1.03]"
               style={{ objectPosition: member.portraitPosition ?? "50% 50%" }}
             />
@@ -59,20 +53,16 @@ function MemberCard({ member, prominent = false }: { member: TeamMember; promine
         </div>
         <div className="min-w-0">
           <p className="mb-2 font-mono text-[0.62rem] uppercase leading-relaxed tracking-[0.16em] text-primary">{member.role[lang]}</p>
-          <h3 className={cn("font-extrabold leading-tight text-foreground", prominent ? "text-2xl sm:text-3xl" : "text-lg sm:text-xl")}>
-            {member.name}
-          </h3>
+          <h3 className="text-lg font-extrabold leading-tight text-foreground sm:text-xl">{member.name}</h3>
         </div>
       </div>
 
       <div className="relative z-10 flex flex-1 flex-col">
-        <p className={cn("mt-4 leading-relaxed text-foreground/75", prominent ? "text-sm sm:text-base" : "text-sm")}>
-          {member.summary[lang]}
-        </p>
+        <p className="mt-4 text-sm leading-relaxed text-foreground/75">{member.summary[lang]}</p>
 
         <div className="mt-auto pt-5">
           <div className="mb-3 flex flex-wrap gap-2" aria-label={`${strings.profileLinks} ${member.name}`}>
-            {member.links.slice(0, prominent ? 3 : 2).map((link) => (
+            {member.links.slice(0, 2).map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -99,8 +89,7 @@ function MemberCard({ member, prominent = false }: { member: TeamMember; promine
 export function Team({ fullPage = false }: { fullPage?: boolean }) {
   const { lang } = useLanguage()
   const strings = copy[lang]
-  const featured = teamMembers.filter((member) => member.featured)
-  const rest = teamMembers.filter((member) => !member.featured)
+  const members = [...teamMembers].sort((a, b) => a.name.localeCompare(b.name, "es"))
   const Heading = fullPage ? "h1" : "h2"
 
   return (
@@ -122,11 +111,8 @@ export function Team({ fullPage = false }: { fullPage?: boolean }) {
           <p className="max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg md:justify-self-end">{strings.intro}</p>
         </header>
 
-        <div className="grid gap-4 lg:grid-cols-2">
-          {featured.map((member) => <MemberCard key={member.slug} member={member} prominent />)}
-        </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {rest.map((member) => <MemberCard key={member.slug} member={member} />)}
+          {members.map((member) => <MemberCard key={member.slug} member={member} />)}
         </div>
       </div>
     </section>

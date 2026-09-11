@@ -18,7 +18,6 @@ export type TeamMember = {
   links: TeamLink[]
   portrait?: string
   portraitPosition?: string
-  featured?: boolean
 }
 
 export const teamMembers: TeamMember[] = [
@@ -32,19 +31,17 @@ export const teamMembers: TeamMember[] = [
     },
     biography: {
       es: [
-        "Nicolás trabaja desde hace más de dos décadas para que comunidades y organizaciones puedan construir infraestructura tecnológica propia. Es cofundador de AlterMundi y participó en el desarrollo de LibreMesh, LibreRouter, Librenet6 y LibreMap, además de representar el trabajo de las redes comunitarias en espacios internacionales.",
-        "Es músico e investigador de la armonía natural. Junto con Mariano Fernández Méndez escribió Harmonic Information Theory: Foundations y creó Harmonic Beacon, el dispositivo que lleva las hipótesis de esa investigación al terreno de la vibración física y la experiencia.",
-        "Hoy articula música, tecnología libre e inteligencia artificial para explorar nuevas formas de percepción, cooperación e identidad distribuida. Esa búsqueda conecta la historia de AlterMundi con sus proyectos actuales.",
+        "Nicolás es cofundador de la Asociación Civil AlterMundi. Su trabajo abarca redes comunitarias, software libre y tecnologías soberanas. Participó en el desarrollo de LibreMesh, LibreRouter, Librenet6 y LibreMap, y representó el trabajo de las redes comunitarias en espacios internacionales.",
+        "Es músico e investigador de la armonía natural. Junto con Mariano Fernández Méndez escribió Harmonic Information Theory: Foundations. Dirige el proyecto HIT y creó Harmonic Beacon, un dispositivo que lleva las hipótesis de la investigación al terreno de la vibración física.",
       ],
       en: [
-        "For more than two decades, Nicolás has worked so communities and organizations can build technological infrastructure of their own. He co-founded AlterMundi and contributed to LibreMesh, LibreRouter, Librenet6 and LibreMap, while representing community-network work in international forums.",
-        "He is a musician and a researcher of natural harmony. With Mariano Fernández Méndez he wrote Harmonic Information Theory: Foundations, and he created Harmonic Beacon, the device that brings the research hypotheses into physical vibration and lived experience.",
-        "Today he connects music, open technology and artificial intelligence to explore new forms of perception, cooperation and distributed identity. That inquiry links AlterMundi’s history with its current projects.",
+        "Nicolás is a co-founder of Asociación Civil AlterMundi. His work spans community networks, free software and sovereign technologies. He contributed to LibreMesh, LibreRouter, Librenet6 and LibreMap, and represented community-network work in international forums.",
+        "He is a musician and a researcher of natural harmony. With Mariano Fernández Méndez he wrote Harmonic Information Theory: Foundations. He leads the HIT project and created Harmonic Beacon, a device that brings the research hypotheses into physical vibration.",
       ],
     },
     areas: {
-      es: ["Dirección institucional", "Redes comunitarias", "HIT y Harmonic Beacon", "IA distribuida"],
-      en: ["Institutional direction", "Community networks", "HIT and Harmonic Beacon", "Distributed AI"],
+      es: ["Dirección institucional", "Redes comunitarias", "HIT", "Harmonic Beacon"],
+      en: ["Institutional direction", "Community networks", "HIT", "Harmonic Beacon"],
     },
     links: [
       { label: "GitHub", href: "https://github.com/nicoechaniz", kind: "github" },
@@ -52,7 +49,6 @@ export const teamMembers: TeamMember[] = [
       { label: "Sitio personal", href: "https://nicoechaniz.altermundi.net", kind: "website" },
     ],
     portrait: "https://avatars.githubusercontent.com/u/198112?v=4",
-    featured: true,
   },
   {
     slug: "jesica-giudice",
@@ -66,12 +62,10 @@ export const teamMembers: TeamMember[] = [
       es: [
         "Jésica integra AlterMundi desde 2011 y reúne más de quince años de experiencia en software libre, redes comunitarias y derechos digitales. Su trabajo combina formación, gestión de proyectos, despliegue en territorio e incidencia política y regulatoria.",
         "Coordinó y facilitó Semilleros de Redes Comunitarias en distintas provincias argentinas, acompañando a organizaciones desde el diseño social de la red hasta su construcción, sostenibilidad y acceso a políticas públicas. También participó en la Cumbre Latinoamericana de Redes Comunitarias y en espacios de APC, UIT, ANATEL y BattleMesh.",
-        "Su práctica pone en el centro el aprendizaje colectivo, la perspectiva de género y la capacidad de cada comunidad para comprender, adaptar y gobernar su propia tecnología.",
       ],
       en: [
         "Jésica has been part of AlterMundi since 2011 and brings more than fifteen years of experience in free software, community networks and digital rights. Her work combines training, project management, field deployment, and policy and regulatory advocacy.",
         "She coordinated and facilitated Community Network Seedbeds across several Argentine provinces, supporting organizations from the social design of a network through its construction, sustainability and access to public policy. She has also taken part in the Latin American Community Networks Summit and forums organized by APC, ITU, ANATEL and BattleMesh.",
-        "Her practice centers collective learning, a gender perspective and each community’s ability to understand, adapt and govern its own technology.",
       ],
     },
     areas: {
@@ -84,26 +78,25 @@ export const teamMembers: TeamMember[] = [
     ],
     portrait: "https://raw.githubusercontent.com/AlterMundi/web-conectividad/master/public/images/personas/jesica.jpeg",
     portraitPosition: "50% 30%",
-    featured: true,
   },
   {
     slug: "fabricio-puzio",
     name: "Fabricio Puzio",
     role: { es: "Coordinación de proyectos de innovación", en: "Innovation project coordination" },
     summary: {
-      es: "Convierte prototipos de tecnología abierta en proyectos productivos, articulando equipos, organizaciones, universidades y políticas públicas.",
-      en: "He turns open-technology prototypes into productive projects by connecting teams, organizations, universities and public policy.",
+      es: "Gestor de proyectos con veinte años de trayectoria entre educación, tecnología libre y economía social.",
+      en: "A project manager with twenty years of experience across education, open technology and the social economy.",
     },
     biography: {
       es: [
         "Fabricio es gestor de proyectos con una trayectoria que cruza educación, tecnología libre y economía social. Formula y coordina iniciativas complejas junto con organismos públicos, universidades, cooperativas y organizaciones de base.",
         "En AlterMundi coordina LibreIncu, una incubadora avícola de hardware y software abiertos pensada para la agricultura familiar, y acompaña desarrollos de monitoreo de invernaderos, plataformas productivas y conectividad rural.",
-        "Su aporte combina estrategia, rendición y financiamiento con comprensión técnica y formación de formadores, para que una innovación pueda sostenerse después del prototipo.",
+        "Sus competencias incluyen formulación y rendición ante financiadores, articulación entre Estado, universidades y organizaciones de base, tecnologías IoT, plataformas productivas y formación de formadores.",
       ],
       en: [
         "Fabricio is a project manager whose work spans education, open technology and the social economy. He designs and coordinates complex initiatives with public agencies, universities, cooperatives and grassroots organizations.",
         "At AlterMundi he coordinates LibreIncu, an open hardware and software poultry incubator for family farming, and supports greenhouse monitoring, productive platforms and rural connectivity projects.",
-        "His contribution combines strategy, funding and accountability with technical understanding and train-the-trainer work, helping innovations remain useful beyond the prototype stage.",
+        "His skills include grant writing and reporting, coordination among government, universities and grassroots organizations, IoT technologies, productive platforms and train-the-trainer work.",
       ],
     },
     areas: {
@@ -125,12 +118,12 @@ export const teamMembers: TeamMember[] = [
       es: [
         "Mariano es investigador, escritor y desarrollador. Su trayectoria integra psicología, psicoanálisis y ciencias sociales con machine learning, inteligencia artificial, visión computacional, electrónica e infraestructura local.",
         "Es coautor de Harmonic Information Theory: Foundations y desarrolló la arquitectura conceptual y la compilación final de la obra. En Phideus trabaja sobre métodos para reconocer relaciones armónicas entre distintas clases de señales.",
-        "Dentro de AlterMundi conecta investigación y construcción técnica en sistemas como SAI, PsicopoMPo, HarMoCAP y ProsodIA, cuidando que las hipótesis puedan expresarse como experimentos y herramientas auditables.",
+        "En AlterMundi participa en SAI, PsicopoMPo, HarMoCAP y ProsodIA. Su perfil escrito describe su aporte como la conversión de una visión sobre sonido, cuerpo y experiencia simbólica en investigación, arquitecturas, prototipos y productos integrados.",
       ],
       en: [
         "Mariano is a researcher, writer and developer. His background brings psychology, psychoanalysis and social science together with machine learning, artificial intelligence, computer vision, electronics and local infrastructure.",
         "He co-authored Harmonic Information Theory: Foundations and shaped the work’s conceptual architecture and final compilation. In Phideus he develops methods for recognizing harmonic relationships across different classes of signal.",
-        "At AlterMundi he connects research with technical construction in systems including SAI, PsicopoMPo, HarMoCAP and ProsodIA, making sure hypotheses can become auditable experiments and tools.",
+        "At AlterMundi he contributes to SAI, PsicopoMPo, HarMoCAP and ProsodIA. His written profile describes his contribution as turning a vision of sound, body and symbolic experience into research, architectures, prototypes and integrated products.",
       ],
     },
     areas: {
@@ -156,12 +149,12 @@ export const teamMembers: TeamMember[] = [
       es: [
         "Julián es licenciado en Psicología por la Universidad Nacional de Córdoba, con formación en psicología analítica junguiana, psicodrama y sociopsicodrama. Creó la Proyección del Mito Personal, una metodología de exploración simbólica desarrollada durante quince años.",
         "Integra AlterMundi desde 2014. Primero documentó proyectos como fotógrafo y realizador audiovisual; actualmente aporta a la dimensión psicológica y experiencial de Harmonic Beacon y PsicopoMPo.",
-        "Su trabajo reúne imaginación activa, narrativa mítica, intercambio grupal e investigación interdisciplinaria para acompañar procesos de elaboración humana.",
+        "La Proyección del Mito Personal articula la imaginación activa de la psicología analítica, una estructura narrativa inspirada en el monomito y herramientas de psicodrama.",
       ],
       en: [
         "Julián holds a psychology degree from the National University of Córdoba and trained in Jungian analytical psychology, psychodrama and sociodrama. He created Personal Myth Projection, a symbolic exploration method developed over fifteen years.",
         "He has been part of AlterMundi since 2014. He first documented projects as a photographer and filmmaker; today he contributes to the psychological and experiential dimensions of Harmonic Beacon and PsicopoMPo.",
-        "His work brings together active imagination, mythic narrative, group exchange and interdisciplinary research to support processes of human meaning-making.",
+        "Personal Myth Projection brings together active imagination from analytical psychology, a narrative structure inspired by the monomyth and psychodrama tools.",
       ],
     },
     areas: {
@@ -182,11 +175,11 @@ export const teamMembers: TeamMember[] = [
     biography: {
       es: [
         "Javier trabaja en la intersección entre redes, software y sistemas embebidos. Su actividad pública incluye desarrollo y pruebas para LibreMesh y OpenWrt, herramientas de malla virtual y proyectos basados en ESP32.",
-        "En LibreAgro aporta al software, el backend y la automatización de tecnologías para producción familiar. También experimenta con protocolos distribuidos, robótica abierta y herramientas de prueba reproducibles.",
+        "En LibreAgro figura a cargo de software, backend y automatización. Su GitHub público contiene repositorios de LibreMesh, pruebas para redes mesh, OpenWrt, ESP32 y robótica abierta.",
       ],
       en: [
         "Javier works where networking, software and embedded systems meet. His public work includes development and testing for LibreMesh and OpenWrt, virtual-mesh tooling and ESP32-based projects.",
-        "In LibreAgro he contributes software, backend systems and automation for family-production technologies. He also experiments with distributed protocols, open robotics and reproducible testing tools.",
+        "In LibreAgro he is listed for software, backend systems and automation. His public GitHub contains repositories for LibreMesh, mesh-network testing, OpenWrt, ESP32 and open robotics.",
       ],
     },
     areas: {
@@ -237,11 +230,11 @@ export const teamMembers: TeamMember[] = [
     biography: {
       es: [
         "Anabella es estudiante de ingeniería biomédica. En la investigación de AlterMundi trabaja sobre el vínculo entre estructuras armónicas, procesos neurológicos y validación experimental.",
-        "Su actividad pública incluye HarMoCAP, una herramienta de captura de movimiento humano en tiempo real para Harmonic Beacon, y prototipos que relacionan señales corporales con actuadores y experiencias sonoras.",
+        "Su GitHub público incluye HarMoCAP, descripto como un sistema de captura de movimiento humano en tiempo real para Harmonic Beacon, además de los repositorios EEG Actuator y Digital Beacon.",
       ],
       en: [
         "Anabella is a biomedical engineering student. In AlterMundi’s research she works on the relationship between harmonic structures, neurological processes and experimental validation.",
-        "Her public work includes HarMoCAP, a real-time human-motion capture tool for Harmonic Beacon, and prototypes connecting bodily signals with actuators and sound experiences.",
+        "Her public GitHub includes HarMoCAP, described as a real-time human-motion capture system for Harmonic Beacon, as well as the EEG Actuator and Digital Beacon repositories.",
       ],
     },
     areas: {
@@ -264,13 +257,13 @@ export const teamMembers: TeamMember[] = [
         "Saira es diseñadora web y vibe coder: trabaja con inteligencia artificial como método principal para llevar una idea desde la conversación inicial hasta un producto que funciona. Orquesta agentes, modelos y herramientas para construir sitios, identidades digitales y sistemas con automatización.",
         "En AlterMundi participó en los Semilleros de Redes Comunitarias, acompañando durante meses la gestión, la administración, la formación técnica, los encuentros y las visitas a redes emergentes. Esa experiencia fue reconocida en 2022 por el desafío Connecting the Unconnected de IEEE.",
         "Su recorrido en Alta Gracia incluye trabajo territorial y feminista, la coordinación de Políticas de Género y Salud Comunitaria de la Municipalidad y participación en la organización del Encuentro Anual de Colectividades. Hoy vincula esa experiencia de escucha y articulación con el desarrollo colaborativo junto a IA.",
-        "Entre sus proyectos públicos están las webs de SAI, Phideus, Harmonic Beacon y PsicopoMPo, además de experiencias sobre agentes persistentes como DaemonCraft. Su GitHub registra el proceso: decisiones, prototipos y código construido en diálogo continuo con agentes de IA.",
+        "En su GitHub publica proyectos de SAI, Phideus, Harmonic Beacon, PsicopoMPo y DaemonCraft, además de su perfil como diseñadora de páginas web con inteligencia artificial.",
       ],
       en: [
         "Saira is a web designer and vibe coder: she uses artificial intelligence as her primary method for taking an idea from the first conversation to a working product. She orchestrates agents, models and tools to build websites, digital identities and automated systems.",
         "At AlterMundi she took part in the Community Network Seedbeds, supporting management, administration, technical training, gatherings and visits to emerging networks over several months. This work was recognized by the 2022 IEEE Connecting the Unconnected Challenge.",
         "Her work in Alta Gracia includes grassroots and feminist organizing, coordinating the municipality’s Gender Policy and Community Health area, and joining the organizing committee for the city’s Annual Communities Festival. She now brings that experience of listening and coordination into collaborative development with AI.",
-        "Her public projects include the websites for SAI, Phideus, Harmonic Beacon and PsicopoMPo, as well as persistent-agent experiments such as DaemonCraft. Her GitHub records the process: decisions, prototypes and code built through continuous dialogue with AI agents.",
+        "On GitHub she publishes projects for SAI, Phideus, Harmonic Beacon, PsicopoMPo and DaemonCraft, as well as her profile as an AI-based web designer.",
       ],
     },
     areas: {
@@ -285,17 +278,15 @@ export const teamMembers: TeamMember[] = [
     name: "Santiago Cetran",
     role: { es: "Desarrollo, interfaces y agentes", en: "Development, interfaces and agents" },
     summary: {
-      es: "Construye software experimental, visualizaciones e infraestructura para agentes, redes distribuidas y proyectos abiertos de AlterMundi.",
-      en: "He builds experimental software, visualizations and infrastructure for agents, distributed networks and AlterMundi’s open projects.",
+      es: "Su trabajo público incluye desarrollo web, animación, WANDA, LibreIncu, redes distribuidas y herramientas para agentes.",
+      en: "His public work includes web development, animation, WANDA, LibreIncu, distributed networks and agent tooling.",
     },
     biography: {
       es: [
-        "Santiago desarrolla software y experiencias visuales que vuelven explorables ideas técnicas complejas. Su trabajo público abarca herramientas de animación 3D y bitmap, interfaces para WANDA y LibreIncu, y prototipos de redes distribuidas.",
-        "También investiga entornos para agentes de IA y automatización, combinando desarrollo web, infraestructura y una práctica sostenida de experimentación abierta.",
+        "El GitHub público de Santiago reúne herramientas de animación 3D y bitmap, desarrollos para WANDA y LibreIncu, y repositorios vinculados con redes distribuidas, MCP y agentes de IA.",
       ],
       en: [
-        "Santiago develops software and visual experiences that make complex technical ideas explorable. His public work spans 3D and bitmap animation tools, interfaces for WANDA and LibreIncu, and distributed-network prototypes.",
-        "He also researches environments for AI agents and automation, bringing together web development, infrastructure and a sustained practice of open experimentation.",
+        "Santiago’s public GitHub brings together 3D and bitmap animation tools, work for WANDA and LibreIncu, and repositories related to distributed networks, MCP and AI agents.",
       ],
     },
     areas: {
