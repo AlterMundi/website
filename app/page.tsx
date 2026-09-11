@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { Projects } from "@/components/projects"
-import { Team } from "@/components/team"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { PageBackground } from "@/components/page-background"
@@ -16,7 +15,6 @@ export default function HomePage() {
       <main className="pt-14 sm:pt-16 md:pt-20">
         <Hero />
         <Projects />
-        <Team />
         <Contact />
       </main>
       <Footer />

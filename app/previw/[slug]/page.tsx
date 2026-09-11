@@ -18,17 +18,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!member) return {}
 
   return {
-    title: `${member.name} — Equipo AlterMundi`,
+    title: `${member.name} — Revisión del equipo AlterMundi`,
     description: member.summary.es,
-    alternates: { canonical: `/equipo/${member.slug}/` },
-    openGraph: {
-      url: `/equipo/${member.slug}/`,
-      images: member.portrait ? [{ url: member.portrait, alt: `Retrato de ${member.name}` }] : undefined,
-    },
+    robots: { index: false, follow: false, noarchive: true, nosnippet: true },
   }
 }
 
-export default async function TeamMemberPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function TeamMemberPreviewPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const member = getTeamMember(slug)
   if (!member) notFound()
@@ -37,9 +33,8 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
     <div className="relative min-h-screen w-full min-w-0 overflow-x-hidden noise-texture">
       <PageBackground />
       <Navbar />
-      <main className="pt-14 sm:pt-16 md:pt-20"><TeamProfile member={member} /></main>
+      <main className="pt-14 sm:pt-16 md:pt-20"><TeamProfile member={member} backHref="/previw/" /></main>
       <Footer />
     </div>
   )
 }
-

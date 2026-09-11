@@ -11,7 +11,7 @@ const copy = {
   en: { back: "Back to the team", areas: "Areas of work", links: "Public links", portrait: "Portrait of" },
 } as const
 
-export function TeamProfile({ member }: { member: TeamMember }) {
+export function TeamProfile({ member, backHref = "/equipo/" }: { member: TeamMember; backHref?: string }) {
   const { lang } = useLanguage()
   const strings = copy[lang]
 
@@ -19,7 +19,7 @@ export function TeamProfile({ member }: { member: TeamMember }) {
     <article className="container mx-auto px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-6xl">
         <Link
-          href="/equipo/"
+          href={backHref}
           className="mb-8 inline-flex min-h-11 items-center gap-2 py-2 font-mono text-sm text-primary underline decoration-primary/40 underline-offset-4 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         >
           <ArrowLeft className="size-4" aria-hidden />{strings.back}

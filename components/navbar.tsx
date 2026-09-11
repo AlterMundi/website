@@ -12,16 +12,15 @@ import { useScrollSpy } from "@/hooks/use-scroll-spy"
 import { useLanguage } from "@/lib/i18n"
 import { LanguageToggle } from "@/components/ui/language-toggle"
 
-const navLinks: { id: "projects" | "team" | "contact"; scrollBlock?: "start" | "center" | "end"; href?: string }[] = [
+const navLinks: { id: "projects" | "contact"; scrollBlock?: "start" | "center" | "end"; href?: string }[] = [
   { id: "projects", scrollBlock: "start" },
-  { id: "team", scrollBlock: "start" },
   { id: "contact" },
 ]
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const { activeId, setActiveId } = useScrollSpy(["hero", "projects", "team", "contact"])
+  const { activeId, setActiveId } = useScrollSpy(["hero", "projects", "contact"])
   const pathname = usePathname()
   const isHome = pathname === "/"
   const { t } = useLanguage()

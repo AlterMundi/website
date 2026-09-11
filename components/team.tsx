@@ -27,7 +27,7 @@ const copy = {
   },
 } as const
 
-function MemberCard({ member }: { member: TeamMember }) {
+function MemberCard({ member, profileBasePath }: { member: TeamMember; profileBasePath: string }) {
   const { lang } = useLanguage()
   const strings = copy[lang]
 
@@ -79,7 +79,7 @@ function MemberCard({ member }: { member: TeamMember }) {
             ))}
           </div>
           <Link
-            href={`/equipo/${member.slug}/`}
+            href={`${profileBasePath}/${member.slug}/`}
             className="inline-flex min-h-11 items-center gap-2 py-1.5 font-mono text-xs font-medium text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
             {strings.readMore}<ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
@@ -90,7 +90,7 @@ function MemberCard({ member }: { member: TeamMember }) {
   )
 }
 
-export function Team({ fullPage = false }: { fullPage?: boolean }) {
+export function Team({ fullPage = false, profileBasePath = "/equipo" }: { fullPage?: boolean; profileBasePath?: string }) {
   const { lang } = useLanguage()
   const strings = copy[lang]
   const order = [
@@ -130,7 +130,7 @@ export function Team({ fullPage = false }: { fullPage?: boolean }) {
         </header>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {members.map((member) => <MemberCard key={member.slug} member={member} />)}
+          {members.map((member) => <MemberCard key={member.slug} member={member} profileBasePath={profileBasePath} />)}
         </div>
       </div>
     </section>
