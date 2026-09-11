@@ -368,7 +368,7 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "santiago-cetran",
     name: "Santiago Cetran",
-    role: { es: "Desarrollo, interfaces y agentes", en: "Development, interfaces and agents" },
+    role: { es: "Desarrollador de software", en: "Software developer" },
     summary: {
       es: "Su trabajo público incluye desarrollo web, animación, WANDA, LibreIncu, redes distribuidas y herramientas para agentes.",
       en: "His public work includes web development, animation, WANDA, LibreIncu, distributed networks and agent tooling.",
@@ -385,7 +385,10 @@ export const teamMembers: TeamMember[] = [
       es: ["Desarrollo web", "Visualización", "Agentes de IA", "Redes distribuidas"],
       en: ["Web development", "Visualization", "AI agents", "Distributed networks"],
     },
-    links: [{ label: "GitHub", href: "https://github.com/Santiagocetran", kind: "github" }],
+    links: [
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/santiago-rodriguez-cetran/", kind: "website" },
+      { label: "GitHub", href: "https://github.com/Santiagocetran", kind: "github" },
+    ],
     portrait: "https://avatars.githubusercontent.com/u/108505846?v=4",
   },
   {
