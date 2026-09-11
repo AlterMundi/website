@@ -91,7 +91,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     slug: "fabricio-puzio",
-    name: "Fabricio Puzio",
+    name: "Fabricio Javier Puzio",
     role: { es: "Coordinador de proyectos de innovación tecnológica", en: "Technology innovation project coordinator" },
     summary: {
       es: "Gestor de proyectos con veinte años de trayectoria entre educación, tecnología libre y economía social.",
@@ -100,15 +100,23 @@ export const teamMembers: TeamMember[] = [
     biography: {
       es: [
         "Formula, ejecuta y rinde proyectos con financiamiento público nacional, provincial e internacional, y coordina equipos interinstitucionales de hasta veinte personas.",
-        "En LibreIncu llevó una incubadora avícola de hardware y software libre del prototipo al diseño industrial listo para fabricación en escala. También dirigió un ERP y e-commerce de código abierto sobre Odoo, en producción en cinco cooperativas, y un sistema IoT de monitoreo de invernadero operativo en Traslasierra.",
+        "Desde 2023 lleva adelante LibreIncu: llevó una incubadora avícola de hardware y software libre del prototipo al diseño industrial listo para fabricación en escala. Alcanzó un 86 % de eclosión frente al 79 % del promedio comercial nacional, con diez unidades fabricadas, siete en producción real, 2.562 huevos incubados y 1.711 nacimientos registrados en siete organizaciones de la agricultura familiar entre mayo de 2025 y mayo de 2026.",
+        "Dirigió un ERP y e-commerce de código abierto sobre Odoo, en producción en cinco cooperativas, y un sistema IoT de monitoreo de invernadero —temperatura, humedad, pH, conductividad y NPK— operativo en Traslasierra.",
+        "Captó y rindió tres fondos consecutivos del Agroecology Fund y fue director técnico de un proyecto MINCyT–PNTIS. También formuló y ejecutó otros seis proyectos con cierre administrativo y rendición total para PROTAAL–INAFCI, ENACOM, PRODERI y el Ministerio de Economía.",
+        "LibreIncu obtuvo la Declaración de Interés Legislativo de la Provincia de Córdoba en 2025 y la certificación de hardware abierto OSHWA AR00005 en 2026. El proyecto fue presentado ante cuatro ministerios provinciales, INTI, INTA y CONICET.",
         "Obtuvo una licencia VARC del ENACOM en la región, concretó la interconexión de una red comunitaria con la fibra óptica provincial y escaló la red de piloto a más de treinta familias. Es fundador de la Cooperativa El Espinillo, integrada por más de cuarenta familias productoras.",
-        "Su formación incluye el Posgrado en Diseño Estratégico de Tecnologías para el Desarrollo Inclusivo Sustentable de la UNQ y Project Manager de Vinculación Tecnológica de la Fundación Sadosky, ambos de 2025.",
+        "Durante nueve años estuvo al frente de un equipo de más de veinte facilitadores pedagógicos del Ministerio de Educación de Córdoba y formó referentes técnicos de doce comunidades rurales del país en redes mesh.",
+        "Su formación incluye el Posgrado en Diseño Estratégico de Tecnologías para el Desarrollo Inclusivo Sustentable de la UNQ y Project Manager de Vinculación Tecnológica de la Fundación Sadosky, ambos de 2025. Fue expositor en el X Congreso Latinoamericano de Agroecología en 2024, organizó el Encuentro de Tecnologías Libres Córdoba en 2026 y es coautor de Argentina en Internet, publicado en 2022.",
       ],
       en: [
         "He formulates, carries out and reports on projects funded by national, provincial and international public programs, and coordinates inter-institutional teams of up to twenty people.",
-        "With LibreIncu, he took an open-hardware and open-software poultry incubator from prototype to an industrial design ready for manufacturing at scale. He also led an open-source ERP and e-commerce platform based on Odoo, now used by five cooperatives, and an operational IoT greenhouse-monitoring system in Traslasierra.",
+        "Since 2023 he has led LibreIncu, taking an open-hardware and open-software poultry incubator from prototype to an industrial design ready for manufacturing at scale. It achieved an 86% hatching rate compared with the 79% national commercial average, with ten units manufactured, seven in active production, 2,562 eggs incubated and 1,711 births recorded across seven family-farming organizations between May 2025 and May 2026.",
+        "He led an open-source ERP and e-commerce platform based on Odoo, now used by five cooperatives, and an operational IoT greenhouse-monitoring system for temperature, humidity, pH, conductivity and NPK in Traslasierra.",
+        "He secured and reported on three consecutive Agroecology Fund grants and served as technical director of a MINCyT–PNTIS project. He also formulated and delivered six additional projects with complete administrative closure and reporting for PROTAAL–INAFCI, ENACOM, PRODERI and the Ministry of Economy.",
+        "LibreIncu received a Declaration of Legislative Interest from the Province of Córdoba in 2025 and OSHWA open-hardware certification AR00005 in 2026. The project was officially presented to four provincial ministries, INTI, INTA and CONICET.",
         "He obtained an ENACOM VARC license for the region, connected a community network to the provincial fiber backbone and grew the network from a pilot to more than thirty families. He founded Cooperativa El Espinillo, which now brings together more than forty producer families.",
-        "His training includes the UNQ postgraduate program in Strategic Design of Technologies for Inclusive Sustainable Development and Fundación Sadosky’s Technology Transfer Project Manager program, both from 2025.",
+        "For nine years he led a team of more than twenty educational facilitators at Córdoba’s Ministry of Education and trained technical leaders from twelve rural communities across Argentina in mesh networking.",
+        "His training includes the UNQ postgraduate program in Strategic Design of Technologies for Inclusive Sustainable Development and Fundación Sadosky’s Technology Transfer Project Manager program, both from 2025. He presented at the 10th Latin American Congress of Agroecology in 2024, organized the Córdoba Open Technologies Gathering in 2026 and co-authored Argentina en Internet, published in 2022.",
       ],
     },
     areas: {
@@ -153,22 +161,34 @@ export const teamMembers: TeamMember[] = [
   },
   {
     slug: "julian-de-la-reta",
-    name: "Julián de la Reta",
+    name: "Julián Manuel de la Reta",
     role: { es: "Psicólogo e investigador · Creador de PMP", en: "Psychologist and researcher · Creator of PMP" },
     summary: {
-      es: "Investiga la dimensión psicológica, simbólica y grupal de Harmonic Beacon y PsicopoMPo desde la psicología junguiana y el psicodrama.",
-      en: "He researches the psychological, symbolic and group dimensions of Harmonic Beacon and PsicopoMPo through Jungian psychology and psychodrama.",
+      es: "Creador de la Proyección del Mito Personal; reúne exploración simbólica, acompañamiento psicológico, investigación, creación audiovisual y trabajo comunitario.",
+      en: "Creator of Personal Myth Projection; his work brings together symbolic exploration, psychological support, research, audiovisual creation and community work.",
     },
     biography: {
       es: [
         "Julián es licenciado en Psicología por la Universidad Nacional de Córdoba, con formación en psicología analítica junguiana, psicodrama y sociopsicodrama. Es creador de la Proyección del Mito Personal, desarrollada a lo largo de quince años.",
         "Integra AlterMundi desde 2014, donde actualmente trabaja como psicólogo y participa en Harmonic Beacon y PsicopoMPo. Su trayectoria reúne exploración simbólica, acompañamiento psicológico, investigación interdisciplinaria y experiencia en creación audiovisual, educación y trabajo comunitario.",
-        "La Proyección del Mito Personal articula la imaginación activa de la psicología analítica, una estructura narrativa inspirada en el monomito y herramientas de psicodrama. Actualmente trabaja en su sistematización y en su articulación con el campo sonoro de Harmonic Beacon.",
+        "La Proyección del Mito Personal es una metodología de exploración simbólica que articula la imaginación activa de la psicología analítica, una estructura narrativa inspirada en el monomito y herramientas de psicodrama. Actualmente trabaja en su sistematización y en su articulación con el campo sonoro de Harmonic Beacon.",
+        "En su práctica psicológica independiente acompaña procesos desde una orientación junguiana y psicodramática, trabajando con imaginación activa, símbolos, autoconocimiento y procesos de individuación.",
+        "En AlterMundi participa en la dimensión psicológica, simbólica y experiencial de Harmonic Beacon y realiza aportes metodológicos a Psicopompo. Facilita experiencias y espacios de elaboración humana mediante imágenes, intercambio grupal y psicodrama.",
+        "Entre 2014 y 2024 también documentó proyectos de AlterMundi como fotógrafo y realizador audiovisual. Entre 2012 y 2022 participó en Fundación Deuda Interna como fotógrafo, documentalista y activista junto a comunidades indígenas, especialmente wichí de Salta.",
+        "Realizó integralmente Las enseñanzas del monte, largometraje documental sobre comunidades wichí del Chaco salteño, sus saberes ancestrales, la defensa del territorio y sus procesos de organización. También participó en Construyendo miradas, sobre una iniciativa de acceso a la salud visual que articula comunidades wichí, organizaciones sociales y universidad.",
+        "Se graduó como licenciado en Psicología en 2024 y completó en 2025 un posgrado en Psicología Analítica Junguiana. Su formación incluye psicodrama, sociopsicodrama y dirección de cine y video.",
+        "Integró ELAPPSS en la Facultad de Psicología de la UNC entre 2019 y 2023 y colaboró en Harmonic Information Theory: Foundations con aportes sobre Proyección del Mito Personal, interpretación simbólica y dimensión experiencial de la investigación armónica.",
       ],
       en: [
         "Julián holds a Psychology degree from the National University of Córdoba and has trained in Jungian analytical psychology, psychodrama and sociodrama. He created Personal Myth Projection, which he has developed over fifteen years.",
         "He has been part of AlterMundi since 2014, where he currently works as a psychologist and participates in Harmonic Beacon and PsicopoMPo. His trajectory brings together symbolic exploration, psychological support, interdisciplinary research, audiovisual creation, education and community work.",
-        "Personal Myth Projection connects active imagination from analytical psychology, a narrative structure inspired by the monomyth and psychodrama tools. He is currently working on its systematization and its articulation with the Harmonic Beacon sound field.",
+        "Personal Myth Projection is a symbolic-exploration method connecting active imagination from analytical psychology, a narrative structure inspired by the monomyth and psychodrama tools. He is currently working on its systematization and its articulation with the Harmonic Beacon sound field.",
+        "In his independent psychological practice, he supports processes through a Jungian and psychodramatic approach, working with active imagination, symbols, self-knowledge and individuation.",
+        "At AlterMundi he contributes to the psychological, symbolic and experiential dimension of Harmonic Beacon and provides methodological input to Psicopompo. He facilitates experiences and spaces for human elaboration through images, group exchange and psychodrama.",
+        "From 2014 to 2024 he also documented AlterMundi projects as a photographer and filmmaker. From 2012 to 2022 he participated in Fundación Deuda Interna as a photographer, documentary filmmaker and activist alongside Indigenous communities, especially Wichí communities in Salta.",
+        "He was responsible for the full production of Las enseñanzas del monte, a feature documentary about Wichí communities in the Chaco region of Salta, their ancestral knowledge, defense of their territory and community organization. He also participated in Construyendo miradas, about a visual-health initiative connecting Wichí communities, social organizations and a university.",
+        "He graduated with a Psychology degree in 2024 and completed a postgraduate program in Jungian Analytical Psychology in 2025. His training also includes psychodrama, sociodrama, and film and video direction.",
+        "He was a member of ELAPPSS at the UNC School of Psychology from 2019 to 2023 and contributed to Harmonic Information Theory: Foundations on Personal Myth Projection, symbolic interpretation and the experiential dimension of harmonic research.",
       ],
     },
     areas: {
@@ -215,12 +235,18 @@ export const teamMembers: TeamMember[] = [
       es: [
         "Actualmente cursa las tecnicaturas en Gestión de Telecomunicaciones e Innovación con Tecnologías 4.0 en el ISPC. Tiene una base sólida en redes, Linux y desarrollo con Python, Lua y firmware para ESP32, y orienta su formación hacia la ciberseguridad y el Red Team.",
         "Desde 2022 trabaja en AlterMundi instalando y manteniendo redes inalámbricas comunitarias, fibra óptica y enlaces WiFi. También desarrolla agentes y scripts de Python para redes y monitoreo, integra modelos locales de lenguaje y administra servidores Linux.",
-        "En LibreIncu desarrolló firmware Lua para ESP32, una API REST embebida, modos WiFi AP y STA, la aplicación Flutter de control y métricas con Grafana. También participó en la instalación de cámaras y el despliegue físico de SAI, y trabajó en WANDA Telescope y mini-armonic.",
+        "En LibreIncu desarrolla firmware Lua con NodeMCU para ESP32, una API REST embebida, configurador del dispositivo, modos WiFi AP y STA, la aplicación Flutter de control, métricas con Grafana e InfluxDB y una canalización de integración continua con GitHub Actions.",
+        "En WANDA Telescope trabaja sobre un sistema abierto de astrofotografía con Raspberry Pi: control de cámara, montura ecuatorial con seguimiento automatizado, backend Flask, WebSocket en tiempo real y despliegue con systemd y Nginx.",
+        "En el prototipo de SAI participó en la instalación de cámaras y en la implementación física del sistema en territorio. En mini-armonic desarrolló un laboratorio web sonoro y visual con Web Audio, Web MIDI y visualizaciones en tiempo real.",
+        "Su formación en seguridad incluye Ethical Hacker de Cisco —en curso—, PortSwigger, TryHackMe, OverTheWire, OWASP Top 10, Burp Suite, Nmap y reconocimiento web.",
       ],
       en: [
         "He is currently studying Telecommunications Management and Innovation with 4.0 Technologies at ISPC. He has a strong base in networking, Linux and development with Python, Lua and ESP32 firmware, and is steering his training toward cybersecurity and Red Team work.",
         "Since 2022 he has worked at AlterMundi installing and maintaining community wireless networks, fiber and WiFi links. He also develops Python agents and scripts for networks and monitoring, integrates local language models and administers Linux servers.",
-        "For LibreIncu he developed Lua firmware for ESP32, an embedded REST API, WiFi AP and STA modes, the Flutter control application and Grafana metrics. He also participated in camera installation and the physical deployment of SAI, and worked on WANDA Telescope and mini-armonic.",
+        "For LibreIncu he develops Lua firmware with NodeMCU for ESP32, an embedded REST API, device configurator, WiFi AP and STA modes, the Flutter control application, Grafana and InfluxDB metrics, and a continuous-integration pipeline with GitHub Actions.",
+        "On WANDA Telescope he works on an open-source Raspberry Pi astrophotography system with camera control, an equatorial mount with automated tracking, a Flask backend, real-time WebSocket and deployment through systemd and Nginx.",
+        "On the SAI prototype he participated in camera installation and physical field implementation. For mini-armonic he developed a web-based sound and visual laboratory using Web Audio, Web MIDI and real-time visualization.",
+        "His security training includes Cisco Ethical Hacker—in progress—PortSwigger, TryHackMe, OverTheWire, OWASP Top 10, Burp Suite, Nmap and web reconnaissance.",
       ],
     },
     areas: {
