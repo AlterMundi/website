@@ -18,6 +18,8 @@ export type TeamMember = {
   links: TeamLink[]
   portrait?: string
   portraitPosition?: string
+  portraitZoom?: number
+  portraitOrigin?: string
 }
 
 export const teamMembers: TeamMember[] = [
@@ -242,7 +244,10 @@ export const teamMembers: TeamMember[] = [
       en: ["Biomedical engineering", "HarMoCAP", "Bodily signals", "Experimental validation"],
     },
     links: [{ label: "GitHub", href: "https://github.com/AnnieScigliano", kind: "github" }],
-    portrait: "https://avatars.githubusercontent.com/u/61830433?v=4",
+    portrait: "/team/annie.webp",
+    portraitPosition: "66% 42%",
+    portraitZoom: 2.1,
+    portraitOrigin: "50% 42%",
   },
   {
     slug: "saira-asua",

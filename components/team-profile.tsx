@@ -35,7 +35,11 @@ export function TeamProfile({ member }: { member: TeamMember }) {
                 priority
                 sizes="(max-width: 640px) 144px, (max-width: 1024px) 176px, 208px"
                 className="object-cover grayscale-[15%] contrast-[1.06]"
-                style={{ objectPosition: member.portraitPosition ?? "50% 50%" }}
+                style={{
+                  objectPosition: member.portraitPosition ?? "50% 50%",
+                  transform: `scale(${member.portraitZoom ?? 1})`,
+                  transformOrigin: member.portraitOrigin ?? "50% 50%",
+                }}
               />
             ) : null}
           </div>

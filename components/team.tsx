@@ -42,8 +42,12 @@ function MemberCard({ member }: { member: TeamMember }) {
               alt={`${strings.portrait} ${member.name}`}
               fill
               sizes="96px"
-              className="object-cover grayscale-[20%] contrast-[1.06] transition duration-500 group-hover:grayscale-0 group-hover:scale-[1.03]"
-              style={{ objectPosition: member.portraitPosition ?? "50% 50%" }}
+              className="object-cover grayscale-[20%] contrast-[1.06] transition duration-500 group-hover:grayscale-0"
+              style={{
+                objectPosition: member.portraitPosition ?? "50% 50%",
+                transform: `scale(${member.portraitZoom ?? 1})`,
+                transformOrigin: member.portraitOrigin ?? "50% 50%",
+              }}
             />
           ) : (
             <div className="absolute inset-0 grid place-items-center font-mono text-xl text-primary/60" aria-hidden>
@@ -89,7 +93,21 @@ function MemberCard({ member }: { member: TeamMember }) {
 export function Team({ fullPage = false }: { fullPage?: boolean }) {
   const { lang } = useLanguage()
   const strings = copy[lang]
-  const members = [...teamMembers].sort((a, b) => a.name.localeCompare(b.name, "es"))
+  const order = [
+    "nicolas-echaniz",
+    "jesica-giudice",
+    "fabricio-puzio",
+    "javier-jorge",
+    "pablo-bustos",
+    "mariano-fernandez-mendez",
+    "saira-asua",
+    "anabella-scigliano",
+    "federico-bonino",
+    "santiago-cetran",
+    "jeremias-castro",
+    "julian-de-la-reta",
+  ]
+  const members = order.map((slug) => teamMembers.find((member) => member.slug === slug)).filter((member): member is TeamMember => Boolean(member))
   const Heading = fullPage ? "h1" : "h2"
 
   return (
