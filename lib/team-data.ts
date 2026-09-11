@@ -244,20 +244,20 @@ export const teamMembers: TeamMember[] = [
     biography: {
       es: [
         "Anabella es investigadora y estudiante de Ingeniería Biomédica en la Universidad Nacional de Córdoba. En AlterMundi participa en el diseño de protocolos para evaluar el impacto fisiológico y neurológico de estructuras armónicas naturales y explorar sus posibles aplicaciones terapéuticas.",
-        "También es desarrolladora de software. Construyó la aplicación y la web de Harmonic Beacon y trabaja con interfaces, pruebas y señales fisiológicas. Su práctica conecta la investigación biomédica con instrumentos digitales capaces de registrar, procesar y representar la experiencia corporal.",
+        "También es desarrolladora de software. Desarrolló la webapp de Harmonic Beacon, que incluye Listen y las salas de eventos del Living Lab, y trabaja con interfaces, pruebas y señales fisiológicas. Su práctica conecta la investigación biomédica con instrumentos digitales capaces de registrar, procesar y representar la experiencia corporal.",
         "Participó en el desarrollo de LibreIncu. Su repositorio público documenta trabajo con electrónica, firmware para ESP32 y una aplicación Flutter para la incubadora avícola abierta. En proyectos más recientes trabaja con HarMoCAP —captura de movimiento humano en tiempo real—, señales EEG y ECG, Digital Beacon y Latido.",
         "Estas líneas se encuentran en etapa de investigación y desarrollo: los protocolos buscan producir evidencia y no presuponen eficacia terapéutica.",
       ],
       en: [
         "Anabella is a researcher and Biomedical Engineering student at the National University of Córdoba. At AlterMundi, she participates in the design of protocols to assess the physiological and neurological impact of natural harmonic structures and explore their potential therapeutic applications.",
-        "She is also a software developer. She built the Harmonic Beacon application and website and works with interfaces, testing and physiological signals. Her practice connects biomedical research with digital instruments that can record, process and represent bodily experience.",
+        "She is also a software developer. She developed the Harmonic Beacon web app, including Listen and the Living Lab event rooms, and works with interfaces, testing and physiological signals. Her practice connects biomedical research with digital instruments that can record, process and represent bodily experience.",
         "She contributed to LibreIncu. Her public repository documents work with electronics, ESP32 firmware and a Flutter application for the open poultry incubator. Her more recent projects involve HarMoCAP—real-time human motion capture—EEG and ECG signals, Digital Beacon and Latido.",
         "These lines of work remain in research and development: the protocols seek to produce evidence and do not presume therapeutic efficacy.",
       ],
     },
     areas: {
-      es: ["Ingeniería biomédica", "Protocolos de investigación", "Software y señales fisiológicas", "LibreIncu y Harmonic Beacon"],
-      en: ["Biomedical engineering", "Research protocols", "Software and physiological signals", "LibreIncu and Harmonic Beacon"],
+      es: ["Ingeniería biomédica", "Protocolos de investigación", "Webapp de Harmonic Beacon", "Software y señales fisiológicas"],
+      en: ["Biomedical engineering", "Research protocols", "Harmonic Beacon web app", "Software and physiological signals"],
     },
     links: [
       { label: "GitHub", href: "https://github.com/AnnieScigliano", kind: "github" },
