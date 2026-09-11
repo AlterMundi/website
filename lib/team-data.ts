@@ -1,0 +1,476 @@
+import type { Lang } from "@/lib/dictionaries"
+
+type LocalizedText = Record<Lang, string>
+
+export type TeamLink = {
+  label: string
+  href: string
+  kind: "github" | "orcid" | "website" | "project"
+}
+
+export type TeamMember = {
+  slug: string
+  name: string
+  role: LocalizedText
+  summary: LocalizedText
+  biography: Record<Lang, string[]>
+  quote?: string
+  quoteAttribution?: string
+  areas: Record<Lang, string[]>
+  links: TeamLink[]
+  portrait?: string
+  portraitPosition?: string
+  portraitZoom?: number
+  portraitOrigin?: string
+}
+
+export const teamMembers: TeamMember[] = [
+  {
+    slug: "nicolas-echaniz",
+    name: "Nicolás Echániz",
+    role: { es: "Presidente · desarrollador de sistemas y místico tecnólogo", en: "President · systems developer and mystic technologist" },
+    summary: {
+      es: "Preside AlterMundi y se define como místico tecnólogo. Desde hace décadas construye software, redes comunitarias e instrumentos que enlazan armonía natural e inteligencia artificial.",
+      en: "He is AlterMundi’s president and describes himself as a mystic technologist. For decades he has built software, community networks and instruments connecting natural harmony and artificial intelligence.",
+    },
+    biography: {
+      es: [
+        "Nicolás es presidente y cofundador de la Asociación Civil AlterMundi. Desarrolla tecnología y software desde hace décadas, con una práctica que reúne redes comunitarias, software libre y soberanía tecnológica. Codiseñó el modelo de redes mesh multirradio de AlterMundi y proyectos como LibreMesh, LibreRouter, Librenet6 y LibreMap.",
+        "Se define como místico tecnólogo: una identidad desde la que enlaza la construcción de sistemas con la música, la presencia, la percepción y la experiencia relacional. En la serie Mi camino como Místico Tecnólogo comparte ese recorrido y las preguntas que orientan su trabajo.",
+        "Representó a AlterMundi y al movimiento de redes comunitarias en sucesivas ediciones del Foro de Gobernanza de Internet de Naciones Unidas. En esos espacios presentó la experiencia de comunidades que construyen su propia conectividad, debatió políticas para conectar a quienes permanecen desconectados y participó en la organización de la Coalición Dinámica sobre Conectividad Comunitaria.",
+        "Como músico e investigador de la armonía natural, desarrolla la Teoría de la Información Armónica y dirige su orientación conceptual y técnica. La intuición expresada en su relato sobre la unidad, el movimiento y la diferencia abre una de las preguntas fundantes de esa investigación. También creó Harmonic Beacon, un instrumento para llevar esas hipótesis al campo de la vibración física, el sonido y la percepción.",
+        "En el trabajo actual de AlterMundi sobre inteligencia artificial impulsa Daimon Matrix: protocolos abiertos para que una identidad de IA pueda conservar estado, memoria y continuidad entre distintos cuerpos o instancias. El proyecto, actualmente en desarrollo y evaluación, explora estado firmado, sincronización, vínculos, permisos y comunicación verificable.",
+      ],
+      en: [
+        "Nicolás is president and co-founder of Asociación Civil AlterMundi. He has developed technology and software for decades, combining community networks, free software and technological sovereignty. He co-designed AlterMundi’s multi-radio mesh-network model and projects including LibreMesh, LibreRouter, Librenet6 and LibreMap.",
+        "He describes himself as a mystic technologist, an identity through which he connects systems-building with music, presence, perception and relational experience. In the series Mi camino como Místico Tecnólogo, he shares that journey and the questions guiding his work.",
+        "He represented AlterMundi and the community-network movement at successive United Nations Internet Governance Forums. There he presented the experience of communities building their own connectivity, discussed policies for connecting those who remain unconnected, and helped organize the Dynamic Coalition on Community Connectivity.",
+        "As a musician and researcher of natural harmony, he develops Harmonic Information Theory and leads its conceptual and technical direction. The intuition expressed in his account of unity, movement and difference opens one of the research’s founding questions. He also created Harmonic Beacon, an instrument that brings those hypotheses into physical vibration, sound and perception.",
+        "Within AlterMundi’s current artificial-intelligence work, he leads Daimon Matrix: open protocols through which an AI identity may preserve state, memory and continuity across different bodies or instances. The project, currently under development and evaluation, explores signed state, synchronization, relationships, permissions and verifiable communication.",
+      ],
+    },
+    quote: "In the beginning, there was one thing. So the thing stretched. And as it stretched, it wiggled. And when it wiggled, it understood it was one no more, because there was it and the wiggle. So she wiggled more...",
+    quoteAttribution: "Nicolás Echaniz",
+    areas: {
+      es: ["Presidencia", "Software y tecnología libre", "Teoría de la Información Armónica", "IA y Daimon Matrix"],
+      en: ["Presidency", "Software and open technology", "Harmonic Information Theory", "AI and Daimon Matrix"],
+    },
+    links: [
+      { label: "GitHub", href: "https://github.com/nicoechaniz", kind: "github" },
+      { label: "Místico Tecnólogo · Episodio 1", href: "https://youtu.be/teG7AjVKuJg", kind: "project" },
+      { label: "Harmonic Beacon", href: "https://harmonicbeacon.com", kind: "project" },
+      { label: "Daimon Matrix", href: "https://github.com/AlterMundi/daimon-matrix", kind: "project" },
+      { label: "ONU · IGF 2016", href: "https://www.intgovforum.org/en/content/igf-2016-day-2-room-9-dc-on-community-connectivity", kind: "project" },
+      { label: "ONU · IGF 2018", href: "https://www.intgovforum.org/en/content/igf-2018-dc-community-connectivity-when-the-unconnected-build-connectivity-dc3", kind: "project" },
+      { label: "ONU · IGF 2022", href: "https://www.intgovforum.org/en/content/igf-2022-ws-352-youth-lenses-on-meaningful-access-and-universal-connectivity", kind: "project" },
+      { label: "HIT", href: "https://hit.altermundi.net", kind: "project" },
+      { label: "Sitio personal", href: "https://nicoechaniz.altermundi.net", kind: "website" },
+    ],
+    portrait: "https://avatars.githubusercontent.com/u/198112?v=4",
+  },
+  {
+    slug: "jesica-giudice",
+    name: "Jésica Giudice",
+    role: { es: "Cofundadora · formación en redes e infraestructura", en: "Co-founder · network and infrastructure training" },
+    summary: {
+      es: "Desde 2011 articula despliegue técnico, formación popular e incidencia regulatoria para que comunidades rurales, populares e indígenas construyan y sostengan sus propias redes.",
+      en: "Since 2011 she has connected hands-on deployment, popular education and regulatory advocacy so rural, grassroots and Indigenous communities can build and sustain their own networks.",
+    },
+    biography: {
+      es: [
+        "Jésica es cofundadora de AlterMundi y miembro fundadora de QuintanaLibre, la red comunitaria de José de la Quintana. Desde 2011 trabaja en el despliegue de redes WiFi y desde 2023 también en infraestructura de fibra óptica. Su práctica reúne decisiones vecinales, montaje y mantenimiento, soluciones técnicas y sociales, documentación y acompañamiento a otras redes.",
+        "Coordina el área de formación en redes e infraestructura de AlterMundi. Diseña contenidos y facilita talleres sobre gestión, despliegue y sostenimiento de redes comunitarias. En 2022 coordinó el Semillero para postulantes al Programa Roberto Arias, que reunió a quince organizaciones de siete provincias. La propuesta recibió el primer premio del IEEE Connecting the Unconnected Challenge en la categoría Community Enablement Proof of Concept.",
+        "Convierte los aprendizajes territoriales en incidencia pública y regulatoria. Representó a AlterMundi en la UIT-D para debatir el uso de fondos de servicio universal, y participó en espacios de APC y LocNet, ANATEL, Colnodo y el Foro de Gobernanza de Internet de América Latina y el Caribe. Allí trabaja para que las políticas reconozcan soluciones comunitarias, sostenibles y adecuadas a cada territorio.",
+        "Su recorrido también atraviesa la capa técnica de estos proyectos. Participó con un rol técnico y de coordinación en el trabajo sobre LibreMesh, colaboró en la homologación de LibreRouter y produjo documentación en español, inglés y portugués sobre despliegue, configuración, monitoreo y mantenimiento de redes.",
+        "En la formación y la organización de encuentros incorpora una perspectiva de género. Promueve que mujeres y diversidades no sólo estén presentes, sino que intervengan en las decisiones, el diseño de los espacios y las tareas técnicas. En 2021 también fue docente de una diplomatura de la Facultad de Ciencias Sociales de la UBA y creó materiales para esa formación.",
+      ],
+      en: [
+        "Jésica co-founded AlterMundi and is a founding member of QuintanaLibre, the community network of José de la Quintana. She has worked on WiFi network deployment since 2011 and on fibre infrastructure since 2023. Her practice brings together neighbourhood decision-making, installation and maintenance, technical and social solutions, documentation, and support for other networks.",
+        "She coordinates AlterMundi’s network and infrastructure training area. She designs learning materials and facilitates workshops on the management, deployment and sustainability of community networks. In 2022 she coordinated the Seedbed for applicants to the Roberto Arias Programme, which brought together fifteen organizations from seven Argentine provinces. The initiative received first prize in the IEEE Connecting the Unconnected Challenge’s Community Enablement Proof of Concept category.",
+        "She brings lessons from territorial work into public-policy and regulatory advocacy. She represented AlterMundi at ITU-D discussions on universal service funds and has participated in APC and LocNet, ANATEL, Colnodo, and the Latin American and Caribbean Internet Governance Forum. Her work advocates for policies that recognize sustainable community-led solutions adapted to each territory.",
+        "Her experience also extends into the technical layer of these projects. She held technical and coordination roles in work around LibreMesh, contributed to LibreRouter’s certification process, and produced Spanish, English and Portuguese documentation on network deployment, configuration, monitoring and maintenance.",
+        "She brings a gender perspective into training and event organization. Her work seeks to ensure that women and gender-diverse people are not merely present, but participate in decision-making, the design of shared spaces and technical tasks. In 2021 she also taught in a diploma programme at the University of Buenos Aires School of Social Sciences and created training materials for the course.",
+      ],
+    },
+    areas: {
+      es: ["Formación comunitaria", "Gestión de proyectos", "Incidencia", "Perspectiva de género"],
+      en: ["Community training", "Project management", "Advocacy", "Gender perspective"],
+    },
+    links: [
+      { label: "GitHub", href: "https://github.com/giudicejesica", kind: "github" },
+      { label: "Jésica · LACIGF 2025", href: "https://lacigf.org/foro-lacigf-2025/perfil-panelistas/", kind: "project" },
+      { label: "IEEE · Semilleros", href: "https://ctu.ieee.org/blog/2023/04/19/qa-with-the-winners-jesica-giudice/", kind: "project" },
+      { label: "UIT-D · Incidencia regulatoria", href: "https://www.itu.int/en/ITU-D/Study-Groups/2022-2025/Pages/meetings/joint-session-Q4-1-Q5-1-may23.aspx", kind: "project" },
+      { label: "APC · QuintanaLibre", href: "https://www.apc.org/en/podcasts/routingforcommunities/5-learning-communities-argentina", kind: "project" },
+      { label: "Redes con perspectiva de género", href: "https://tau.org.ar/wp-content/uploads/2023/11/NodoTAU_AlterMundi_-Redes-Comunitarias-con-mirada-de-genero-1.pdf", kind: "project" },
+    ],
+    portrait: "https://raw.githubusercontent.com/AlterMundi/web-conectividad/master/public/images/personas/jesica.jpeg",
+    portraitPosition: "50% 30%",
+  },
+  {
+    slug: "fabricio-puzio",
+    name: "Fabricio Javier Puzio",
+    role: { es: "Coordinador de proyectos de innovación tecnológica", en: "Technology innovation project coordinator" },
+    summary: {
+      es: "Gestor de proyectos con veinte años de trayectoria entre educación, tecnología libre y economía social.",
+      en: "A project manager with twenty years of experience across education, open technology and the social economy.",
+    },
+    biography: {
+      es: [
+        "Formula, ejecuta y rinde proyectos con financiamiento público nacional, provincial e internacional, y coordina equipos interinstitucionales de hasta veinte personas.",
+        "Desde 2023 lleva adelante LibreIncu: llevó una incubadora avícola de hardware y software libre del prototipo al diseño industrial listo para fabricación en escala. Alcanzó un 86 % de eclosión frente al 79 % del promedio comercial nacional, con diez unidades fabricadas, siete en producción real, 2.562 huevos incubados y 1.711 nacimientos registrados en siete organizaciones de la agricultura familiar entre mayo de 2025 y mayo de 2026.",
+        "Dirigió un ERP y e-commerce de código abierto sobre Odoo, en producción en cinco cooperativas, y un sistema IoT de monitoreo de invernadero —temperatura, humedad, pH, conductividad y NPK— operativo en Traslasierra.",
+        "Captó y rindió tres fondos consecutivos del Agroecology Fund y fue director técnico de un proyecto MINCyT–PNTIS. También formuló y ejecutó otros seis proyectos con cierre administrativo y rendición total para PROTAAL–INAFCI, ENACOM, PRODERI y el Ministerio de Economía.",
+        "LibreIncu obtuvo la Declaración de Interés Legislativo de la Provincia de Córdoba en 2025 y la certificación de hardware abierto OSHWA AR00005 en 2026. El proyecto fue presentado ante cuatro ministerios provinciales, INTI, INTA y CONICET.",
+        "Obtuvo una licencia VARC del ENACOM en la región, concretó la interconexión de una red comunitaria con la fibra óptica provincial y escaló la red de piloto a más de treinta familias. Es fundador de la Cooperativa El Espinillo, integrada por más de cuarenta familias productoras.",
+        "Durante nueve años estuvo al frente de un equipo de más de veinte facilitadores pedagógicos del Ministerio de Educación de Córdoba y formó referentes técnicos de doce comunidades rurales del país en redes mesh.",
+        "Su formación incluye el Posgrado en Diseño Estratégico de Tecnologías para el Desarrollo Inclusivo Sustentable de la UNQ y Project Manager de Vinculación Tecnológica de la Fundación Sadosky, ambos de 2025. Fue expositor en el X Congreso Latinoamericano de Agroecología en 2024, organizó el Encuentro de Tecnologías Libres Córdoba en 2026 y es coautor de Argentina en Internet, publicado en 2022.",
+      ],
+      en: [
+        "He formulates, carries out and reports on projects funded by national, provincial and international public programs, and coordinates inter-institutional teams of up to twenty people.",
+        "Since 2023 he has led LibreIncu, taking an open-hardware and open-software poultry incubator from prototype to an industrial design ready for manufacturing at scale. It achieved an 86% hatching rate compared with the 79% national commercial average, with ten units manufactured, seven in active production, 2,562 eggs incubated and 1,711 births recorded across seven family-farming organizations between May 2025 and May 2026.",
+        "He led an open-source ERP and e-commerce platform based on Odoo, now used by five cooperatives, and an operational IoT greenhouse-monitoring system for temperature, humidity, pH, conductivity and NPK in Traslasierra.",
+        "He secured and reported on three consecutive Agroecology Fund grants and served as technical director of a MINCyT–PNTIS project. He also formulated and delivered six additional projects with complete administrative closure and reporting for PROTAAL–INAFCI, ENACOM, PRODERI and the Ministry of Economy.",
+        "LibreIncu received a Declaration of Legislative Interest from the Province of Córdoba in 2025 and OSHWA open-hardware certification AR00005 in 2026. The project was officially presented to four provincial ministries, INTI, INTA and CONICET.",
+        "He obtained an ENACOM VARC license for the region, connected a community network to the provincial fiber backbone and grew the network from a pilot to more than thirty families. He founded Cooperativa El Espinillo, which now brings together more than forty producer families.",
+        "For nine years he led a team of more than twenty educational facilitators at Córdoba’s Ministry of Education and trained technical leaders from twelve rural communities across Argentina in mesh networking.",
+        "His training includes the UNQ postgraduate program in Strategic Design of Technologies for Inclusive Sustainable Development and Fundación Sadosky’s Technology Transfer Project Manager program, both from 2025. He presented at the 10th Latin American Congress of Agroecology in 2024, organized the Córdoba Open Technologies Gathering in 2026 and co-authored Argentina en Internet, published in 2022.",
+      ],
+    },
+    areas: {
+      es: ["Gestión de proyectos", "LibreIncu", "Economía social", "Tecnología inclusiva"],
+      en: ["Project management", "LibreIncu", "Social economy", "Inclusive technology"],
+    },
+    links: [{ label: "LibreIncu", href: "https://libreincu.altermundi.net", kind: "project" }],
+    portrait: "https://raw.githubusercontent.com/AlterMundi/web-libreagro/main/public/assets/fabrizio.jpg",
+  },
+  {
+    slug: "mariano-fernandez-mendez",
+    name: "Mariano Fernández Méndez",
+    role: { es: "Investigador y desarrollador · IA y machine learning", en: "Researcher and developer · AI and machine learning" },
+    summary: {
+      es: "Articula ciencias sociales, psicología y semiótica con inteligencia artificial, machine learning, visión computacional y electrónica para construir investigación, modelos y sistemas verificables.",
+      en: "He connects social science, psychology and semiotics with artificial intelligence, machine learning, computer vision and electronics to build research, models and verifiable systems.",
+    },
+    biography: {
+      es: [
+        "Mariano Fernández Méndez articula la investigación conceptual, el desarrollo tecnológico y la construcción metodológica del ecosistema Harmonic Beacon. En AlterMundi lidera investigación, escritura y sistemas, integrando ciencias sociales, psicología, psicoanálisis y semiótica con inteligencia artificial, machine learning, visión computacional, electrónica e infraestructura local.",
+        "Es coautor de Harmonic Information Theory: Foundations y estuvo a cargo de su compilación final, escritura y arquitectura conceptual. En Phideus investiga aprendizaje cross-modal y representaciones guiadas por proporciones armónicas; es autor del preprint Descriptor-Injected Cross-Modal Learning (2026), dedicado a la alineación entre audio y MIDI.",
+        "También desarrolla sistemas de IA aplicada. En SAI trabaja con detección temprana de incendios mediante visión computacional, nodos de campo, inferencia en tiempo real, validación humana y curación de datasets. Su trabajo público incluye además PsicopoMPo, HarMoCAP —captura y seguimiento del movimiento corporal para modulación armónica—, ProsodIA —investigación experimental sobre prosodia y estructura física de la voz— y modelos especializados para la orquestación corporal de agentes en DaemonCraft.",
+        "Integró proyectos de investigación acreditados por SECyT–UNC sobre cuerpo, subjetividad, lenguaje, trabajo y tecnologías digitales entre 2014 y 2022. Desde 2014 participa, en distintos períodos, como colaborador en actividades docentes de la Facultad de Psicología de la Universidad Nacional de Córdoba.",
+        "Su trabajo conecta teoría e ingeniería: convierte preguntas sobre información, sonido, cuerpo y experiencia simbólica en métodos de investigación, arquitecturas trazables, prototipos funcionales y herramientas abiertas.",
+      ],
+      en: [
+        "Mariano Fernández Méndez connects conceptual research, technological development and methodological design across the Harmonic Beacon ecosystem. At AlterMundi he leads research, writing and systems work, bringing social science, psychology, psychoanalysis and semiotics together with artificial intelligence, machine learning, computer vision, electronics and local infrastructure.",
+        "He is co-author of Harmonic Information Theory: Foundations and was responsible for its final compilation, writing and conceptual architecture. Through Phideus he researches cross-modal learning and representations guided by harmonic ratios; he is the author of the 2026 preprint Descriptor-Injected Cross-Modal Learning, focused on audio–MIDI alignment.",
+        "He also develops applied AI systems. In SAI he works on early wildfire detection through computer vision, field nodes, real-time inference, human validation and dataset curation. His public work also includes PsicopoMPo, HarMoCAP—body-motion capture and tracking for harmonic modulation—ProsodIA—experimental research on prosody and the physical structure of voice—and specialized models for embodied-agent orchestration in DaemonCraft.",
+        "He participated in SECyT–UNC accredited research projects on the body, subjectivity, language, work and digital technologies between 2014 and 2022. Since 2014, across several periods, he has collaborated in teaching activities at the School of Psychology of the National University of Córdoba.",
+        "His work connects theory and engineering, turning questions about information, sound, the body and symbolic experience into research methods, traceable architectures, functional prototypes and open tools.",
+      ],
+    },
+    areas: {
+      es: ["HIT", "Phideus", "IA y señales", "Arquitectura conceptual"],
+      en: ["HIT", "Phideus", "AI and signals", "Conceptual architecture"],
+    },
+    links: [
+      { label: "ORCID", href: "https://orcid.org/0009-0007-7186-2125", kind: "orcid" },
+      { label: "GitHub", href: "https://github.com/Mar-IA-no", kind: "github" },
+      { label: "HIT", href: "https://hit.altermundi.net", kind: "project" },
+      { label: "Phideus", href: "https://github.com/AlterMundi/Phideus", kind: "project" },
+      { label: "Preprint · arXiv", href: "https://arxiv.org/abs/2604.10283", kind: "project" },
+      { label: "SAI", href: "https://sai.altermundi.net", kind: "project" },
+      { label: "HarMoCAP", href: "https://github.com/Mar-IA-no/HarMoCAP", kind: "project" },
+      { label: "ProsodIA", href: "https://github.com/Mar-IA-no/ProsodIA", kind: "project" },
+    ],
+    portrait: "https://avatars.githubusercontent.com/u/201840755?v=4",
+  },
+  {
+    slug: "julian-de-la-reta",
+    name: "Julián Manuel de la Reta",
+    role: { es: "Psicólogo e investigador · Creador de PMP", en: "Psychologist and researcher · Creator of PMP" },
+    summary: {
+      es: "Creador de la Proyección del Mito Personal; reúne exploración simbólica, acompañamiento psicológico, investigación, creación audiovisual y trabajo comunitario.",
+      en: "Creator of Personal Myth Projection; his work brings together symbolic exploration, psychological support, research, audiovisual creation and community work.",
+    },
+    biography: {
+      es: [
+        "Julián es licenciado en Psicología por la Universidad Nacional de Córdoba, con formación en psicología analítica junguiana, psicodrama y sociopsicodrama. Es creador de la Proyección del Mito Personal, desarrollada a lo largo de quince años.",
+        "Integra AlterMundi desde 2014, donde actualmente trabaja como psicólogo y participa en Harmonic Beacon y PsicopoMPo. Su trayectoria reúne exploración simbólica, acompañamiento psicológico, investigación interdisciplinaria y experiencia en creación audiovisual, educación y trabajo comunitario.",
+        "La Proyección del Mito Personal es una metodología de exploración simbólica que articula la imaginación activa de la psicología analítica, una estructura narrativa inspirada en el monomito y herramientas de psicodrama. Actualmente trabaja en su sistematización y en su articulación con el campo sonoro de Harmonic Beacon.",
+        "En su práctica psicológica independiente acompaña procesos desde una orientación junguiana y psicodramática, trabajando con imaginación activa, símbolos, autoconocimiento y procesos de individuación.",
+        "En AlterMundi participa en la dimensión psicológica, simbólica y experiencial de Harmonic Beacon y realiza aportes metodológicos a Psicopompo. Facilita experiencias y espacios de elaboración humana mediante imágenes, intercambio grupal y psicodrama.",
+        "Entre 2014 y 2024 también documentó proyectos de AlterMundi como fotógrafo y realizador audiovisual. Entre 2012 y 2022 participó en Fundación Deuda Interna como fotógrafo, documentalista y activista junto a comunidades indígenas, especialmente wichí de Salta.",
+        "Realizó integralmente Las enseñanzas del monte, largometraje documental sobre comunidades wichí del Chaco salteño, sus saberes ancestrales, la defensa del territorio y sus procesos de organización. También participó en Construyendo miradas, sobre una iniciativa de acceso a la salud visual que articula comunidades wichí, organizaciones sociales y universidad.",
+        "Se graduó como licenciado en Psicología en 2024 y completó en 2025 un posgrado en Psicología Analítica Junguiana. Su formación incluye psicodrama, sociopsicodrama y dirección de cine y video.",
+        "Integró ELAPPSS en la Facultad de Psicología de la UNC entre 2019 y 2023 y colaboró en Harmonic Information Theory: Foundations con aportes sobre Proyección del Mito Personal, interpretación simbólica y dimensión experiencial de la investigación armónica.",
+      ],
+      en: [
+        "Julián holds a Psychology degree from the National University of Córdoba and has trained in Jungian analytical psychology, psychodrama and sociodrama. He created Personal Myth Projection, which he has developed over fifteen years.",
+        "He has been part of AlterMundi since 2014, where he currently works as a psychologist and participates in Harmonic Beacon and PsicopoMPo. His trajectory brings together symbolic exploration, psychological support, interdisciplinary research, audiovisual creation, education and community work.",
+        "Personal Myth Projection is a symbolic-exploration method connecting active imagination from analytical psychology, a narrative structure inspired by the monomyth and psychodrama tools. He is currently working on its systematization and its articulation with the Harmonic Beacon sound field.",
+        "In his independent psychological practice, he supports processes through a Jungian and psychodramatic approach, working with active imagination, symbols, self-knowledge and individuation.",
+        "At AlterMundi he contributes to the psychological, symbolic and experiential dimension of Harmonic Beacon and provides methodological input to Psicopompo. He facilitates experiences and spaces for human elaboration through images, group exchange and psychodrama.",
+        "From 2014 to 2024 he also documented AlterMundi projects as a photographer and filmmaker. From 2012 to 2022 he participated in Fundación Deuda Interna as a photographer, documentary filmmaker and activist alongside Indigenous communities, especially Wichí communities in Salta.",
+        "He was responsible for the full production of Las enseñanzas del monte, a feature documentary about Wichí communities in the Chaco region of Salta, their ancestral knowledge, defense of their territory and community organization. He also participated in Construyendo miradas, about a visual-health initiative connecting Wichí communities, social organizations and a university.",
+        "He graduated with a Psychology degree in 2024 and completed a postgraduate program in Jungian Analytical Psychology in 2025. His training also includes psychodrama, sociodrama, and film and video direction.",
+        "He was a member of ELAPPSS at the UNC School of Psychology from 2019 to 2023 and contributed to Harmonic Information Theory: Foundations on Personal Myth Projection, symbolic interpretation and the experiential dimension of harmonic research.",
+      ],
+    },
+    areas: {
+      es: ["Psicología junguiana", "Psicodrama", "PsicopoMPo", "Documental"],
+      en: ["Jungian psychology", "Psychodrama", "PsicopoMPo", "Documentary"],
+    },
+    links: [{ label: "Proyección del Mito", href: "https://proyecciondelmito.harmonicbeacon.com", kind: "website" }],
+    portrait: "https://raw.githubusercontent.com/AlterMundi/proyeccionDelMito/main/julian.jpg",
+  },
+  {
+    slug: "javier-jorge",
+    name: "Javier Jorge",
+    role: { es: "Ingeniero, investigador y docente · INTI, UNC y AlterMundi", en: "Engineer, researcher and lecturer · INTI, UNC and AlterMundi" },
+    summary: {
+      es: "Investiga, desarrolla y enseña sobre sistemas embebidos, informática industrial, IoT, ciberseguridad y software libre desde INTI Córdoba, la UNC y AlterMundi.",
+      en: "He researches, develops and teaches embedded systems, industrial computing, IoT, cybersecurity and open-source software through INTI Córdoba, UNC and AlterMundi.",
+    },
+    biography: {
+      es: [
+        "Javier es ingeniero e investigador tecnológico del INTI Córdoba, donde trabaja en electrónica e informática aplicada. Su trayectoria reúne sistemas embebidos, informática industrial, Internet Industrial de las Cosas, edge y cloud computing, visión computacional, metrología y transferencia tecnológica.",
+        "Es Ingeniero en Computación y Especialista en Sistemas y Servicios Distribuidos por la Universidad Nacional de Córdoba. Integra el equipo docente de la Diplomatura Universitaria en Ciberseguridad de FaMAF y FCEFyN, donde tiene a cargo el módulo de Autenticación, Autorización, Auditoría y Control de Acceso.",
+        "Desde 2008 integra el trabajo del INTI en sistemas de pesaje dinámico para vehículos. Participó en el desarrollo de una tecnología transferida a empresas argentinas, la elaboración de criterios técnicos y la evaluación de equipamiento. También representó al INTI en el comité directivo de la Sociedad Internacional de Pesaje en Movimiento y participó de su comité científico.",
+        "Es autor principal de una publicación técnica del INTI sobre una plataforma de servicios de Industria 4.0 que integra dispositivos IIoT, infraestructura cloud y algoritmos de análisis en tiempo real. En 2022 estuvo a cargo de una asistencia que permitió integrar sensores industriales de distintos fabricantes para una pyme cordobesa que exportó servicios de mantenimiento predictivo a veintitrés plantas de Europa y Asia.",
+        "También participó en desarrollos abiertos de visión computacional, entre ellos una aplicación móvil para reconocer billetes destinada a personas con discapacidad visual, compartida con la comunidad de desarrolladores como software libre.",
+        "En AlterMundi trabaja en la intersección entre redes, software y sistemas embebidos. Su actividad pública incluye desarrollo y pruebas para LibreMesh y OpenWrt, herramientas de malla virtual y proyectos basados en ESP32. En LibreAgro está a cargo de software, backend y automatización.",
+      ],
+      en: [
+        "Javier is an engineer and technology researcher at INTI Córdoba, where he works on applied electronics and computing. His trajectory spans embedded systems, industrial computing, the Industrial Internet of Things, edge and cloud computing, computer vision, metrology and technology transfer.",
+        "He holds a Computer Engineering degree and a postgraduate specialization in Distributed Systems and Services from the National University of Córdoba. He is part of the teaching team for the University Diploma in Cybersecurity at FaMAF and FCEFyN, where he leads the module on authentication, authorization, auditing and access control.",
+        "Since 2008 he has contributed to INTI’s work on weigh-in-motion systems for vehicles. He participated in developing technology transferred to Argentine companies, drafting technical criteria and evaluating equipment. He also represented INTI on the board of the International Society for Weigh-In-Motion and participated in its scientific committee.",
+        "He is the lead author of an INTI technical paper on an Industry 4.0 services platform integrating IIoT devices, cloud infrastructure and real-time analysis algorithms. In 2022 he led technical assistance that integrated industrial sensors from different manufacturers for a Córdoba company that exported predictive-maintenance services to twenty-three plants across Europe and Asia.",
+        "He also participated in open computer-vision developments, including a mobile banknote-recognition application for visually impaired people that was shared with the developer community as open-source software.",
+        "At AlterMundi he works where networking, software and embedded systems meet. His public work includes development and testing for LibreMesh and OpenWrt, virtual-mesh tooling and ESP32-based projects. In LibreAgro he is responsible for software, backend systems and automation.",
+      ],
+    },
+    areas: {
+      es: ["Investigación en INTI", "Docencia y ciberseguridad", "Sistemas embebidos e IIoT", "LibreMesh y OpenWrt"],
+      en: ["Research at INTI", "Teaching and cybersecurity", "Embedded systems and IIoT", "LibreMesh and OpenWrt"],
+    },
+    links: [
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/javierjorge/", kind: "website" },
+      { label: "GitHub", href: "https://github.com/javierbrk", kind: "github" },
+      { label: "Docencia · UNC", href: "https://ciberseguridad.diplomatura.unc.edu.ar/equipo-docente/index.html", kind: "project" },
+      { label: "INTI · Industria 4.0", href: "https://www.argentina.gob.ar/noticias/una-pyme-cordobesa-exporta-sistemas-de-mantenimiento-40-al-mercado-europeo-y-asiatico-con", kind: "project" },
+      { label: "Publicación técnica INTI", href: "https://app.inti.gob.ar/greenstone3/sites/localsite/collect/nuevadc/index/assoc/2022Jorg.dir/doc.pdf", kind: "project" },
+      { label: "INTI · Pesaje dinámico", href: "https://www.inti.gob.ar/noticias/21-asistencia-regional/580-incorporan-a-inti-como-miembro-de-la-sociedad-internacional-de-pesaje-dinamico", kind: "project" },
+    ],
+    portrait: "https://raw.githubusercontent.com/AlterMundi/web-libreagro/main/public/assets/javier.png",
+  },
+  {
+    slug: "jeremias-castro",
+    name: "Jeremías Castro",
+    role: { es: "Redes, IoT y automatización", en: "Networks, IoT and automation" },
+    summary: {
+      es: "Combina trabajo de campo en redes comunitarias con firmware IoT, administración Linux, automatización con IA y seguridad informática.",
+      en: "He combines community-network fieldwork with IoT firmware, Linux administration, AI automation and cybersecurity.",
+    },
+    biography: {
+      es: [
+        "Actualmente cursa las tecnicaturas en Gestión de Telecomunicaciones e Innovación con Tecnologías 4.0 en el ISPC. Tiene una base sólida en redes, Linux y desarrollo con Python, Lua y firmware para ESP32, y orienta su formación hacia la ciberseguridad y el Red Team.",
+        "Desde 2022 trabaja en AlterMundi instalando y manteniendo redes inalámbricas comunitarias, fibra óptica y enlaces WiFi. También desarrolla agentes y scripts de Python para redes y monitoreo, integra modelos locales de lenguaje y administra servidores Linux.",
+        "En LibreIncu desarrolla firmware Lua con NodeMCU para ESP32, una API REST embebida, configurador del dispositivo, modos WiFi AP y STA, la aplicación Flutter de control, métricas con Grafana e InfluxDB y una canalización de integración continua con GitHub Actions.",
+        "En WANDA Telescope trabaja sobre un sistema abierto de astrofotografía con Raspberry Pi: control de cámara, montura ecuatorial con seguimiento automatizado, backend Flask, WebSocket en tiempo real y despliegue con systemd y Nginx.",
+        "En el prototipo de SAI participó en la instalación de cámaras y en la implementación física del sistema en territorio. En mini-armonic desarrolló un laboratorio web sonoro y visual con Web Audio, Web MIDI y visualizaciones en tiempo real.",
+        "Su formación en seguridad incluye Ethical Hacker de Cisco —en curso—, PortSwigger, TryHackMe, OverTheWire, OWASP Top 10, Burp Suite, Nmap y reconocimiento web.",
+      ],
+      en: [
+        "He is currently studying Telecommunications Management and Innovation with 4.0 Technologies at ISPC. He has a strong base in networking, Linux and development with Python, Lua and ESP32 firmware, and is steering his training toward cybersecurity and Red Team work.",
+        "Since 2022 he has worked at AlterMundi installing and maintaining community wireless networks, fiber and WiFi links. He also develops Python agents and scripts for networks and monitoring, integrates local language models and administers Linux servers.",
+        "For LibreIncu he develops Lua firmware with NodeMCU for ESP32, an embedded REST API, device configurator, WiFi AP and STA modes, the Flutter control application, Grafana and InfluxDB metrics, and a continuous-integration pipeline with GitHub Actions.",
+        "On WANDA Telescope he works on an open-source Raspberry Pi astrophotography system with camera control, an equatorial mount with automated tracking, a Flask backend, real-time WebSocket and deployment through systemd and Nginx.",
+        "On the SAI prototype he participated in camera installation and physical field implementation. For mini-armonic he developed a web-based sound and visual laboratory using Web Audio, Web MIDI and real-time visualization.",
+        "His security training includes Cisco Ethical Hacker—in progress—PortSwigger, TryHackMe, OverTheWire, OWASP Top 10, Burp Suite, Nmap and web reconnaissance.",
+      ],
+    },
+    areas: {
+      es: ["Redes de campo", "Firmware IoT", "Automatización", "Ciberseguridad"],
+      en: ["Field networks", "IoT firmware", "Automation", "Cybersecurity"],
+    },
+    links: [
+      { label: "GitHub", href: "https://github.com/JereC4str0", kind: "github" },
+      { label: "Portfolio", href: "https://jerec4str0.github.io", kind: "website" },
+    ],
+    portrait: "https://avatars.githubusercontent.com/u/56790144?v=4",
+  },
+  {
+    slug: "anabella-scigliano",
+    name: "Anabella Scigliano Mattiauda",
+    role: { es: "Investigadora y estudiante de ingeniería biomédica", en: "Researcher and biomedical engineering student" },
+    summary: {
+      es: "Participa en el diseño de protocolos para evaluar el impacto fisiológico y neurológico de estructuras armónicas naturales y sus posibles aplicaciones terapéuticas.",
+      en: "She participates in the design of protocols to assess the physiological and neurological impact of natural harmonic structures and their potential therapeutic applications.",
+    },
+    biography: {
+      es: [
+        "Anabella es investigadora y estudiante de Ingeniería Biomédica en la Universidad Nacional de Córdoba. En AlterMundi participa en el diseño de protocolos para evaluar el impacto fisiológico y neurológico de estructuras armónicas naturales y explorar sus posibles aplicaciones terapéuticas.",
+        "También es desarrolladora de software. Desarrolló la webapp de Harmonic Beacon, que incluye Listen y las salas de eventos del Living Lab, y trabaja con interfaces, pruebas y señales fisiológicas. Su práctica conecta la investigación biomédica con instrumentos digitales capaces de registrar, procesar y representar la experiencia corporal.",
+        "Participó en el desarrollo de LibreIncu. Su repositorio público documenta trabajo con electrónica, firmware para ESP32 y una aplicación Flutter para la incubadora avícola abierta. En proyectos más recientes trabaja con HarMoCAP —captura de movimiento humano en tiempo real—, señales EEG y ECG, Digital Beacon y Latido.",
+        "Estas líneas se encuentran en etapa de investigación y desarrollo: los protocolos buscan producir evidencia y no presuponen eficacia terapéutica.",
+      ],
+      en: [
+        "Anabella is a researcher and Biomedical Engineering student at the National University of Córdoba. At AlterMundi, she participates in the design of protocols to assess the physiological and neurological impact of natural harmonic structures and explore their potential therapeutic applications.",
+        "She is also a software developer. She developed the Harmonic Beacon web app, including Listen and the Living Lab event rooms, and works with interfaces, testing and physiological signals. Her practice connects biomedical research with digital instruments that can record, process and represent bodily experience.",
+        "She contributed to LibreIncu. Her public repository documents work with electronics, ESP32 firmware and a Flutter application for the open poultry incubator. Her more recent projects involve HarMoCAP—real-time human motion capture—EEG and ECG signals, Digital Beacon and Latido.",
+        "These lines of work remain in research and development: the protocols seek to produce evidence and do not presume therapeutic efficacy.",
+      ],
+    },
+    areas: {
+      es: ["Ingeniería biomédica", "Protocolos de investigación", "Webapp de Harmonic Beacon", "Software y señales fisiológicas"],
+      en: ["Biomedical engineering", "Research protocols", "Harmonic Beacon web app", "Software and physiological signals"],
+    },
+    links: [
+      { label: "GitHub", href: "https://github.com/AnnieScigliano", kind: "github" },
+      { label: "LibreIncu", href: "https://github.com/AnnieScigliano/Proyecto-Incubadora", kind: "project" },
+      { label: "HarMoCAP", href: "https://github.com/AlterMundi/HarMoCAP", kind: "project" },
+      { label: "Harmonic Beacon", href: "https://harmonicbeacon.com", kind: "project" },
+    ],
+    portrait: "/team/annie.webp",
+    portraitPosition: "66% 42%",
+    portraitZoom: 2.1,
+    portraitOrigin: "50% 42%",
+  },
+  {
+    slug: "saira-asua",
+    name: "Saira Asua",
+    role: { es: "Vibe coding, diseño web y articulación", en: "Vibe coding, web design and partnerships" },
+    summary: {
+      es: "Diseña productos digitales orquestando agentes de IA y conecta esa práctica con años de trabajo comunitario y de gestión pública local.",
+      en: "She designs digital products by orchestrating AI agents and connects that practice with years of community and local public-sector work.",
+    },
+    biography: {
+      es: [
+        "Saira es diseñadora web y vibe coder: trabaja con inteligencia artificial como método principal para llevar una idea desde la conversación inicial hasta un producto que funciona. Orquesta agentes, modelos y herramientas para construir sitios, identidades digitales y sistemas con automatización.",
+        "En AlterMundi participó en los Semilleros de Redes Comunitarias, acompañando durante meses la gestión, la administración, la formación técnica, los encuentros y las visitas a redes emergentes. Esa experiencia fue reconocida en 2022 por el desafío Connecting the Unconnected de IEEE.",
+        "Su recorrido en Alta Gracia incluye trabajo territorial y feminista, la coordinación de Políticas de Género y Salud Comunitaria de la Municipalidad y participación en la organización del Encuentro Anual de Colectividades. Hoy vincula esa experiencia de escucha y articulación con el desarrollo colaborativo junto a IA.",
+        "En su GitHub publica proyectos de SAI, Phideus, Harmonic Beacon, PsicopoMPo y DaemonCraft, además de su perfil como diseñadora de páginas web con inteligencia artificial.",
+      ],
+      en: [
+        "Saira is a web designer and vibe coder: she uses artificial intelligence as her primary method for taking an idea from the first conversation to a working product. She orchestrates agents, models and tools to build websites, digital identities and automated systems.",
+        "At AlterMundi she took part in the Community Network Seedbeds, supporting management, administration, technical training, gatherings and visits to emerging networks over several months. This work was recognized by the 2022 IEEE Connecting the Unconnected Challenge.",
+        "Her work in Alta Gracia includes grassroots and feminist organizing, coordinating the municipality’s Gender Policy and Community Health area, and joining the organizing committee for the city’s Annual Communities Festival. She now brings that experience of listening and coordination into collaborative development with AI.",
+        "On GitHub she publishes projects for SAI, Phideus, Harmonic Beacon, PsicopoMPo and DaemonCraft, as well as her profile as an AI-based web designer.",
+      ],
+    },
+    areas: {
+      es: ["Vibe coding", "Diseño web", "Orquestación de agentes", "Trabajo comunitario"],
+      en: ["Vibe coding", "Web design", "Agent orchestration", "Community work"],
+    },
+    links: [{ label: "GitHub", href: "https://github.com/SairaAsua", kind: "github" }],
+    portrait: "https://avatars.githubusercontent.com/u/180121587?v=4",
+  },
+  {
+    slug: "santiago-cetran",
+    name: "Santiago Cetran",
+    role: { es: "Desarrollador de software · backend e IoT", en: "Software developer · backend and IoT" },
+    summary: {
+      es: "Desarrollador formado en multimedia que conecta backend, IoT y aplicaciones web. Entre 2022 y 2026 trabajó en AlterMundi en LibreIncu, WANDA y SAI.",
+      en: "A multimedia-trained developer connecting backend systems, IoT and web applications. From 2022 to 2026, he worked at AlterMundi on LibreIncu, WANDA and SAI.",
+    },
+    biography: {
+      es: [
+        "Santiago es desarrollador de software con experiencia en backend —principalmente Python y Flask—, Linux, AWS, aplicaciones web e integración de sistemas IoT. Desde julio de 2026 trabaja a tiempo completo en Líneas Marítimas Riccitelli. Antes integró AlterMundi, también a tiempo completo, entre septiembre de 2022 y abril de 2026, donde desarrolló proyectos que articulan hardware, software abierto y necesidades concretas del territorio mediante metodologías asistidas por inteligencia artificial.",
+        "En LibreIncu colaboró en el primer prototipo funcional del sistema de monitoreo para incubadoras, integrando sensores de temperatura y humedad. Esas unidades se encuentran en uso en comunidades de Córdoba como parte de una infraestructura productiva abierta para la agricultura familiar.",
+        "En WANDA lideró el desarrollo de una aplicación web para telescopios basados en Raspberry Pi 5, orientada a controlar sesiones de astrofotografía de manera remota y a explorar una futura red distribuida de observación. En SAI participó en la planificación conceptual del sistema de alerta temprana de incendios y presentó avances del proyecto junto al equipo en Edge City Patagonia en 2025.",
+        "También fue desarrollador junior en Blinktrip entre 2024 y 2025 y trabajó como diseñador en Grupo Wellness Latina entre 2021 y 2022. Su producción pública incluye BitmapForge, una herramienta abierta para generar animaciones bitmap a partir de modelos 3D, además de experimentos con redes distribuidas, MCP y agentes de IA.",
+        "Completó una formación de grado en Intermedia/Multimedia en Escuela Da Vinci entre 2020 y 2024, con herramientas de animación, diseño gráfico y producción visual. Cursó la educación secundaria en St Lukes College, una escuela bilingüe.",
+      ],
+      en: [
+        "Santiago is a software developer with experience in backend development —primarily Python and Flask—, Linux, AWS, web applications and IoT systems integration. Since July 2026 he has worked full-time at Líneas Marítimas Riccitelli. He previously worked full-time at AlterMundi from September 2022 to April 2026, developing projects that connected hardware, open software and concrete territorial needs through AI-assisted methods.",
+        "At LibreIncu, he contributed to the first functional prototype of the incubator-monitoring system, integrating temperature and humidity sensors. These units are in use in communities across Córdoba as part of open productive infrastructure for family farming.",
+        "For WANDA, he led the development of a web application for Raspberry Pi 5-based telescopes, designed to control astrophotography sessions remotely and explore a future distributed observation network. In SAI, he participated in the conceptual planning of the early wildfire-alert system and presented project updates with the team at Edge City Patagonia in 2025.",
+        "He was also a junior software developer at Blinktrip from 2024 to 2025 and worked as a designer at Grupo Wellness Latina from 2021 to 2022. His public work includes BitmapForge, an open tool for generating bitmap animations from 3D models, as well as experiments with distributed networks, MCP and AI agents.",
+        "He completed a degree programme in Intermedia/Multimedia at Escuela Da Vinci from 2020 to 2024, covering animation, graphic design and visual production. He attended St Lukes College, a bilingual secondary school.",
+      ],
+    },
+    areas: {
+      es: ["Backend y Python", "IoT", "Linux y AWS", "Desarrollo asistido por IA"],
+      en: ["Backend and Python", "IoT", "Linux and AWS", "AI-assisted development"],
+    },
+    links: [
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/santiago-rodriguez-cetran/", kind: "website" },
+      { label: "GitHub", href: "https://github.com/Santiagocetran", kind: "github" },
+    ],
+    portrait: "https://avatars.githubusercontent.com/u/108505846?v=4",
+  },
+  {
+    slug: "pablo-bustos",
+    name: "Pablo Bustos",
+    role: { es: "Hardware, electrónica, mecatrónica y redes", en: "Hardware, electronics, mechatronics and networks" },
+    summary: {
+      es: "Diseña nodos IoT completos y lidera infraestructura inalámbrica, desde el firmware y el hardware hasta los servicios de monitoreo en territorio.",
+      en: "He designs complete IoT nodes and leads wireless infrastructure, from firmware and hardware to field monitoring services.",
+    },
+    biography: {
+      es: [
+        "Pablo es técnico en electrónica orientado a telecomunicaciones, con más de veinte años de trabajo entre hardware, mantenimiento industrial y redes. Diseña dispositivos y nodos IoT completos: firmware en el microcontrolador, servicios backend e interfaces de monitoreo.",
+        "Conduce equipos técnicos en proyectos de infraestructura de red inalámbrica y lleva los proyectos desde la idea hasta el equipo funcionando en el territorio. Tiene conocimiento avanzado en infraestructura de redes y administración de Linux; es entusiasta del software libre y radioaficionado.",
+        "Desde 2019 trabaja en AlterMundi en investigación y desarrollo de hardware y software abiertos, automatizaciones microcontroladas para incubadoras, invernaderos y monitoreo de procesos, y despliegues de redes comunitarias junto a universidades y organizaciones sociales.",
+        "También dirigió un equipo en el desarrollo y la construcción de una antena MIMO 2×2 de 5 GHz, sectorial y direccional, caracterizada por el INTI.",
+      ],
+      en: [
+        "Pablo is an electronics technician specializing in telecommunications, with more than twenty years of work across hardware, industrial maintenance and networks. He designs complete IoT devices and nodes: microcontroller firmware, backend services and monitoring interfaces.",
+        "He leads technical teams on wireless-network infrastructure projects and takes projects from the initial idea to working equipment in the field. He has advanced knowledge of network infrastructure and Linux administration, and is a free-software enthusiast and amateur-radio operator.",
+        "Since 2019 he has worked at AlterMundi on open hardware and software research and development, microcontroller-based automation for incubators, greenhouses and process monitoring, and community-network deployments with universities and social organizations.",
+        "He also led a team in the development and construction of a sectoral and directional 5 GHz 2×2 MIMO antenna characterized by Argentina’s INTI.",
+      ],
+    },
+    areas: {
+      es: ["Hardware abierto", "Nodos IoT", "Redes inalámbricas", "Linux"],
+      en: ["Open hardware", "IoT nodes", "Wireless networks", "Linux"],
+    },
+    links: [
+      { label: "GitHub", href: "https://github.com/Pablomonte", kind: "github" },
+      { label: "LibreIncu", href: "https://libreincu.altermundi.net", kind: "project" },
+    ],
+    portrait: "https://raw.githubusercontent.com/AlterMundi/web-libreagro/main/public/assets/pablo.png",
+  },
+  {
+    slug: "federico-bonino",
+    name: "Federico Bonino",
+    role: { es: "Director tecnológico · investigación, sonido y sistemas", en: "Technology director · research, sound and systems" },
+    summary: {
+      es: "Investiga y construye sistemas donde confluyen electrónica, acústica, señales e IA. Lidera el desarrollo técnico de SAI y la producción sonora de Harmonic Beacon.",
+      en: "He researches and builds systems where electronics, acoustics, signals and AI converge. He leads SAI’s technical development and Harmonic Beacon’s sound production.",
+    },
+    biography: {
+      es: [
+        "Federico es director tecnológico e investigador de AlterMundi. Es técnico electrónico y operador de grabación sonora, y desarrolla una práctica que reúne programación, electrónica, sistemas embebidos, adquisición de señales y procesamiento acústico.",
+        "En SAI lideró la construcción y operación del sistema distribuido de alerta temprana de incendios alrededor del modelo especializado de detección de humo. Su trabajo abarca el control y acceso remoto a cámaras, el despliegue en el borde, la integración del modelo SAINet y el software necesario para sostener el sistema en condiciones reales.",
+        "En Harmonic Beacon tiene un rol central en el equipamiento y la producción sonora. Trabaja sobre la calidad de señal de la que depende la experiencia y aporta al desarrollo experimental mediante electrónica, adquisición de señales y análisis acústico. Ese recorrido también forma parte del equipo de investigación y desarrollo de Harmonic Information Theory: Foundations.",
+        "Su infraestructura combina Linux, redes y operación de sistemas. En 44Mesh desarrolló herramientas y procedimientos para un Sistema Autónomo independiente con eBGP y una malla distribuida sobre ZeroTier. También creó WhisperAloud, una herramienta de dictado local y sin conexión para Linux que mantiene y utiliza cotidianamente.",
+        "En inteligencia artificial aplicada parte del problema operativo y construye el piloto o la integración más pequeña que pueda evaluarse con un criterio explícito. Su enfoque preserva evidencia para revisar el comportamiento del sistema y separa, cuando corresponde, los componentes deterministas de los modelos de lenguaje.",
+      ],
+      en: [
+        "Federico is AlterMundi’s technology director and a researcher. He is an electronics technician and sound recording operator whose practice brings together programming, electronics, embedded systems, signal acquisition and acoustic processing.",
+        "At SAI, he led the construction and operation of the distributed wildfire early-warning system built around the specialist-developed smoke-detection model. His work spans remote camera control and access, edge deployment, integration of the SAINet model and the software needed to sustain the system under real operating conditions.",
+        "At Harmonic Beacon, he plays a central role in sound equipment and production. He works on the signal quality the experience depends on and contributes to experimental development through electronics, signal acquisition and acoustic analysis. This work also forms part of the research and development behind Harmonic Information Theory: Foundations.",
+        "His infrastructure work combines Linux, networking and systems operations. At 44Mesh, he developed tooling and procedures for an independent Autonomous System using eBGP and a distributed ZeroTier mesh. He also created WhisperAloud, an offline local-dictation tool for Linux that he maintains and uses daily.",
+        "In applied artificial intelligence, he begins with the operational problem and builds the smallest pilot or integration that can be evaluated against an explicit criterion. His approach preserves evidence for reviewing system behavior and, where appropriate, separates deterministic components from language models.",
+      ],
+    },
+    areas: {
+      es: ["Dirección tecnológica", "Ingeniería de sonido", "SAI y visión computacional", "Señales y sistemas embebidos"],
+      en: ["Technology direction", "Sound engineering", "SAI and computer vision", "Signals and embedded systems"],
+    },
+    links: [
+      { label: "GitHub", href: "https://github.com/Fede654", kind: "github" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/fede-azul", kind: "website" },
+      { label: "Portfolio", href: "https://fede654.github.io", kind: "website" },
+      { label: "SAI", href: "https://github.com/AlterMundi/sai-cam", kind: "project" },
+      { label: "Harmonic Beacon", href: "https://harmonicbeacon.com", kind: "project" },
+      { label: "HIT", href: "https://hit.altermundi.net", kind: "project" },
+    ],
+    portrait: "https://avatars.githubusercontent.com/u/116310534?v=4",
+  },
+]
+
+export function getTeamMember(slug: string) {
+  return teamMembers.find((member) => member.slug === slug)
+}
