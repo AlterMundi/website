@@ -71,19 +71,25 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "jesica-giudice",
     name: "Jésica Giudice",
-    role: { es: "Formación, incidencia y articulación", en: "Training, advocacy and partnerships" },
+    role: { es: "Cofundadora · formación en redes e infraestructura", en: "Co-founder · network and infrastructure training" },
     summary: {
-      es: "Acompaña redes comunitarias, forma referentes y construye articulaciones para que la conectividad sea una herramienta de autonomía y organización.",
-      en: "She supports community networks, trains local leaders and builds partnerships so connectivity becomes a tool for autonomy and organization.",
+      es: "Desde 2011 articula despliegue técnico, formación popular e incidencia regulatoria para que comunidades rurales, populares e indígenas construyan y sostengan sus propias redes.",
+      en: "Since 2011 she has connected hands-on deployment, popular education and regulatory advocacy so rural, grassroots and Indigenous communities can build and sustain their own networks.",
     },
     biography: {
       es: [
-        "Jésica integra AlterMundi desde 2011 y reúne más de quince años de experiencia en software libre, redes comunitarias y derechos digitales. Su trabajo combina formación, gestión de proyectos, despliegue en territorio e incidencia política y regulatoria.",
-        "Coordinó y facilitó Semilleros de Redes Comunitarias en distintas provincias argentinas, acompañando a organizaciones desde el diseño social de la red hasta su construcción, sostenibilidad y acceso a políticas públicas. También participó en la Cumbre Latinoamericana de Redes Comunitarias y en espacios de APC, UIT, ANATEL y BattleMesh.",
+        "Jésica es cofundadora de AlterMundi y miembro fundadora de QuintanaLibre, la red comunitaria de José de la Quintana. Desde 2011 trabaja en el despliegue de redes WiFi y desde 2023 también en infraestructura de fibra óptica. Su práctica reúne decisiones vecinales, montaje y mantenimiento, soluciones técnicas y sociales, documentación y acompañamiento a otras redes.",
+        "Coordina el área de formación en redes e infraestructura de AlterMundi. Diseña contenidos y facilita talleres sobre gestión, despliegue y sostenimiento de redes comunitarias. En 2022 coordinó el Semillero para postulantes al Programa Roberto Arias, que reunió a quince organizaciones de siete provincias. La propuesta recibió el primer premio del IEEE Connecting the Unconnected Challenge en la categoría Community Enablement Proof of Concept.",
+        "Convierte los aprendizajes territoriales en incidencia pública y regulatoria. Representó a AlterMundi en la UIT-D para debatir el uso de fondos de servicio universal, y participó en espacios de APC y LocNet, ANATEL, Colnodo y el Foro de Gobernanza de Internet de América Latina y el Caribe. Allí trabaja para que las políticas reconozcan soluciones comunitarias, sostenibles y adecuadas a cada territorio.",
+        "Su recorrido también atraviesa la capa técnica de estos proyectos. Participó con un rol técnico y de coordinación en el trabajo sobre LibreMesh, colaboró en la homologación de LibreRouter y produjo documentación en español, inglés y portugués sobre despliegue, configuración, monitoreo y mantenimiento de redes.",
+        "En la formación y la organización de encuentros incorpora una perspectiva de género. Promueve que mujeres y diversidades no sólo estén presentes, sino que intervengan en las decisiones, el diseño de los espacios y las tareas técnicas. En 2021 también fue docente de una diplomatura de la Facultad de Ciencias Sociales de la UBA y creó materiales para esa formación.",
       ],
       en: [
-        "Jésica has been part of AlterMundi since 2011 and brings more than fifteen years of experience in free software, community networks and digital rights. Her work combines training, project management, field deployment, and policy and regulatory advocacy.",
-        "She coordinated and facilitated Community Network Seedbeds across several Argentine provinces, supporting organizations from the social design of a network through its construction, sustainability and access to public policy. She has also taken part in the Latin American Community Networks Summit and forums organized by APC, ITU, ANATEL and BattleMesh.",
+        "Jésica co-founded AlterMundi and is a founding member of QuintanaLibre, the community network of José de la Quintana. She has worked on WiFi network deployment since 2011 and on fibre infrastructure since 2023. Her practice brings together neighbourhood decision-making, installation and maintenance, technical and social solutions, documentation, and support for other networks.",
+        "She coordinates AlterMundi’s network and infrastructure training area. She designs learning materials and facilitates workshops on the management, deployment and sustainability of community networks. In 2022 she coordinated the Seedbed for applicants to the Roberto Arias Programme, which brought together fifteen organizations from seven Argentine provinces. The initiative received first prize in the IEEE Connecting the Unconnected Challenge’s Community Enablement Proof of Concept category.",
+        "She brings lessons from territorial work into public-policy and regulatory advocacy. She represented AlterMundi at ITU-D discussions on universal service funds and has participated in APC and LocNet, ANATEL, Colnodo, and the Latin American and Caribbean Internet Governance Forum. Her work advocates for policies that recognize sustainable community-led solutions adapted to each territory.",
+        "Her experience also extends into the technical layer of these projects. She held technical and coordination roles in work around LibreMesh, contributed to LibreRouter’s certification process, and produced Spanish, English and Portuguese documentation on network deployment, configuration, monitoring and maintenance.",
+        "She brings a gender perspective into training and event organization. Her work seeks to ensure that women and gender-diverse people are not merely present, but participate in decision-making, the design of shared spaces and technical tasks. In 2021 she also taught in a diploma programme at the University of Buenos Aires School of Social Sciences and created training materials for the course.",
       ],
     },
     areas: {
@@ -92,7 +98,11 @@ export const teamMembers: TeamMember[] = [
     },
     links: [
       { label: "GitHub", href: "https://github.com/giudicejesica", kind: "github" },
-      { label: "Semilleros", href: "https://ctu.ieee.org/challenge/2022-ctu-challenge-2/", kind: "project" },
+      { label: "Jésica · LACIGF 2025", href: "https://lacigf.org/foro-lacigf-2025/perfil-panelistas/", kind: "project" },
+      { label: "IEEE · Semilleros", href: "https://ctu.ieee.org/blog/2023/04/19/qa-with-the-winners-jesica-giudice/", kind: "project" },
+      { label: "UIT-D · Incidencia regulatoria", href: "https://www.itu.int/en/ITU-D/Study-Groups/2022-2025/Pages/meetings/joint-session-Q4-1-Q5-1-may23.aspx", kind: "project" },
+      { label: "APC · QuintanaLibre", href: "https://www.apc.org/en/podcasts/routingforcommunities/5-learning-communities-argentina", kind: "project" },
+      { label: "Redes con perspectiva de género", href: "https://tau.org.ar/wp-content/uploads/2023/11/NodoTAU_AlterMundi_-Redes-Comunitarias-con-mirada-de-genero-1.pdf", kind: "project" },
     ],
     portrait: "https://raw.githubusercontent.com/AlterMundi/web-conectividad/master/public/images/personas/jesica.jpeg",
     portraitPosition: "50% 30%",
