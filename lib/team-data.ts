@@ -216,26 +216,37 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "javier-jorge",
     name: "Javier Jorge",
-    role: { es: "Software, infraestructura y automatización", en: "Software, infrastructure and automation" },
+    role: { es: "Ingeniero e investigador tecnológico · INTI y AlterMundi", en: "Engineer and technology researcher · INTI and AlterMundi" },
     summary: {
-      es: "Desarrolla software para redes comunitarias, sistemas embebidos y automatización, desde LibreMesh hasta LibreAgro.",
-      en: "He develops software for community networks, embedded systems and automation, from LibreMesh to LibreAgro.",
+      es: "Investiga y desarrolla sistemas embebidos, informática industrial, IoT y software libre, articulando su trabajo en INTI Córdoba con proyectos de AlterMundi.",
+      en: "He researches and develops embedded systems, industrial computing, IoT and open-source software, connecting his work at INTI Córdoba with AlterMundi projects.",
     },
     biography: {
       es: [
-        "Javier trabaja en la intersección entre redes, software y sistemas embebidos. Su actividad pública incluye desarrollo y pruebas para LibreMesh y OpenWrt, herramientas de malla virtual y proyectos basados en ESP32.",
-        "En LibreAgro figura a cargo de software, backend y automatización. Su GitHub público contiene repositorios de LibreMesh, pruebas para redes mesh, OpenWrt, ESP32 y robótica abierta.",
+        "Javier es ingeniero e investigador tecnológico del INTI Córdoba, donde trabaja en electrónica e informática aplicada. Su trayectoria reúne sistemas embebidos, informática industrial, Internet Industrial de las Cosas, edge y cloud computing, visión computacional, metrología y transferencia tecnológica.",
+        "Desde 2008 integra el trabajo del INTI en sistemas de pesaje dinámico para vehículos. Participó en el desarrollo de una tecnología transferida a empresas argentinas, la elaboración de criterios técnicos y la evaluación de equipamiento. También representó al INTI en el comité directivo de la Sociedad Internacional de Pesaje en Movimiento y participó de su comité científico.",
+        "Es autor principal de una publicación técnica del INTI sobre una plataforma de servicios de Industria 4.0 que integra dispositivos IIoT, infraestructura cloud y algoritmos de análisis en tiempo real. En 2022 estuvo a cargo de una asistencia que permitió integrar sensores industriales de distintos fabricantes para una pyme cordobesa que exportó servicios de mantenimiento predictivo a veintitrés plantas de Europa y Asia.",
+        "También participó en desarrollos abiertos de visión computacional, entre ellos una aplicación móvil para reconocer billetes destinada a personas con discapacidad visual, compartida con la comunidad de desarrolladores como software libre.",
+        "En AlterMundi trabaja en la intersección entre redes, software y sistemas embebidos. Su actividad pública incluye desarrollo y pruebas para LibreMesh y OpenWrt, herramientas de malla virtual y proyectos basados en ESP32. En LibreAgro está a cargo de software, backend y automatización.",
       ],
       en: [
-        "Javier works where networking, software and embedded systems meet. His public work includes development and testing for LibreMesh and OpenWrt, virtual-mesh tooling and ESP32-based projects.",
-        "In LibreAgro he is listed for software, backend systems and automation. His public GitHub contains repositories for LibreMesh, mesh-network testing, OpenWrt, ESP32 and open robotics.",
+        "Javier is an engineer and technology researcher at INTI Córdoba, where he works on applied electronics and computing. His trajectory spans embedded systems, industrial computing, the Industrial Internet of Things, edge and cloud computing, computer vision, metrology and technology transfer.",
+        "Since 2008 he has contributed to INTI’s work on weigh-in-motion systems for vehicles. He participated in developing technology transferred to Argentine companies, drafting technical criteria and evaluating equipment. He also represented INTI on the board of the International Society for Weigh-In-Motion and participated in its scientific committee.",
+        "He is the lead author of an INTI technical paper on an Industry 4.0 services platform integrating IIoT devices, cloud infrastructure and real-time analysis algorithms. In 2022 he led technical assistance that integrated industrial sensors from different manufacturers for a Córdoba company that exported predictive-maintenance services to twenty-three plants across Europe and Asia.",
+        "He also participated in open computer-vision developments, including a mobile banknote-recognition application for visually impaired people that was shared with the developer community as open-source software.",
+        "At AlterMundi he works where networking, software and embedded systems meet. His public work includes development and testing for LibreMesh and OpenWrt, virtual-mesh tooling and ESP32-based projects. In LibreAgro he is responsible for software, backend systems and automation.",
       ],
     },
     areas: {
-      es: ["LibreMesh", "OpenWrt", "Sistemas embebidos", "LibreAgro"],
-      en: ["LibreMesh", "OpenWrt", "Embedded systems", "LibreAgro"],
+      es: ["Investigación en INTI", "Sistemas embebidos e IIoT", "LibreMesh y OpenWrt", "Industria 4.0"],
+      en: ["Research at INTI", "Embedded systems and IIoT", "LibreMesh and OpenWrt", "Industry 4.0"],
     },
-    links: [{ label: "GitHub", href: "https://github.com/javierbrk", kind: "github" }],
+    links: [
+      { label: "GitHub", href: "https://github.com/javierbrk", kind: "github" },
+      { label: "INTI · Industria 4.0", href: "https://www.argentina.gob.ar/noticias/una-pyme-cordobesa-exporta-sistemas-de-mantenimiento-40-al-mercado-europeo-y-asiatico-con", kind: "project" },
+      { label: "Publicación técnica INTI", href: "https://app.inti.gob.ar/greenstone3/sites/localsite/collect/nuevadc/index/assoc/2022Jorg.dir/doc.pdf", kind: "project" },
+      { label: "INTI · Pesaje dinámico", href: "https://www.inti.gob.ar/noticias/21-asistencia-regional/580-incorporan-a-inti-como-miembro-de-la-sociedad-internacional-de-pesaje-dinamico", kind: "project" },
+    ],
     portrait: "https://raw.githubusercontent.com/AlterMundi/web-libreagro/main/public/assets/javier.png",
   },
   {
