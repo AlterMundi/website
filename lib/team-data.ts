@@ -386,7 +386,7 @@ export const teamMembers: TeamMember[] = [
         "At LibreIncu, he contributed to the first functional prototype of the incubator-monitoring system, integrating temperature and humidity sensors. These units are in use in communities across Córdoba as part of open productive infrastructure for family farming.",
         "For WANDA, he led the development of a web application for Raspberry Pi 5-based telescopes, designed to control astrophotography sessions remotely and explore a future distributed observation network. In SAI, he participated in the conceptual planning of the early wildfire-alert system and presented project updates with the team at Edge City Patagonia in 2025.",
         "He was also a junior software developer at Blinktrip from 2024 to 2025 and worked as a designer at Grupo Wellness Latina from 2021 to 2022. His public work includes BitmapForge, an open tool for generating bitmap animations from 3D models, as well as experiments with distributed networks, MCP and AI agents.",
-        "He completed a degree programme in Intermedia/Multimedia at Escuela Da Vinci from 2020 to 2024, covering animation, graphic design and visual production. He attended St Lukes College, a bilingual secondary school.",
+        "He completed a degree in Multimedia Design at Escuela Da Vinci from 2020 to 2024, covering animation, graphic design and visual production. He attended St Lukes College, a bilingual secondary school.",
       ],
     },
     areas: {
