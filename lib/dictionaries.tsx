@@ -21,6 +21,7 @@ const en = {
 
   nav: {
     projects: "Projects",
+    team: "Team",
     contact: "Contact",
     workWithUs: "Work with us",
     home: "AlterMundi Home",
@@ -97,6 +98,7 @@ const en = {
     connect: "// Connect",
     aboutUs: "> About_Us",
     projects: "> Projects",
+    team: "> Team",
     contact: "> Contact",
     legal: "AlterMundi · Asociación Civil Sin Fines de Lucro",
     motto: "[ frequency · relation · pattern · uptake ]",
@@ -170,6 +172,7 @@ const es: Dictionary = {
 
   nav: {
     projects: "Proyectos",
+    team: "Equipo",
     contact: "Contacto",
     workWithUs: "Trabajá con nosotros",
     home: "Inicio de AlterMundi",
@@ -246,6 +249,7 @@ const es: Dictionary = {
     connect: "// Conectar",
     aboutUs: "> Quiénes_Somos",
     projects: "> Proyectos",
+    team: "> Equipo",
     contact: "> Contacto",
     legal: "AlterMundi · Asociación Civil Sin Fines de Lucro",
     motto: "[ frecuencia · relación · patrón · captación ]",
