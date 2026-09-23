@@ -258,7 +258,7 @@ export const teamMembers: TeamMember[] = [
       { label: "GitHub", href: "https://github.com/javierbrk", kind: "github" },
       { label: "Docencia · UNC", href: "https://ciberseguridad.diplomatura.unc.edu.ar/equipo-docente/index.html", kind: "project" },
       { label: "INTI · Industria 4.0", href: "https://www.argentina.gob.ar/noticias/una-pyme-cordobesa-exporta-sistemas-de-mantenimiento-40-al-mercado-europeo-y-asiatico-con", kind: "project" },
-      { label: "Publicación técnica INTI", href: "https://app.inti.gob.ar/greenstone3/sites/localsite/collect/nuevadc/index/assoc/2022Jorg.dir/doc.pdf", kind: "project" },
+      { label: "Publicación técnica INTI", href: "https://app.inti.gob.ar/greenstone3/biblio/collection/nuevadc/document/2022JorgeJavier_pdf", kind: "project" },
       { label: "INTI · Pesaje dinámico", href: "https://www.inti.gob.ar/noticias/21-asistencia-regional/580-incorporan-a-inti-como-miembro-de-la-sociedad-internacional-de-pesaje-dinamico", kind: "project" },
     ],
     portrait: "https://raw.githubusercontent.com/AlterMundi/web-libreagro/main/public/assets/javier.png",

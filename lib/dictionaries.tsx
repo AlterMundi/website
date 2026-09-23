@@ -21,7 +21,7 @@ const en = {
 
   nav: {
     projects: "Projects",
-    team: "Team",
+    team: "Meet the team",
     contact: "Contact",
     workWithUs: "Work with us",
     home: "AlterMundi Home",
@@ -172,7 +172,7 @@ const es: Dictionary = {
 
   nav: {
     projects: "Proyectos",
-    team: "Equipo",
+    team: "Ver equipo",
     contact: "Contacto",
     workWithUs: "Trabajá con nosotros",
     home: "Inicio de AlterMundi",

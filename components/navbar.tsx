@@ -12,8 +12,9 @@ import { useScrollSpy } from "@/hooks/use-scroll-spy"
 import { useLanguage } from "@/lib/i18n"
 import { LanguageToggle } from "@/components/ui/language-toggle"
 
-const navLinks: { id: "projects" | "contact"; scrollBlock?: "start" | "center" | "end"; href?: string }[] = [
+const navLinks: { id: "projects" | "team" | "contact"; scrollBlock?: "start" | "center" | "end"; href?: string }[] = [
   { id: "projects", scrollBlock: "start" },
+  { id: "team", href: "/equipo" },
   { id: "contact" },
 ]
 
@@ -92,7 +93,7 @@ export function Navbar() {
               const label = t.nav[id]
               // If it has an href (like /about), use it directly
               if (href) {
-                const isActive = pathname === href
+                const isActive = pathname === href || pathname.startsWith(`${href}/`)
                 return (
                   <a
                     key={id}
@@ -167,7 +168,7 @@ export function Navbar() {
             {navLinks.map(({ id, scrollBlock, href }) => {
               const label = t.nav[id]
               if (href) {
-                const isActive = pathname === href
+                const isActive = pathname === href || pathname.startsWith(`${href}/`)
                 return (
                   <a
                     key={id}
